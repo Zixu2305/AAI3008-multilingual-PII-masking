@@ -1,0 +1,22 @@
+# ASR inference
+faster-whisper
+
+# Core ML + NLP
+torch
+transformers
+
+# Datasets + eval
+datasets
+evaluate
+jiwer
+
+# Audio I/O helpers
+soundfile
+pydub
+
+# Utilities
+numpy
+pyyaml
+pydantic
+orjson
+rich

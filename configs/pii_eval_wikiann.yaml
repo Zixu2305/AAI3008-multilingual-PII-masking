@@ -1,0 +1,28 @@
+run:
+  run_id: "pii_eval_wikiann_baseline_v1"
+
+inputs:
+  evaluations:
+    - name: "en_test"
+      data_path: "data/raw/wikiann/en/test.jsonl"
+    - name: "zh_test"
+      data_path: "data/raw/wikiann/zh/test.jsonl"
+
+pii:
+  ner:
+    model_name: "Davlan/xlm-roberta-base-ner-hrl"
+    device: "cuda"
+    max_length: 256
+    score_threshold: 0.0
+
+protocol:
+  version: "pii_ner_eval_v1"
+  beta: 2.0
+  max_items_per_split: 0
+  allowed_entity_types:
+    - "PER"
+    - "ORG"
+    - "LOC"
+  label_aliases:
+    PERSON: "PER"
+    GPE: "LOC"

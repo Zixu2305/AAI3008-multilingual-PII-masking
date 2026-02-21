@@ -1,0 +1,11 @@
+run:
+  run_id: "asr_eval_cs_test_v1"
+
+inputs:
+  evaluations:
+    - name: "cs_test"
+      asr_dir: "data/runs/asr/asr_baseline_cs_test"
+      manifest_path: "data/raw/cs_dialogue/cs_test/long_wav/manifest.jsonl"
+
+protocol:
+  version: "asr_eval_v1"

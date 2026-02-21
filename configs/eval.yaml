@@ -1,0 +1,36 @@
+run:
+  run_id: "eval_baseline_cs_test"
+  output_dir: "data/runs/eval/${run.run_id}"
+
+inputs:
+  # Your gold set should contain:
+  # - audio files
+  # - reference transcript (optional)
+  # - gold PII spans/labels (required for PII metrics)
+  gold_dir: "data/gold"
+
+  # Pipeline outputs
+  asr_dir: "data/runs/asr/asr_baseline_cs_test"
+  pii_dir: "data/runs/pii/pii_baseline_cs_test"
+  masked_dir: "data/runs/masked/pii_baseline_cs_test"
+
+metrics:
+  asr:
+    enabled: true
+    compute_wer: true
+    compute_cer: true
+
+  pii:
+    enabled: true
+    compute_precision: true
+    compute_recall: true
+    compute_f1: true
+    compute_fbeta: true
+    beta: 2.0
+    leak_check_enabled: false
+
+reports:
+  summary_json: "summary.json"
+  per_type_csv: "per_type.csv"
+  per_lang_csv: "per_lang.csv"
+  run_meta_json: "run_meta.json"

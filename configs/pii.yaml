@@ -1,0 +1,42 @@
+run:
+  run_id: "pii_baseline_cs_test"
+  input_asr_dir: "data/runs/asr/asr_baseline_cs_test"
+  output_dir: "data/runs/pii/${run.run_id}"
+
+pii:
+  # Hybrid detection = rules + NER
+  enable_rules: true
+  enable_ner: true
+
+  rules:
+    # Keep simple first; expand later
+    phone: true
+    email: true
+    # Add more later if needed:
+    # id_number: true
+    # postal_code: true
+    # credit_card: false
+
+  ner:
+    # A multilingual NER model is a good baseline.
+    # You can swap this later without touching code.
+    model_name: "Davlan/xlm-roberta-base-ner-hrl"
+    device: "cuda"
+    max_length: 256
+
+    # Map model labels to your project PII tags
+    label_map:
+      PER: "NAME"
+      PERSON: "NAME"
+      LOC: "LOCATION"
+      GPE: "LOCATION"
+      ORG: "ORG"
+
+postprocess:
+  # Merge close spans, remove tiny spans, etc.
+  merge_gap_chars: 1
+  min_span_chars: 2
+
+export:
+  spans_jsonl: "spans.jsonl"      # per utterance/segment
+  audit_json: "audit.json"        # run metadata

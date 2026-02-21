@@ -1,0 +1,64 @@
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Local caches / experiment trackers
+.cache/
+.cache/huggingface/
+.hf/
+.wandb/
+mlruns/
+
+# Model and checkpoint artifacts (large)
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# Data artifacts (large / generated / sensitive)
+data/raw/
+data/runs/
+data/gold/
+data/interim/
+data/processed/
+
+# Keep placeholder files when needed
+!data/.gitkeep
+!data/**/.gitkeep

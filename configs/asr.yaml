@@ -1,0 +1,24 @@
+run:
+  run_id: "asr_baseline_cs_test"
+  output_dir: "data/runs/asr/${run.run_id}"
+
+data:
+  source_type: "manifest"
+  max_items: 0
+  manifest:
+    path: "data/raw/cs_dialogue/cs_test/long_wav/manifest.jsonl"
+
+asr:
+  engine: "faster_whisper"
+  model_name: "small"
+  device: "cuda"
+  compute_type: "float16"
+
+  language: "auto"
+  word_timestamps: true
+  vad_filter: true
+  beam_size: 5
+
+export:
+  segments_jsonl: "segments.jsonl"
+  summary_json: "summary.json"
