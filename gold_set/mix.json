@@ -1,0 +1,2262 @@
+[
+  {
+    "record_id": "gold_dev_mixed_0001",
+    "split": "dev",
+    "audio_id": "clip_mixed_0001",
+    "language": "mixed",
+    "transcript": "最近真的有点累, I feel like this month very packed. Every week got meeting, 然后还要赶报告。 Sometimes I reach home already ten plus, really no energy. 不过上个周末我还是逼自己出去走走。 I went to East Coast walk walk, 吹吹风。 That day quite peaceful, 没有想工作的东西。 Actually these few months I keep thinking whether I should change job. 现在这份工作算稳定, but not very exciting. Oh ya, I haven’t properly introduce myself. My name is Daniel Wong. I’m working in IT operations, 现在负责系统监控。 If server down, we need to react immediately. 有时候半夜也会被 call。 By the way, next Thursday meeting still confirm right? 我怕我记错时间。 If anything change, you can call me. 我的电话是九三四五，六六七七。 In English it’s 9345 6677. Same number, just different way to say. 如果我没接，可能在机房。Then you can email me at daniel.wong.demo@mail.com. Then you can email me at daniel.wong.demo@mail.com. 我每天晚上都会看邮件。 对了，我现在住在宏星路，大牌三零八。That area quite quiet, but morning traffic very jam.\nWah, IT operations really not easy one. 尤其是半夜被叫醒，很辛苦。 I used to have friend doing similar job. 对了，我也介绍一下自己。 I’m Michelle Tan, 我是陈慧玲。 I’m working in admin support, 现在每天安排会议。 Sometimes whole day just reply email. 刚才你说你的号码是九三四五，六六七七，对吗？ Let me say again in English ah, 9345 6677. Ok I save already. 如果会议时间有改变，我会先通知你。 My email is michelle.tan.demo@servicehub.net. 宏星路那边环境还不错。 Next time maybe we meet for kopi, 慢慢聊。 Life already busy enough, 有时候要放慢脚步。",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "start_char": 387,
+        "end_char": 398,
+        "text": "Daniel Wong"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "PHONE",
+        "start_char": 607,
+        "end_char": 616,
+        "text": "九三四五，六六七七"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "PHONE",
+        "start_char": 634,
+        "end_char": 643,
+        "text": "9345 6677"
+      },
+      {
+        "entity_id": "e4",
+        "pii_type": "EMAIL",
+        "start_char": 722,
+        "end_char": 747,
+        "text": "daniel.wong.demo@mail.com"
+      },
+      {
+        "entity_id": "e5",
+        "pii_type": "EMAIL",
+        "start_char": 774,
+        "end_char": 799,
+        "text": "daniel.wong.demo@mail.com"
+      },
+      {
+        "entity_id": "e6",
+        "pii_type": "ADDRESS",
+        "start_char": 821,
+        "end_char": 830,
+        "text": "宏星路，大牌三零八"
+      },
+      {
+        "entity_id": "e7",
+        "pii_type": "NAME",
+        "start_char": 996,
+        "end_char": 1008,
+        "text": "Michelle Tan"
+      },
+      {
+        "entity_id": "e8",
+        "pii_type": "NAME",
+        "start_char": 1012,
+        "end_char": 1015,
+        "text": "陈慧玲"
+      },
+      {
+        "entity_id": "e9",
+        "pii_type": "PHONE",
+        "start_char": 1104,
+        "end_char": 1113,
+        "text": "九三四五，六六七七"
+      },
+      {
+        "entity_id": "e10",
+        "pii_type": "PHONE",
+        "start_char": 1150,
+        "end_char": 1159,
+        "text": "9345 6677"
+      },
+      {
+        "entity_id": "e11",
+        "pii_type": "EMAIL",
+        "start_char": 1210,
+        "end_char": 1242,
+        "text": "michelle.tan.demo@servicehub.net"
+      }
+      {
+       "entity_id": "e12",
+       "pii_type": "ADDRESS",
+       "start_char": 1344,
+       "end_char": 1347,
+       "text": "宏星路" 
+     }
+    ]
+  },
+ {
+"record_id": "gold_dev_mixed_0002",
+"split": "dev",
+"audio_id": "clip_mixed_0002",
+"language": "mixed",
+"transcript": "最近这几个月真的有点忙, I feel like I haven’t rested properly. Work keeps piling up, 然后每天都在赶 deadline。 Sometimes I open laptop at night also. 我妈一直说不要太拼命。 But you know lah, hard to slow down. Last weekend I finally went out for dinner with my family. 我们去吃火锅, 吃到很撑。 That night I didn’t think about work at all. Oh ya, I haven’t properly intro myself. 我叫黄志强。 I’m working in operations planning，现在负责排班和流程。 Sometimes one small mistake can affect whole team. By the way, next Monday meeting still on right? 我怕我记错时间。 If got any change, you can call me. 我的电话是九八二二，三三六五。 Eh wait, sorry I say wrong. 不是三三六五。是三三六八。 So the correct one is 九八二二，三三六八。 In English that’s 9822 3368. You can also email me at kelvin.ng.demo@mail.com. Usually I reply at night. 对了，我现在住在绿景路，大牌五零九。 Quite quiet there, but morning traffic quite bad.\nWah, operations planning confirm stressful one. Especially when need to manage people schedule. 其实长期这样真的很累。 By the way, I also intro myself properly. I’m Jasmine Lee，我是李嘉欣。 I’m working in finance support，现在每天对账和做报表。 Sometimes one number wrong, whole thing must redo. 刚才你说你的号码是九八二二，三三六八，对吗？ Let me repeat in English ah, 9822 3368. Ok I save already. If meeting timing change, I text you first. My email is jasmine.lee.demo@financehub.net. 绿景路那边我去过, quite peaceful. Next time maybe we meet for dinner, 不要一直讲工作。 Life already busy enough, sometimes must relax.",
+"entities": [
+{
+"entity_id": "e1",
+"pii_type": "NAME",
+"start_char": 278,
+"end_char": 282,
+"text": "黄志强"
+},
+{
+"entity_id": "e2",
+"pii_type": "PHONE",
+"start_char": 449,
+"end_char": 458,
+"text": "九八二二，三三六五"
+},
+{
+"entity_id": "e3",
+"pii_type": "PHONE",
+"start_char": 498,
+"end_char": 507,
+"text": "九八二二，三三六八"
+},
+{
+"entity_id": "e4",
+"pii_type": "PHONE",
+"start_char": 524,
+"end_char": 533,
+"text": "9822 3368"
+},
+{
+"entity_id": "e5",
+"pii_type": "EMAIL",
+"start_char": 567,
+"end_char": 593,
+"text": "kelvin.ng.demo@mail.com"
+},
+{
+"entity_id": "e6",
+"pii_type": "ADDRESS",
+"start_char": 626,
+"end_char": 635,
+"text": "绿景路，大牌五零九"
+},
+{
+"entity_id": "e7",
+"pii_type": "NAME",
+"start_char": 770,
+"end_char": 782,
+"text": "Jasmine Lee"
+},
+{
+"entity_id": "e8",
+"pii_type": "NAME",
+"start_char": 786,
+"end_char": 789,
+"text": "李嘉欣"
+},
+{
+"entity_id": "e9",
+"pii_type": "PHONE",
+"start_char": 918,
+"end_char": 927,
+"text": "九八二二，三三六八"
+},
+{
+"entity_id": "e10",
+"pii_type": "PHONE",
+"start_char": 958,
+"end_char": 967,
+"text": "9822 3368"
+},
+{
+"entity_id": "e11",
+"pii_type": "EMAIL",
+"start_char": 1043,
+"end_char": 1080,
+"text": "jasmine.lee.demo@financehub.net"
+}
+{
+"entity_id": "e12",
+"pii_type": "ADDRESS",
+"start_char": 1238,
+"end_char": 1241,
+"text": "绿景路"
+}
+
+]
+},
+{
+    "record_id": "gold_dev_mixed_0003",
+    "split": "dev",
+    "audio_id": "clip_mixed_0003",
+    "language": "mixed",
+    "transcript": "最近工作真的有点忙，不过还算可以应付。 这个月公司在准备新的系统升级。 So every day got meeting, 还要做 testing。Sometimes one small issue can delay whole schedule. 有时候压力还是蛮大的。不过周末我还是会尽量休息。 Last Sunday I went to visit my parents, 吃了很多家常菜。 感觉整个人轻松很多。 Oh ya, I think I haven’t properly introduce myself. My name is Andrew Koh，我叫高伟伦。 I’m currently working in system support，现在主要负责系统维护。 If something wrong, 我们要马上处理。 By the way, next Friday meeting still confirm right? I scared I mix up the timing. If got change, you can call me at 8901 2345. 我的电话是八九零一，二三四五。 Same number, just English and Chinese way. 如果我没接，可能在开会。 You can also email me at andrew.koh.demo@mail.com. Usually I reply after work. 对了，我现在住在金华路，大牌四二一。 那边环境还不错，就是有时候停车比较难。\n系统支持真的不简单。 Especially when upgrade period, confirm very busy. 我以前也做过类似的工作，所以我明白。 对了，我也介绍一下自己。 I’m Cheryl Tan，我是陈诗敏。 I’m working in project admin，现在每天协调时间表。 Sometimes both sides cannot match timing, very headache. 刚才你说你的号码是八九零一，二三四五，对吗？ Let me repeat in English ah, 8901 2345. Ok I saved already. If Friday meeting change, I text you first. My email is cheryl.tan.demo@projecthub.net. 金华路那边我去过，附近好像有小商场。 Next time maybe we meet nearby for lunch, 不要只聊工作。 Sometimes must relax a bit.",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "start_char": 247,
+        "end_char": 258,
+        "text": "Andrew Koh"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "NAME",
+        "start_char": 259,
+        "end_char": 263,
+        "text": "高伟伦"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "PHONE",
+        "start_char": 405,
+        "end_char": 414,
+        "text": "8901 2345"
+      },
+      {
+        "entity_id": "e4",
+        "pii_type": "PHONE",
+        "start_char": 421,
+        "end_char": 430,
+        "text": "八九零一，二三四五"
+      },
+      {
+        "entity_id": "e5",
+        "pii_type": "EMAIL",
+        "start_char": 505,
+        "end_char": 532,
+        "text": "andrew.koh.demo@mail.com"
+      },
+      {
+        "entity_id": "e6",
+        "pii_type": "ADDRESS",
+        "start_char": 571,
+        "end_char": 580,
+        "text": "金华路，大牌四二一"
+      },
+      {
+        "entity_id": "e7",
+        "pii_type": "NAME",
+        "start_char": 720,
+        "end_char": 731,
+        "text": "Cheryl Tan"
+      },
+      {
+        "entity_id": "e8",
+        "pii_type": "NAME",
+        "start_char": 732,
+        "end_char": 736,
+        "text": "陈诗敏"
+      },
+      {
+        "entity_id": "e9",
+        "pii_type": "PHONE",
+        "start_char": 848,
+        "end_char": 857,
+        "text": "八九零一，二三四五"
+      },
+      {
+        "entity_id": "e10",
+        "pii_type": "PHONE",
+        "start_char": 888,
+        "end_char": 897,
+        "text": "8901 2345"
+      },
+      {
+        "entity_id": "e11",
+        "pii_type": "EMAIL",
+        "start_char": 971,
+        "end_char": 1009,
+        "text": "cheryl.tan.demo@projecthub.net"
+      }
+     {
+       "entity_id": "e12",
+       "pii_type": "ADDRESS",
+       "start_char": 1075,
+       "end_char": 1078,
+       "text": "金华路"
+     }
+    ]
+  },
+{
+  "record_id": "gold_dev_mixed_0004",
+  "split": "dev",
+  "audio_id": "clip_mixed_0004",
+  "language": "mixed",
+  "transcript": "最近真的感觉时间过得很快, I feel like every week just fly past. 这个月公司一直在忙 audit。 So every day got document to prepare, 还要开很多会议。 Sometimes I go home already nine plus. 我妈一直问我为什么这么晚回家。 Actually I also feel tired, but work cannot stop. Last weekend I finally forced myself to rest. 我们去附近公园走走，晒晒太阳。 Quite relaxing actually. Oh ya, I think I haven’t properly introduce myself. My name is Ryan Lim I’m working in finance operations，现在主要做账务处理。 Sometimes one small number wrong, whole report need redo. By the way, next Wednesday meeting still confirm right? 我怕我搞错时间。 If got any change, you can call me at 9188 4205. 我的电话是九一八八，四二零五。 Same number, English or Chinese also can. If I don’t answer, maybe I in discussion. You can also email me at ryan.lim.demo@mail.com.Usually I check email at night. 对了，我现在住在阳光园，大牌六零三。Quite convenient, downstairs got supermarket.\nWah, finance operations confirm very detailed one. Especially audit period, stress level very high. 我以前在财务部门实习过，真的很紧张。 Every number must double check. By the way, I also intro myself properly. I’m Sarah Ong，我是王思敏。 I’m working in admin coordination，现在负责安排会议和整理文件。 Sometimes whole day just replying email, quite tiring also. 刚才你说你的号码是九一八八，四二零五，对吗？ Let me repeat in English ah, 9188 4205. Ok I save already. If Wednesday meeting timing change, I message you first. My email is sarah.ong.demo@officehub.net. 阳光园那边我去过，环境蛮不错的。 Next time maybe we meet nearby for lunch, 不要一直讲工作。 Sometimes must slow down and rest a bit.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 356,
+      "end_char": 365,
+      "text": "Ryan Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 550,
+      "end_char": 559,
+      "text": "9188 4205"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 566,
+      "end_char": 575,
+      "text": "九一八八，四二零五"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 680,
+      "end_char": 702,
+      "text": "ryan.lim.demo@mail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "start_char": 742,
+      "end_char": 751,
+      "text": "阳光园，大牌六零三"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "NAME",
+      "start_char": 942,
+      "end_char": 951,
+      "text": "Sarah Ong"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "NAME",
+      "start_char": 952,
+      "end_char": 956,
+      "text": "王思敏"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "PHONE",
+      "start_char": 1080,
+      "end_char": 1089,
+      "text": "九一八八，四二零五"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "PHONE",
+      "start_char": 1122,
+      "end_char": 1131,
+      "text": "9188 4205"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "EMAIL",
+      "start_char": 1215,
+      "end_char": 1243,
+      "text": "sarah.ong.demo@officehub.net"
+    }
+    {
+     "entity_id": "e11",
+     "pii_type": "ADDRESS",
+     "start_char": 1345,
+     "end_char": 1348,
+     "text": "阳光园"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0005",
+  "split": "dev",
+  "audio_id": "clip_mixed_0005",
+  "language": "mixed",
+  "transcript": "This quarter company pushing new system, so every week got review meeting. Sometimes discussion very long, 到晚上才结束。 After work I just want to go home and rest. 不过上个周末我还是出去走走。 I met my cousin for dinner, just simple food but very nice. That day I didn’t think about work at all. Oh ya, I haven’t properly introduce myself. My name is Marcus Teo，我叫张伟强。 I’m working in logistics planning，现在负责安排运输。 If one shipment delay, whole schedule affected. By the way, next Tuesday meeting still confirm right? If got any change, you can call me at 8223 9906. 我的电话是八二二三，九九零六。 Same number, just different way to say. If I don’t answer, maybe I driving. You can also email me at marcus.teo.demo@mail.com. Usually I reply at night. 对了，我的员工编号是 STAFF-ID-5521。 Just in case admin need reference. 我现在住在翠景园，大牌四五六。Quite peaceful area, but parking sometimes difficult.\nLogistics planning confirm very stressful one. Especially when shipment delay, customers sure complain. 我以前在供应链部门做过，真的很赶。 Need to coordinate many people at the same time. By the way, I also introduce myself properly. I’m Emily Chua，我是李欣怡。 I’m working in procurement support，现在每天处理订单。 Sometimes supplier late reply, very headache. 刚才你说你的号码是八二二三，九九零六，对吗？ In English that’s 8223 9906 right? Ok I save already. If Tuesday meeting change, I message you first. My email is emily.chua.demo@procurehub.net. 翠景园那边我去过，环境不错。 Next time maybe we meet for lunch, 不要一直聊 shipment。 Sometimes must relax a bit, work never finish one.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 318,
+      "end_char": 329,
+      "text": "Marcus Teo"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 330,
+      "end_char": 334,
+      "text": "张伟强"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 501,
+      "end_char": 510,
+      "text": "8223 9906"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 517,
+      "end_char": 526,
+      "text": "八二二三，九九零六"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "start_char": 628,
+      "end_char": 654,
+      "text": "marcus.teo.demo@mail.com"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "ID",
+      "start_char": 689,
+      "end_char": 702,
+      "text": "STAFF-ID-5521"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "ADDRESS",
+      "start_char": 744,
+      "end_char": 753,
+      "text": "翠景园，大牌四五六"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "NAME",
+      "start_char": 921,
+      "end_char": 932,
+      "text": "Emily Chua"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 933,
+      "end_char": 937,
+      "text": "李欣怡"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "PHONE",
+      "start_char": 1065,
+      "end_char": 1074,
+      "text": "八二二三，九九零六"
+    },
+    {
+      "entity_id": "e11",
+      "pii_type": "PHONE",
+      "start_char": 1105,
+      "end_char": 1114,
+      "text": "8223 9906"
+    },
+    {
+      "entity_id": "e12",
+      "pii_type": "EMAIL",
+      "start_char": 1192,
+      "end_char": 1227,
+      "text": "emily.chua.demo@procurehub.net"
+    }
+   {
+    "entity_id": "e13",
+    "pii_type": "ADDRESS",
+    "start_char": 1285,
+    "end_char": 1288,
+    "text": "翠景园"
+  }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0006",
+  "split": "dev",
+  "audio_id": "clip_mixed_0006",
+  "language": "mixed",
+  "transcript": "时间真的过得很快。 Last weekend I tried not to think about work. 我去找朋友喝咖啡，聊了一整个下午。 It felt quite good actually. Oh ya, I think I haven’t properly introduce myself. 我叫吴俊杰。 I’m working in project coordination，现在主要负责timeline。 If one task delay, whole project shift. Sometimes really quite stressful. By the way, next Thursday meeting still confirm right? If got change, you can call me at 9660 2248. 我的电话是九六六零，二二四八。 Eh wait, sorry — I think I said wrongly just now. 不是二二四八。 是二二四九。 So correct one is 九六六零，二二四九。 In English it’s 9660 2249. If I don’t answer maybe I in discussion. You can also email me at adrian.goh.demo@mail.com. 我现在住在海景园，大牌三二一。 That area quite windy at night, very cooling.\nProject coordination really not easy one. Especially when timeline tight, everybody rushing. 我之前也做过类似的工作，很紧张。 Need to chase people everyday. By the way, I also intro myself properly. I’m Nicole Tan，我是陈思琪。 I’m working in marketing support，现在每天整理活动资料。 Sometimes event change last minute, very headache. 刚才你说你的号码是九六六零，二二四九，对吗？ In English that’s 9660 2249 right? Ok I saved already. If Thursday meeting timing shift, I text you first. My email is nicole.tan.demo@marketingsg.net. 海景园那边我去过，环境蛮舒服的。 Next time maybe we meet for dinner, 不要一直讲 project。 Sometimes must relax a bit, work always there one.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 152,
+      "end_char": 156,
+      "text": "吴俊杰"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 403,
+      "end_char": 412,
+      "text": "9660 2248"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 419,
+      "end_char": 428,
+      "text": "九六六零，二二四八"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 490,
+      "end_char": 499,
+      "text": "九六六零，二二四九"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "start_char": 516,
+      "end_char": 525,
+      "text": "9660 2249"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "start_char": 582,
+      "end_char": 609,
+      "text": "adrian.goh.demo@mail.com"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "ADDRESS",
+      "start_char": 619,
+      "end_char": 628,
+      "text": "海景园，大牌三二一"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "NAME",
+      "start_char": 786,
+      "end_char": 797,
+      "text": "Nicole Tan"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 798,
+      "end_char": 802,
+      "text": "陈思琪"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "PHONE",
+      "start_char": 931,
+      "end_char": 940,
+      "text": "九六六零，二二四九"
+    },
+    {
+      "entity_id": "e11",
+      "pii_type": "PHONE",
+      "start_char": 971,
+      "end_char": 980,
+      "text": "9660 2249"
+    },
+    {
+      "entity_id": "e12",
+      "pii_type": "EMAIL",
+      "start_char": 1064,
+      "end_char": 1101,
+      "text": "nicole.tan.demo@marketingsg.net"
+    }
+   {
+    "entity_id": "e13",
+    "pii_type": "ADDRESS",
+    "start_char": 1155,
+    "end_char": 1158,
+    "text": "海景园"
+  }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0007",
+  "split": "dev",
+  "audio_id": "clip_mixed_0007",
+  "language": "mixed",
+  "transcript": "My name is Benjamin Tay (Wǒ jiào Zhèng Wěiqiáng) 最近天气真的很热，I feel tired very easily. Every day go office already sweating. 下班的时候整个人都没力气。 By the way, if you need to contact me, you can call me at 9133 5680. 我的电话是九一三三，五六八零。 Sometimes I don’t answer immediately because I’m with customers. 最近公司客户投诉比较多。 Every day must handle many cases. If not urgent, you can email me at benjamin.tay.demo@mail.com. Usually I reply at night before I sleep. 对了，我现在住在碧山花园，大牌七二零。 Quite convenient actually, MRT very near. Last weekend I went downstairs for kopi with my neighbour. 感觉这样慢慢生活也不错。 Next Tuesday that appointment still confirm right? If got change just let me know.\nWah, you really sound very tired recently. 最近天气这么热，加上工作忙，肯定更累。 You mentioned customers complaining a lot, that one confirm stressful. 做客户服务真的不简单。 Just now you say your number is 9133 5680 right? 九一三三，五六八零，对吗？ Ok I saved already in my phone. If next Tuesday appointment timing change, I’ll message you first. By the way, 碧山花园那边环境真的不错。 MRT near also very convenient. I think you should really rest more during weekend. 不要一直想工作，不然很容易burn out。 My email is olivia.tan.demo@trainhub.net if you need anything from me. 白天我通常回复比较快。 Next time maybe we meet downstairs at Bishan, have kopi and relax a bit. Sometimes slow down also good.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 11,
+      "end_char": 24,
+      "text": "Benjamin Tay"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 222,
+      "end_char": 231,
+      "text": "9133 5680"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 238,
+      "end_char": 247,
+      "text": "九一三三，五六八零"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 380,
+      "end_char": 409,
+      "text": "benjamin.tay.demo@mail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "start_char": 455,
+      "end_char": 464,
+      "text": "碧山花园，大牌七二零"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "PHONE",
+      "start_char": 694,
+      "end_char": 703,
+      "text": "9133 5680"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "PHONE",
+      "start_char": 710,
+      "end_char": 719,
+      "text": "九一三三，五六八零"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "EMAIL",
+      "start_char": 1020,
+      "end_char": 1051,
+      "text": "olivia.tan.demo@trainhub.net"
+    }
+   {
+     "entity_id": "e9",
+     "pii_type": "ADDRESS",
+     "start_char": 777,
+     "end_char": 781,
+     "text": "碧山花园"
+  }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0008",
+  "split": "dev",
+  "audio_id": "clip_mixed_0008",
+  "language": "mixed",
+  "transcript": "These few weeks I started going to gym again, 感觉身体比较有精神。 Before that I always say no time, but actually just lazy. 最近发现如果不运动，整个人很容易累。 So now I try to go at least twice a week. Oh by the way, if you need to pass me the membership form, you can send to my email at leonard.ong.demo@mail.com. Usually I check email during lunch break. 上次你问我电话号码，我现在跟你说一下。 It’s 8560 3312. 我的电话是八五六零，三三一二。 Sometimes I don’t pick up because phone inside locker. 对了，我叫翁志豪。 Most people just call me Leonard. 我现在住在湖景园，大牌四零八。 The park downstairs quite nice for jogging. Last Sunday I jogged around the lake, quite peaceful. Actually I feel this kind of simple routine better than always thinking about work.\nWah serious ah, you finally go gym. 运动真的很重要，不然身体很快出问题。 You always say no time last time. Now at least you start already, that’s good. 刚才你说你的号码是八五六零，三三一二，对吗？ Let me repeat in English, 8560 3312. Ok I save under Leonard. If gym admin need contact you, easier already. 湖景园那边我去过，晚上很凉爽。 Jogging there confirm quite nice. If anything urgent, you can also email me at rachel.lim.demo@healthhub.net. Usually I reply quite fast after 6pm. 对了，我叫林若琪。 Next time maybe we go gym together, at least won’t lazy. Sometimes having company makes it easier.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "EMAIL",
+      "text": "leonard.ong.demo@mail.com"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "8560 3312"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "八五六零，三三一二"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "翁志豪"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "text": "湖景园，大牌四零八"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "PHONE",
+      "text": "八五六零，三三一二"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "PHONE",
+      "text": "8560 3312"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "EMAIL",
+      "text": "rachel.lim.demo@healthhub.net"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "text": "林若琪"
+    }
+   {
+    "entity_id": "e10",
+    "pii_type": "ADDRESS",
+    "start_char": 947,
+    "end_char": 950,
+    "text": "湖景园"
+   }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0009",
+  "split": "dev",
+  "audio_id": "clip_mixed_0009",
+  "language": "mixed",
+  "transcript": "I’ve been thinking about taking a short trip next month, maybe somewhere nearby. 最近真的有点想出去走走。 Every day just home and office, very boring. 我想去海边放松一下。 Maybe Malaysia or somewhere not too far. But I’m not sure about the dates yet. If you want to discuss properly, you can text me first. 我的电话是九零七七，二三八四。 In English it’s 9077 2384. Sometimes I miss calls because phone always silent. By the way, I don’t think I told you before — I’m Jonathan Ng，我叫黄俊豪。 Most people just call me Jon. Actually I stay near seaside area already. 我现在住在滨海花园，大牌六零五。 So maybe that’s why I keep thinking about beach. If you confirm going, I can help book hotel. Just email me at jon.ng.demo@mail.com if easier. I check email usually at night.\nTravel ah? That actually sounds quite nice. 最近天气这么热，去海边应该很舒服。 But you sure next month ok? 你上次不是说很忙吗？ Anyway your number is 9077 2384 right? 九零七七，二三八四，对吗？ Ok I saved already. I think if go, must plan properly, otherwise waste money. 滨海花园那边我去过，晚上风很大。 No wonder you keep thinking about beach. By the way I’m Rachel Ong，我是王欣怡。 If you need help comparing hotel prices, email me at rachel.ong.demo@travelhub.net. Usually I reply quite fast in the morning. But serious ah, don’t last minute cancel again. 上次你也是临时改时间。 This time must confirm properly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "PHONE",
+      "start_char": 213,
+      "end_char": 222,
+      "text": "九零七七，二三八四"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 239,
+      "end_char": 248,
+      "text": "9077 2384"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 330,
+      "end_char": 341,
+      "text": "Jonathan Ng"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "start_char": 342,
+      "end_char": 346,
+      "text": "黄俊豪"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "start_char": 419,
+      "end_char": 428,
+      "text": "滨海花园，大牌六零五"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "start_char": 525,
+      "end_char": 548,
+      "text": "jon.ng.demo@mail.com"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "PHONE",
+      "start_char": 698,
+      "end_char": 707,
+      "text": "9077 2384"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "PHONE",
+      "start_char": 715,
+      "end_char": 724,
+      "text": "九零七七，二三八四"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 866,
+      "end_char": 876,
+      "text": "Rachel Ong"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "NAME",
+      "start_char": 877,
+      "end_char": 881,
+      "text": "王欣怡"
+    },
+    {
+      "entity_id": "e11",
+      "pii_type": "EMAIL",
+      "start_char": 934,
+      "end_char": 969,
+      "text": "rachel.ong.demo@travelhub.net"
+    }
+   {
+     "entity_id": "e12",
+     "pii_type": "ADDRESS",
+     "start_char": 946,
+     "end_char": 950,
+     "text": "滨海花园"
+   }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0010",
+  "split": "dev",
+  "audio_id": "clip_mixed_0010",
+  "language": "mixed",
+  "transcript": "其实我有点不好意思开口，不过我还是想跟你说一下。 Last time I lent you that money, remember? 我不是在催你，只是最近自己也有点紧。 Rent and bills all come together. 我这个月真的有点压力。 Maybe you can let me know roughly when you can return? Oh ya, in case you need to transfer, my account name is David Low，我叫刘志伟。 But don’t worry, I’m not rushing you. If easier, you can text me first. 我的电话是九二二四，七七零一。 In English it’s 9224 7701. Sometimes I don’t answer calls immediately. Also if you prefer email, it’s david.low.demo@mail.com. I check it during work hours mostly. 我现在住在绿海苑，大牌三零三。 So if you pass by, can just drop by also. I just want to settle this properly, no hard feelings.\nI know… I was actually thinking how to tell you also. 最近真的有点状况。 My family side had some emergency. 所以钱的事情有点拖延。 I’m sorry I didn’t explain earlier. 刚才你说九二二四，七七零一，对吗？ Ok I saved it again. I can transfer part first next week. 剩下的我分两次给你，可以吗？ By the way, I’m Marcus Tan，我是陈俊豪。 If you need any confirmation, my email is marcus.tan.demo@payhub.net. Usually I reply faster at night. 绿海苑那边我知道，在那一带停车有点难。 Thanks for telling me directly instead of keeping quiet. I also don’t want this to affect our friendship. 下次见面我请你吃饭。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 245,
+      "end_char": 254,
+      "text": "David Low"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 255,
+      "end_char": 259,
+      "text": "刘志伟"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 330,
+      "end_char": 339,
+      "text": "九二二四，七七零一"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 356,
+      "end_char": 365,
+      "text": "9224 7701"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "start_char": 436,
+      "end_char": 463,
+      "text": "david.low.demo@mail.com"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "ADDRESS",
+      "start_char": 505,
+      "end_char": 514,
+      "text": "绿海苑，大牌三零三"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "PHONE",
+      "start_char": 684,
+      "end_char": 693,
+      "text": "九二二四，七七零一"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "NAME",
+      "start_char": 785,
+      "end_char": 796,
+      "text": "Marcus Tan"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 797,
+      "end_char": 801,
+      "text": "陈俊豪"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "EMAIL",
+      "start_char": 847,
+      "end_char": 877,
+      "text": "marcus.tan.demo@payhub.net"
+    }
+   {
+     "entity_id": "e11",
+     "pii_type": "ADDRESS",
+     "start_char": 977,
+     "end_char": 980,
+     "text": "绿海苑"
+   }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0011",
+  "split": "dev",
+  "audio_id": "clip_mixed_0011",
+  "language": "mixed",
+  "transcript": "I finally signed up for photography class last week. 最近一直想学拍照，终于报名了。 The instructor quite strict but very detailed. 他说构图很重要。 Actually I didn’t tell many people yet. By the way, if you need to send me the reference photos, just email me at kevin.lim.demo@mail.com. Usually I reply during lunch break. 上课的时间有点晚，所以有时候我会miss你的电话。 My number… eh wait… 是九八八一，三六五零。 In English that’s 9881 3650. But honestly, texting is easier. 对了，我住在松林苑，大牌四四零。 Sometimes I go downstairs take sunset shots. Oh ya, almost forgot — I’m Kevin Lim，我叫林伟成。 Don’t laugh if my photos still blur.\nWah serious ah, you finally go learn photography. 之前一直说想学，现在真的去报名。 Strict instructor actually good, at least learn properly. 构图真的很重要，不然照片看起来很乱。 You say your email is kevin.lim.demo@mail.com right? Ok next time I send you some sample shots. 刚才你说九八八一，三六五零，对吗？ 9881 3650 — I saved already. 松林苑那边 sunset 应该不错。 I’ve been there once, lighting quite nice in the evening. By the way, I’m Daniel Chia，我是谢志明。 If you need someone to practice with, call me. My email is daniel.chia.demo@photozone.net. Usually I reply at night after dinner. Next time don’t say blur, must show confidence. 慢慢学，肯定会进步。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "EMAIL",
+      "start_char": 239,
+      "end_char": 262,
+      "text": "kevin.lim.demo@mail.com"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 347,
+      "end_char": 356,
+      "text": "九八八一，三六五零"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 376,
+      "end_char": 385,
+      "text": "9881 3650"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "start_char": 426,
+      "end_char": 435,
+      "text": "松林苑，大牌四四零"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "NAME",
+      "start_char": 509,
+      "end_char": 518,
+      "text": "Kevin Lim"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "NAME",
+      "start_char": 521,
+      "end_char": 524,
+      "text": "林伟成"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "EMAIL",
+      "start_char": 729,
+      "end_char": 752,
+      "text": "kevin.lim.demo@mail.com"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "PHONE",
+      "start_char": 807,
+      "end_char": 816,
+      "text": "九八八一，三六五零"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "PHONE",
+      "start_char": 821,
+      "end_char": 830,
+      "text": "9881 3650"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "NAME",
+      "start_char": 943,
+      "end_char": 954,
+      "text": "Daniel Chia"
+    },
+    {
+      "entity_id": "e11",
+      "pii_type": "NAME",
+      "start_char": 957,
+      "end_char": 960,
+      "text": "谢志明"
+    },
+    {
+      "entity_id": "e12",
+      "pii_type": "EMAIL",
+      "start_char": 1021,
+      "end_char": 1051,
+      "text": "daniel.chia.demo@photozone.net"
+    }
+   {
+     "entity_id": "e13",
+     "pii_type": "ADDRESS",
+     "start_char": 850,
+     "end_char": 853,
+     "text": "松林苑"
+   }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0012",
+  "split": "dev",
+  "audio_id": "clip_mixed_0012",
+  "language": "mixed",
+  "transcript": "Yesterday my family suddenly planned a surprise dinner for my dad. 其实我完全不知道。 They asked me to reach restaurant earlier. 结果我差点迟到。 When my dad walked in, he really shocked. That moment quite touching actually. By the way, if you want to send the photos later, just email me first. 我的邮箱是 ryan.ng.demo@mail.com。 Sometimes I reply a bit slow during work hours. Oh and you asked me about my number last time — 是九三三二，七五零四。 In English that’s 9332 7504. Texting easier than calling. 对了，我现在住在青林苑，大牌五九一。 That restaurant actually quite near my place. Oh ya, almost forgot — I’m Ryan Ng，我叫吴俊翔。 Still feel funny thinking about how surprised he was.\nWah that’s actually very sweet. 你爸爸一定很感动。 Sometimes simple family dinner more meaningful than big celebration. So your email is ryan.ng.demo@mail.com right? Ok I’ll send you the photos later tonight. 刚才你说九三三二，七五零四，对吗？ 9332 7504 — saved already. 青林苑那边我去过。 There got one bakery quite nice. By the way I also never formally tell you — I’m Melissa Tan，我是陈思涵。 If next time your family organise again, call me also. My email is melissa.tan.demo@familyhub.net. Usually I reply faster after dinner. Family moments like this really important. 有时候工作再忙，也要抽时间陪家人。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "EMAIL",
+      "start_char": 241,
+      "end_char": 263,
+      "text": "ryan.ng.demo@mail.com"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 363,
+      "end_char": 372,
+      "text": "九三三二，七五零四"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 392,
+      "end_char": 401,
+      "text": "9332 7504"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "start_char": 442,
+      "end_char": 451,
+      "text": "青林苑，大牌五九一"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "NAME",
+      "start_char": 525,
+      "end_char": 533,
+      "text": "Ryan Ng"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "NAME",
+      "start_char": 536,
+      "end_char": 540,
+      "text": "吴俊翔"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "EMAIL",
+      "start_char": 661,
+      "end_char": 683,
+      "text": "ryan.ng.demo@mail.com"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "PHONE",
+      "start_char": 724,
+      "end_char": 733,
+      "text": "九三三二，七五零四"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "PHONE",
+      "start_char": 738,
+      "end_char": 747,
+      "text": "9332 7504"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "NAME",
+      "start_char": 838,
+      "end_char": 849,
+      "text": "Melissa Tan"
+    },
+    {
+      "entity_id": "e11",
+      "pii_type": "NAME",
+      "start_char": 852,
+      "end_char": 856,
+      "text": "陈思涵"
+    },
+    {
+      "entity_id": "e12",
+      "pii_type": "EMAIL",
+      "start_char": 914,
+      "end_char": 948,
+      "text": "melissa.tan.demo@familyhub.net"
+    }
+   {
+     "entity_id": "e13",
+     "pii_type": "ADDRESS",
+     "start_char": 880,
+     "end_char": 883,
+     "text": "青林苑"
+   }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_0013",
+  "split": "eval",
+  "audio_id": "clip_mixed_0013",
+  "language": "mixed",
+  "transcript": "I thought we already confirmed the plan for Saturday. 你上个星期不是说可以吗？ I even arranged my schedule. 结果昨天你突然说不行。 I’m not angry, just a bit disappointed. 最近我真的很少有空。 It’s hard to match timing. Maybe next time just confirm earlier. Oh and if you want to message me directly next time, just call me at 9055 8421. 我的电话是九零五五，八四二一。 Text is better than last minute cancellation. By the way, I realise I never properly told you — I’m Aaron Lim，我叫林俊达。 If easier you can also email me at aaron.lim.demo@mail.com. I just prefer clearer communication. Sometimes small things can be avoided.\nI know… I should have told you earlier. 昨天真的临时有事。 My family suddenly needed help. 我不是故意取消的。 You’re right, I should confirm earlier. 刚才你说九零五五，八四二一，对吗？ 9055 8421 — I saved it. Next time I’ll text earlier. By the way, I’m Daniel Ho，我是何志远。 If anything urgent, email me at daniel.ho.demo@connecthub.net. Usually I reply quite fast at night. 真的不好意思让你失望。 Next time I make it up to you. Maybe we reschedule properly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "PHONE",
+      "start_char": 268,
+      "end_char": 277,
+      "text": "9055 8421"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 284,
+      "end_char": 293,
+      "text": "九零五五，八四二一"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 393,
+      "end_char": 402,
+      "text": "Aaron Lim"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "start_char": 405,
+      "end_char": 409,
+      "text": "林俊达"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "start_char": 452,
+      "end_char": 478,
+      "text": "aaron.lim.demo@mail.com"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "PHONE",
+      "start_char": 628,
+      "end_char": 637,
+      "text": "九零五五，八四二一"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "PHONE",
+      "start_char": 642,
+      "end_char": 651,
+      "text": "9055 8421"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "NAME",
+      "start_char": 708,
+      "end_char": 717,
+      "text": "Daniel Ho"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 720,
+      "end_char": 724,
+      "text": "何志远"
+    },
+    {
+      "entity_id": "e10",
+      "pii_type": "EMAIL",
+      "start_char": 768,
+      "end_char": 804,
+      "text": "daniel.ho.demo@connecthub.net"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_0014",
+  "split": "eval",
+  "audio_id": "clip_mixed_0014",
+  "language": "mixed",
+  "transcript": "The water heater suddenly stopped working last night. 我洗到一半水就变冷了。 At first I thought maybe just temporary problem. 结果今天早上还是一样。 I already contacted the building management. They asked me to provide my contact number. My number is 9810… 等一下，我讲完整一点。 是九八一零，七三六二。 In English that’s 9810 7362. They say technician might come tomorrow. If they need extra info, I told them to email me. 我的邮箱是 kevin.chan.demo@mail.com。 Sometimes I miss calls during work. Hopefully they fix it fast, cannot shower cold water again.\nWah cold shower at night confirm shock. 最近天气虽然热，可是水突然变冷还是很不爽。 You already called management ah? 刚才你说九八一零，七三六二，对吗？ 9810 7362 — I saved just in case. If technician late, maybe you need to chase them again. 你的邮箱是 kevin.chan.demo@mail.com 对吧？ Ok next time if they don’t respond, I help you draft email. By the way I also never properly introduce — I’m Jason Lee，我是李志豪。 If anything urgent tomorrow, just call me. Sometimes these repair things really drag. 希望他们明天真的来。 Then you can have a hot shower.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "PHONE",
+      "start_char": 240,
+      "end_char": 244,
+      "text": "9810"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 264,
+      "end_char": 273,
+      "text": "九八一零，七三六二"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 293,
+      "end_char": 302,
+      "text": "9810 7362"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 395,
+      "end_char": 420,
+      "text": "kevin.chan.demo@mail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "start_char": 553,
+      "end_char": 562,
+      "text": "九八一零，七三六二"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "PHONE",
+      "start_char": 567,
+      "end_char": 576,
+      "text": "9810 7362"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "EMAIL",
+      "start_char": 621,
+      "end_char": 646,
+      "text": "kevin.chan.demo@mail.com"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "NAME",
+      "start_char": 732,
+      "end_char": 742,
+      "text": "Jason Lee"
+    },
+    {
+      "entity_id": "e9",
+      "pii_type": "NAME",
+      "start_char": 745,
+      "end_char": 749,
+      "text": "李志豪"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_0015",
+  "split": "dev",
+  "audio_id": "clip_mixed_0015",
+  "language": "mixed",
+  "transcript": "This weekend I helped my friend move house, and honestly I underestimated how tiring it would be. 我们从早上九点搬到下午五点。 Boxes everywhere, and he didn’t realise how many things he actually had. 最夸张的是他的书。 One whole shelf full, and still packed into extra cartons. At one point I really felt like giving up. 不过搬完之后还是有成就感。 He just moved to Lakeside Residence. 大牌三七六。 The area actually quite nice, got park nearby. If you ever go there and can’t find the block, just call me. My number is 9018 4672. 我的电话是九零一八，四六七二。 Sometimes I don’t pick up because phone inside pocket and I don’t hear it. Actually I was thinking of moving also. 最近房租一直涨。 Not sure if worth staying. Oh ya, I realised I never told you properly — I’m Marcus Goh，我叫吴志强。 If you want the exact moving company contact, email me at marcus.goh.demo@mail.com. I’ll forward you the details. They were quite efficient actually.\nWah moving house confirm very tiring. 搬家真的是体力活。 Especially books, those are the worst. I helped my cousin move before, and I swear I never want to do it again. 湖滨苑那边我去过一次。 Quite peaceful, but weekend parking quite hard. Just now you said 9018 4672 right? 九零一八，四六七二，对吗？ Ok I saved under Marcus. If I need moving company contact I email you. Your email is marcus.goh.demo@mail.com right? By the way I also thinking of moving next year. 最近房租真的涨得很快。 Maybe better to look for smaller place. Oh I also never properly say — I’m Daniel Tan，我是陈俊伟。 If you need help next time, call me. Even if just to supervise, I don’t mind. 不过真的不要再搬书了。",
+  "entities": [
+   {
+    "entity_id": "e1",
+    "pii_type": "ADDRESS",
+    "start_char": 329,
+    "end_char": 354,
+    "text": "Lakeside Residence. 大牌三七六"
+  },
+  {
+    "entity_id": "e2",
+    "pii_type": "PHONE",
+    "start_char": 477,
+    "end_char": 486,
+    "text": "9018 4672"
+  },
+  {
+    "entity_id": "e3",
+    "pii_type": "PHONE",
+    "start_char": 493,
+    "end_char": 502,
+    "text": "九零一八，四六七二"
+  },
+  {
+    "entity_id": "e4",
+    "pii_type": "NAME",
+    "start_char": 705,
+    "end_char": 715,
+    "text": "Marcus Goh"
+  },
+  {
+    "entity_id": "e5",
+    "pii_type": "NAME",
+    "start_char": 718,
+    "end_char": 721,
+    "text": "吴志强"
+  },
+  {
+    "entity_id": "e6",
+    "pii_type": "EMAIL",
+    "start_char": 781,
+    "end_char": 805,
+    "text": "marcus.goh.demo@mail.com"
+  },
+  {
+    "entity_id": "e7",
+    "pii_type": "ADDRESS",
+    "start_char": 1033,
+    "end_char": 1036,
+    "text": "湖滨苑"
+  },
+  {
+    "entity_id": "e8",
+    "pii_type": "PHONE",
+    "start_char": 1111,
+    "end_char": 1120,
+    "text": "9018 4672"
+  },
+  {
+    "entity_id": "e9",
+    "pii_type": "PHONE",
+    "start_char": 1128,
+    "end_char": 1137,
+    "text": "九零一八，四六七二"
+  },
+  {
+    "entity_id": "e10",
+    "pii_type": "EMAIL",
+    "start_char": 1227,
+    "end_char": 1251,
+    "text": "marcus.goh.demo@mail.com"
+  },
+  {
+    "entity_id": "e11",
+    "pii_type": "NAME",
+    "start_char": 1394,
+    "end_char": 1404,
+    "text": "Daniel Tan"
+  },
+  {
+    "entity_id": "e12",
+    "pii_type": "NAME",
+    "start_char": 1407,
+    "end_char": 1410,
+    "text": "陈俊伟"
+  }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_16",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_16",
+  "language": "mixed",
+  "transcript": "Hello, my name is 林子旭, 我叫林子旭, and I am calling to confirm the meeting scheduled tomorrow morning. My phone number is 9123 4567, so 请打电话给我 if there are any changes or updates. Thank you very much.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "林子旭"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 25,
+      "end_char": 28,
+      "text": "林子旭"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 121,
+      "end_char": 130,
+      "text": "9123 4567"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_17",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_17",
+  "language": "mixed",
+  "transcript": "Hi, this is 陈伟明 speaking, 我是陈伟明, and I wanted to follow up on the email I sent earlier. My email address is chen.weiming.demo@mail.com, and I 希望早日收到你的回复.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "陈伟明"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 24,
+      "end_char": 27,
+      "text": "陈伟明"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "start_char": 112,
+      "end_char": 139,
+      "text": "chen.weiming.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_18",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_18",
+  "language": "mixed",
+  "transcript": "Hello, I am 黄雨婷, 我叫黄雨婷, and I would like to 改 my appointment time. My 电话 is 8777 8899, so please call me if any changes are needed. 谢谢你 Bob.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "黄雨婷"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 19,
+      "end_char": 22,
+      "text": "黄雨婷"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 80,
+      "end_char": 89,
+      "text": "8777 8899"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "start_char": 137,
+      "end_char": 140,
+      "text": "Bob"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_19",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_19",
+  "language": "mixed",
+  "transcript": "Hi, 我是李俊凯, and I recently updated my address to Block 123, River View Road. Please confirm once the update has been completed. 好的话请通知我谢谢",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 6,
+      "end_char": 9,
+      "text": "李俊凯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 52,
+      "end_char": 78,
+      "text": "Block 123, River View Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_20",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_20",
+  "language": "mixed",
+  "transcript": "Hello, this is 张心怡, and I would like to confirm my contact details. My phone number is 6321 7749, and I will be available this afternoon. Hope to hear from you soon",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 18,
+      "text": "张心怡"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 84,
+      "end_char": 93,
+      "text": "6321 7749"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_21",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_21",
+  "language": "mixed",
+  "transcript": "Hi, I am 王浩然, and 我打来就是 check the status of 我的 application. My ID number is 123-8899, and please let me know if further documents are required.谢谢",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 9,
+      "end_char": 12,
+      "text": "王浩然"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 76,
+      "end_char": 84,
+      "text": "123-8899"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_22",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_22",
+  "language": "mixed",
+  "transcript": "Hello, my name 我叫刘宇欣, and just want to make sure you have my correct number. It should be 8345 6677. 因为上次你好像打错号码了, so I just want to confirm 好好",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 17,
+      "end_char": 20,
+      "text": "刘宇欣"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 89,
+      "end_char": 98,
+      "text": "8345 6677"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_23",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_23",
+  "language": "mixed",
+  "transcript": "Hi, this is 赵美玲 speaking, 我是赵美玲, and I would like to confirm my reservation. My email is meiling.demo@mail.com, and 时间是7pm。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "赵美玲"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 25,
+      "end_char": 28,
+      "text": "赵美玲"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "start_char": 88,
+      "end_char": 110,
+      "text": "meiling.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_24",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_24",
+  "language": "mixed",
+  "transcript": "Hello, 我叫陈宇涵, and I want to confirm my 号码. It is 8222 3344, and 请打给我 if there are any issues. 感谢你小明",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 10,
+      "end_char": 13,
+      "text": "陈宇涵"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 53,
+      "end_char": 62,
+      "text": "8222 3344"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 96,
+      "end_char": 98,
+      "text": "小明"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_25",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_25",
+  "language": "mixed",
+  "transcript": "Hi, my name is 林家豪, and I would like to confirm my contact number details. My phone number is 9011 2233, and 我明天早上有空. Will you be free?",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 18,
+      "text": "林家豪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 92,
+      "end_char": 101,
+      "text": "9011 2233"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_26",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_26",
+  "language": "mixed",
+  "transcript": "Hello, my name is 许天芯, and I'm checking the status of my application. My ID number is S9308899S. 如果还需要其他文件的话，请告诉我, then I can submit them today.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "许天芯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 88,
+      "end_char": 97,
+      "text": "S9308899S"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_27",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_27",
+  "language": "mixed",
+  "transcript": "Hi, this is 郭萱萱 speaking, and I would like to confirm that you received my email. My email address is guo.xuanxuan.demo@mail.com, 期待你的回复",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "郭萱萱"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 96,
+      "end_char": 124,
+      "text": "guo.xuanxuan.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_28",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_28",
+  "language": "mixed",
+  "transcript": "Hello, my name is 谢宇皓, 我叫谢宇皓, and I am calling to verify my personal details. My ID number is 1249988, and please confirm once it has been checked. 谢谢 Charlie",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "谢宇皓"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 25,
+      "end_char": 28,
+      "text": "谢宇皓"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ID",
+      "start_char": 95,
+      "end_char": 102,
+      "text": "1249988"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "start_char": 143,
+      "end_char": 150,
+      "text": "Charlie"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_29",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_29",
+  "language": "mixed",
+  "transcript": "Hi, I am 林鸣诠, and I'm waiting for a delivery today, but I'm not sure what time it will arrive. My number is 9888 7766. 如果送到的时候我不在，可以先打给我.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 9,
+      "end_char": 12,
+      "text": "林鸣诠"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 106,
+      "end_char": 115,
+      "text": "9888 7766"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_30",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_30",
+  "language": "mixed",
+  "transcript": "Hello, this is 林雯婷,, and I recently moved to a new address at Block 345, Green Hill Road. Please confirm once your system has been updated. 如果有问题的话，可以call我.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 18,
+      "text": "林雯婷"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 61,
+      "end_char": 87,
+      "text": "Block 345, Green Hill Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_31",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_31",
+  "language": "mixed",
+  "transcript": "Hi, my name is 曾心恩, 我是曾心恩, and I would like to confirm my email details. My email is xinen.demo@mail.com 可以帮我check一下吗? Thanks",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 18,
+      "text": "曾心恩"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 22,
+      "end_char": 25,
+      "text": "曾心恩"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "start_char": 90,
+      "end_char": 109,
+      "text": "xinen.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_32",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_32",
+  "language": "mixed",
+  "transcript": "Hello, I am 余玉莲, and I am calling to confirm my phone number. It is 9888 1122, and please contact me if needed. 可以帮我check一下吗?",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "余玉莲"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 70,
+      "end_char": 79,
+      "text": "9888 1122"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_33",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_33",
+  "language": "mixed",
+  "transcript": "Hi, this is 陈慧伶 speaking, 我是陈慧伶, and I would like to confirm my appointment details. My phone number is 8777 5566. 如果你没有看到，我可以再发一次给你, just let me know.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "陈慧伶"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 30,
+      "text": "陈慧伶"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 107,
+      "end_char": 116,
+      "text": "8777 5566"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_34",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_34",
+  "language": "mixed",
+  "transcript": "Hello, my name is 张智恩, and 我要 confirm my address 在 Block 789, Sunrise Road. Please confirm once updated. Thanks Kim",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "张智恩"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 55,
+      "end_char": 79,
+      "text": "Block 789, Sunrise Road"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 110,
+      "end_char": 113,
+      "text": "Kim"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_35",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_35",
+  "language": "mixed",
+  "transcript": "Hi, I am 许轩铭, 我是许轩铭, and I would like to confirm my contact details. 我的 phone number is 6543 2109, and请 call me if needed. 如果你没有看到，我可以再发一次给你, just let me know.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 9,
+      "end_char": 12,
+      "text": "许轩铭"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 16,
+      "end_char": 19,
+      "text": "许轩铭"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 91,
+      "end_char": 100,
+      "text": "6543 2109"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_36",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_36",
+  "language": "mixed",
+  "transcript": "Hello, my name is 吴伊宸 and I would like to confirm my appointment time. My phone number is 9333 2211, and 请打给我 if there are any updates.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "吴伊宸"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 94,
+      "end_char": 103,
+      "text": "9333 2211"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_37",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_37",
+  "language": "mixed",
+  "transcript": "Hi, this is 李芊颖 speaking, and I want to confirm my contact details. My email is li.qianying.demo@mail.com, and please reply when convenient. 如果你没有看到，我可以再发一次给你, just let me know.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "李芊颖"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 78,
+      "end_char": 106,
+      "text": "li.qianying.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_38",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_38",
+  "language": "mixed",
+  "transcript": "Hello, I would like to confirm my address at Block 123, Hill View Road. 如果有问题的话，可以email我或者打电话 94853921. Thanks Jerry",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "ADDRESS",
+      "start_char": 45,
+      "end_char": 71,
+      "text": "Block 123, Hill View Road"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 101,
+      "end_char": 109,
+      "text": "94853921"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 118,
+      "end_char": 123,
+      "text": "Jerry"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_39",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_39",
+  "language": "mixed",
+  "transcript": "Hi, 我是粱米雪, and I would like to confirm my phone number. It is 9444 8899. 可以帮我check一下吗?",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 6,
+      "end_char": 9,
+      "text": "粱米雪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 65,
+      "end_char": 74,
+      "text": "9444 8899"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_40",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_40",
+  "language": "mixed",
+  "transcript": "Hello, this is 郭员甫, and 我想 call to confirm my contact details. My phone number is 9555 3322. 可以帮我check一下吗?",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 18,
+      "text": "郭员甫"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 84,
+      "end_char": 93,
+      "text": "9555 3322"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_41",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_41",
+  "language": "mixed",
+  "transcript": "Hi, I am 刘轩睿, and I would like to confirm 我的 email address. 是 liu.xuanrui.demo@mail.com 如果有改变的话，可以打电话告诉我. Thank you Karen.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 9,
+      "end_char": 12,
+      "text": "刘轩睿"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 63,
+      "end_char": 92,
+      "text": "liu.xuanrui.demo@mail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 125,
+      "end_char": 131,
+      "text": "Karen"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_42",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_42",
+  "language": "mixed",
+  "transcript": "Hello, my name is 黄冠昇, and I want to confirm my ID number. It is 234-5566. 如果有改变的话，可以打电话告诉我.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "黄冠昇"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 67,
+      "end_char": 75,
+      "text": "234-5566"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_mixed_mix_43",
+  "split": "dev",
+  "audio_id": "clip_mixed_mix_43",
+  "language": "mixed",
+  "transcript": "Hi, I would like to confirm my phone number. It is 8111 4455. 如果你没有看到，我可以再发一次给你, just let me know. Thanks Richard",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "PHONE",
+      "start_char": 52,
+      "end_char": 61,
+      "text": "8111 4455"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 113,
+      "end_char": 121,
+      "text": "Richard"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_44",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_44",
+  "language": "mixed",
+  "transcript": "Hello, I am 吴立凯, 我叫吴立凯, and I want to confirm my address at Block 678, Garden View Road. 可以帮我check一下吗?",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "吴立凯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 19,
+      "end_char": 22,
+      "text": "吴立凯"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "start_char": 57,
+      "end_char": 83,
+      "text": "Block 678, Garden View Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_45",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_45",
+  "language": "mixed",
+  "transcript": "Hi, my name is Brian and I would like to confirm my contact details. My phone number is 9222 7788. 如果有改变的话，可以打电话告诉 Henry.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 20,
+      "text": "Brian"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 88,
+      "end_char": 97,
+      "text": "9222 7788"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 122,
+      "end_char": 128,
+      "text": "Henry"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_45",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_45",
+  "language": "mixed",
+  "transcript": "Hi, my name is Brian and I would like to confirm my contact details. My phone number is 9222 7788. 如果有改变的话，可以打电话告诉 Henry.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 20,
+      "text": "Brian"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 88,
+      "end_char": 97,
+      "text": "9222 7788"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 122,
+      "end_char": 128,
+      "text": "Henry"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_47",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_47",
+  "language": "mixed",
+  "transcript": "Hi, this is Tom, and I would like to confirm my email details. 我的 email address is linyuxin.demo@mail.com， 我想要check我的reservation 和 table number。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 15,
+      "text": "Tom"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 78,
+      "end_char": 105,
+      "text": "linyuxin.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_48",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_48",
+  "language": "mixed",
+  "transcript": "Hello, 我叫吴佳琪, and I recently moved to Block 567, Hilltop Road. Please confirm once your system has been updated. 因为我要confirm一下。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 7,
+      "end_char": 10,
+      "text": "吴佳琪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 41,
+      "end_char": 67,
+      "text": "Block 567, Hilltop Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_49",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_49",
+  "language": "mixed",
+  "transcript": "Hi, my name is brian, 我是陈志远, and I want to confirm my contact number. It is 8901 2345, and 请打给我 if needed. 如果你没有看到，我可以再发一次给你, just let me know.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 15,
+      "end_char": 20,
+      "text": "brian"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 25,
+      "end_char": 28,
+      "text": "陈志远"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 83,
+      "end_char": 92,
+      "text": "8901 2345"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_mixed_mix_50",
+  "split": "eval",
+  "audio_id": "clip_mixed_mix_50",
+  "language": "mixed",
+  "transcript": "Hello, this is vivian, 我叫黄心怡, and I am calling to confirm my application status. 我的电话号码 is 9555 6677. 如果有改变的话，可以打电话告诉我.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 16,
+      "end_char": 22,
+      "text": "vivian"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 30,
+      "text": "黄心怡"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 88,
+      "end_char": 97,
+      "text": "9555 6677"
+    }
+  ]
+}
+]

@@ -1,0 +1,1242 @@
+[
+  {
+    "record_id": "gold_dev_zh_0001",
+    "split": "dev",
+    "audio_id": "clip_zh_0001",
+    "language": "zh",
+    "transcript": "哎，你好李梦星。我最近真的有点累。公司这两周一直在赶项目，每天都加班到很晚，回到家基本上什么都不想做，只想躺着刷手机。上个星期我们部门突然接到一个临时任务，要在三天内完成客户的修改要求，整个团队都乱成一团。幸好最后还是顺利交付了，不然真的会被老板骂死。对了，好像还没正式跟你说过，我叫张宇辰，在广告公司做项目协调。平时工作就是帮设计、文案还有客户之间沟通，事情多的时候真的会忙到连午饭都忘记吃。最近我还在考虑要不要换工作，毕竟现在的节奏太快了，感觉身体有点吃不消。如果哪天你找不到我，可以打电话给我，号码是九一八三，五五零六。我平时手机都开着，除非在开会。我的邮箱是zhang.yuchen.demo@mailhub.net，有什么资料也可以发给我。其实我最近在看房子，想搬去离公司近一点的地方，现在住的地方每天通勤要一个小时，真的太浪费时间了。听你这样说，感觉你真的压力蛮大的。其实我最近也差不多，上个月我们部门换了新的主管，做事情的方式完全不一样，大家都还在适应。对了，我现在在做市场推广。平时要策划活动，联系合作伙伴，还要做报告给老板看。有时候客户临时改方案，我们就得全部重来。如果有急事，你也可以打我电话，号码是九六二五，四四零三。我一般晚上十点前都会回信息。我的邮箱是li.xinyi.demo@dailywork.org。你刚才说想搬家，如果真的决定要换地方，我可以帮你看看。我现在住在大牌三零一，门牌零四二二，红毛桥，附近环境还不错，交通也方便。在表格上登记我的资料时，可以用编号零二三七七八五，这样系统会自动关联到我的部门。说真的，有时候工作再忙也要记得休息一下，不然身体真的会抗议。",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "text": "李梦星"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "NAME",
+        "text": "张宇辰"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "PHONE",
+        "text": "九一八三，五五零六"
+      },
+      {
+        "entity_id": "e4",
+        "pii_type": "EMAIL",
+        "text": "zhang.yuchen.demo@mailhub.net"
+      },
+      {
+        "entity_id": "e5",
+        "pii_type": "PHONE",
+        "text": "九六二五，四四零三"
+      },
+      {
+        "entity_id": "e6",
+        "pii_type": "EMAIL",
+        "text": "li.xinyi.demo@dailywork.org"
+      },
+      {
+        "entity_id": "e7",
+        "pii_type": "ADDRESS",
+        "text": "大牌三零一，门牌零四二二，红毛桥"
+      },
+      {
+        "entity_id": "e8",
+        "pii_type": "ID",
+        "text": "零二三七七八五"
+      }
+    ]
+  },
+{
+    "record_id": "gold_dev_zh_0002",
+    "split": "dev",
+    "audio_id": "clip_zh_0002",
+    "language": "zh",
+    "transcript": "这个周末你有什么打算？我原本想在家休息一下，结果我妈突然说要全家一起出去吃饭庆祝我表弟生日。最近工作已经够累了，周末还要出门，其实有点懒。不过想想也很久没见亲戚了，去一下也好。对了，好像还没跟你正式介绍过，我叫陈思远，现在在做数据分析。平时工作就是对着电脑看报表、写代码，偶尔开会讨论需求。说起来挺稳定的，就是有时候要赶报告会比较辛苦。如果有事情找我，可以打我电话九三五七，六六零四。我一般白天都会接。我的邮箱是chen.siyuan.demo@workmail.net，平时客户文件都发那里。最近我在考虑报名一个健身课程，感觉身体越来越僵硬，整天坐办公室真的不太健康。听起来你最近生活节奏也挺满的。我周末应该会去帮我爸妈买点家具，他们最近刚搬家。其实我也没正式跟你说过，我叫王可欣，在一家电商公司做运营。每天都在处理订单数据、分析销售趋势，有时候活动一多就忙到不行。要是有急事，你可以打我电话九八七零，五五零八。我一般都会尽量回复。我们现在的新家地址是牛车水大牌五零一，如果以后你有空可以过来坐坐。对了，如果要在系统里登记我的资料，记得用编号八三四五一，不然有时候系统会识别不到。其实我觉得，不管工作多忙，周末还是要留一点时间给家人，不然时间真的过得很快。",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "text": "陈思远"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "PHONE",
+        "text": "九三五七，六六零四"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "EMAIL",
+        "text": "chen.siyuan.demo@workmail.net"
+      },
+      {
+        "entity_id": "e4",
+        "pii_type": "NAME",
+        "text": "王可欣"
+      },
+      {
+        "entity_id": "e5",
+        "pii_type": "PHONE",
+        "text": "九八七零，五五零八"
+      },
+      {
+        "entity_id": "e6",
+        "pii_type": "ADDRESS",
+        "text": "牛车水大牌五零一"
+      },
+      {
+        "entity_id": "e7",
+        "pii_type": "ID",
+        "text": "八三四五一"
+      }
+    ]
+  },
+{
+  "record_id": "gold_dev_zh_0003",
+  "split": "dev",
+  "audio_id": "clip_zh_0003",
+  "language": "zh",
+  "transcript": "你好赵欣妍，我最近真的有点忙到头大。上个月刚搬家，本来以为只是换个环境，结果发现事情特别多，从找搬家公司到处理水电网络，每一项都要自己跟进。新家那边网络安装还延迟了两天，我只能用手机热点开会，信号又不稳定，老板在视频会议上问问题，我都差点听不清。对了，好像还没跟你正式说，我叫何俊豪，现在在做销售支持，平时要处理客户订单、准备报价单、还有整理合同。工作其实还算稳定，就是有时候客户临时改需求，会弄得大家都很紧张。最近我也在想要不要报个课程提升自己，不然一直原地踏步有点焦虑。对了，如果哪天找不到我，可以打电话给我，号码是九二六八，四四零五。我平时手机基本不关机。还有，我的邮箱是he.junhao.demo@workconnect.net，资料都可以发到那里。现在住的地方离公司近很多，通勤时间少了差不多二十分钟，感觉生活质量有提升一点。搬家真的很累，我之前也经历过类似的情况，光是打包和整理就花了一个星期。我的公司最近准备办团建活动，我还在联系场地和餐饮供应商，事情特别多。如果有急事可以打我电话九七三五，六六零九，我通常晚上十点前都会回复。我的邮箱是zhao.xinyan.demo@dailyoffice.org。对了，我们现在住在红山大牌五零九，附近有个小公园，晚上散步还挺舒服的。如果以后系统要登记我的资料，可以用编号一八一九二四六。说真的，虽然工作忙，但有个舒服的住处真的会让人心情好很多。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "赵欣妍"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "text": "何俊豪"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九二六八，四四零五"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "text": "he.junhao.demo@workconnect.net"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "text": "九七三五，六六零九"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "text": "zhao.xinyan.demo@dailyoffice.org"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "ADDRESS",
+      "text": "红山大牌五零九"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "ID",
+      "text": "一八一九二四六"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0004",
+  "split": "dev",
+  "audio_id": "clip_zh_0004",
+  "language": "zh",
+  "transcript": "你好周佳怡，我上个周末去看我表哥的新房子，真的挺不错的。他们搬去一个比较安静的小区，离地铁也近。我一开始还担心他们会不适应，结果住进去之后反而觉得生活节奏慢了很多。他跟我说，之前每天通勤一个小时，现在只要十五分钟。其实我最近也在考虑是不是要换个地方住。对了，我还没正式介绍自己，我叫梁宇轩，现在在做系统维护工程师。每天的工作就是检查服务器状态、排查问题、更新系统。听起来很稳定，但有时候半夜还会被叫起来处理紧急故障。说到联系，如果有急事，你可以打我电话九二七五，四四零二。我平时都会留意手机通知。我的邮箱是liang.yuxuan.demo@mail.net。其实我也在看几个楼盘，不过预算还是要算清楚。听起来你真的挺辛苦的，半夜被叫起来处理故障真的不容易。我之前也考虑过换房子，不过最后还是觉得先存多一点钱比较安心。对了，我现在在做线上客服管理。每天要盯数据、处理投诉，还要培训新人。有时候忙到连午饭都忘了。如果你有事找我，可以打我电话九六四八，五五零五。我一般都会回。我的邮箱是zhou.jiayi.demo@supporthub.org。我们现在住在牛车水大牌五一八，环境还算不错。到时候可以用我的会员号五七八八一。其实换不换房子，真的要看生活阶段，有时候稳定比冲动更重要。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "周佳怡"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "NAME",
+      "text": "梁宇轩"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九二七五，四四零二"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "text": "liang.yuxuan.demo@mail.net"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "text": "九六四八，五五零五"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "text": "zhou.jiayi.demo@supporthub.org"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "ADDRESS",
+      "text": "牛车水大牌五一八"
+    },
+    {
+      "entity_id": "e8",
+      "pii_type": "ID",
+      "text": "五七八八一"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0005",
+  "split": "dev",
+  "audio_id": "clip_zh_0005",
+  "language": "zh",
+  "transcript": "你好陈慧伶，最近天气很热，我每天下班都累得不行。上个周末我去陪我妹妹看新公寓，她准备结婚了。房子还算不错，不过价格真的挺高的。其实我最近也在考虑要不要进修一下自己的专业技能。我每天都在看报表和整理数据。有时候眼睛都酸了。如果有事，可以打我电话九三二六，五五一八。我的邮箱是xu.tianming.demo@gmail.com。我现在住在红星大牌三零八。听起来你最近真的挺忙的。数据分析听起来就很费脑。我最近也很忙，刚刚换了新工作。我现在在做人事管理，每天要安排面试。有时候还要处理员工的请假事宜。如果你找我，可以打我电话九七四八，三三零六。我的邮箱是chen.huiling.demo@servicecenter.net。我们现在住在大牌五二二，金花路。其实无论工作还是房子，慢一点考虑也是好事。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈慧伶"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九三二六，五五一八"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "text": "xu.tianming.demo@gmail.com"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "text": "红星大牌三零八"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "text": "九七四八，三三零六"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "text": "chen.huiling.demo@servicecenter.net"
+    },
+    {
+      "entity_id": "e7",
+      "pii_type": "ADDRESS",
+      "text": "大牌五二二，金花路"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0006",
+  "split": "dev",
+  "audio_id": "clip_zh_0006",
+  "language": "zh",
+  "transcript": "最近天气真的很热，我每天都觉得很容易累。我最近开始早上起来慢跑，想让自己身体好一点。不过说真的，有时候真的起不来。上个星期我尝试了三天，第四天就放弃了。你最近怎么样？我还没跟你正式介绍自己，我叫黄雨婷。我现在在做产品策划。每天都要跟不同部门开会，有时候会开到头都有点疼。其实我最近还在考虑是不是要换个地方住。我现在住在青山路大牌二三六。环境还算安静，不过交通有点麻烦。对了，如果你找我，我的电话是九三七五，五零六二。有时候我会漏接电话，不过我会回。我觉得你真的很自律，至少你还有去尝试慢跑。我最近都没有运动，每天下班只想躺在床上。我现在在做数据研究，每天都要看很多资料。眼睛都快不行了。对了，我叫李志豪。有时候我会去咖啡店工作，换个环境会舒服一点。其实我最近也在想要不要换房子。不过现在还没想好。如果有事，你也可以发邮件给我。我的邮箱是li.zhihào.demo@gmail.com。对了，刚刚你说你的号码是九三七五，五零六二对吗？我怕我记错。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "黄雨婷"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "青山路大牌二三六"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九三七五，五零六二"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "李志豪"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "text": "li.zhihào.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0007",
+  "split": "dev",
+  "audio_id": "clip_zh_0007",
+  "language": "zh",
+  "transcript": "昨天下班之后没有直接回家，而是去吃了一顿火锅。天气这么热，其实吃火锅有点奇怪，但我还是很想吃。最近工作压力比较大，所以有时候会想吃点好的慰劳自己。对了，我好像还没跟你正式说过，我叫陈宇涵。我现在在做金融分析，每天都要看很多报表。有时候连周末都要待在家里处理工作。不过我最近开始学做菜，觉得还挺解压的。上个星期我尝试做宫保鸡丁，虽然有点太咸，但家人还是吃完了。对了，下周那个会议是在上午对吗？我想提前安排时间。如果有变化，你可以联系我。我的电话是九七二一，六六八九。有时候我会没听到，因为我在开会。不过我会回电话。对了，我最近还搬家了。我现在住在海洋路大牌三三八。环境还不错，就是早上有点塞车。你最近好像真的很忙。金融分析听起来就很费脑。我最近倒是比较轻松一点，只是工作时间不太固定。我现在在做自由职业，有时候在家，有时候去客户那里。最近我也开始学做菜，不过我做的菜常常太辣。上次我做了一道辣子鸡，家人都被辣到流泪。对了，刚刚你说你的号码是九七二一，六六八九对吧？我怕我记错，所以再确认一下。如果我要联系你，我也可以发信息。其实我最近也在想是不是要换个地方住。不过现在还没确定。如果有事找我，可以发邮件。我的邮箱是zhou.jiayi.demo@supporthub.org。有空我们再出来吃饭吧，不要只是聊工作。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈宇涵"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九七二一，六六八九"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "text": "海洋路大牌三三八"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "text": "zhou.jiayi.demo@supporthub.org"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0008",
+  "split": "dev",
+  "audio_id": "clip_zh_0008",
+  "language": "zh",
+  "transcript": "最近我真的觉得时间过得很快。感觉刚开始新年，现在又要到年底了。我这几个月一直在出差，身体有点吃不消。上个月我去了两个城市，机场来回跑，真的很累。对了，我好像还没正式介绍自己。我叫吴伊宸。我现在在做企业培训。每天都要跟不同的公司和团队交流。有时候也挺有意思的，可以认识很多不同类型的人。不过长期在外，也会想念家里。其实我最近还在考虑是不是要搬家。我现在住在兰花路大牌四五二。环境还算安静，但是附近吃的东西不太多。对了，那个会议时间你还记得吗？我怕我搞错。如果有改变，你可以打我。我的电话是九八八三，二二六五。有时候我在高铁上信号不太好，所以可能会晚点回。你真的很忙啊，听起来一直在路上。长期出差身体一定会吃不消。我最近倒是没有怎么出门，基本都在家工作。有时候觉得很方便，有时候也觉得很孤单。对了，我还没跟你说。我叫郑乐萱。我现在在做线上教学。每天都要对着电脑说话，说到嘴都干了。对了，刚刚你说你的号码是九八八三，二二六五对吧？我想写下来，怕我记错。如果我找不到你，我再发邮件给你。我的邮箱是 zheng.lexuan.demo@gmail.com。有空我们真的一起吃个饭，别总是谈工作。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "吴伊宸"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "兰花路大牌四五二"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九八八三，二二六五"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "郑乐萱"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "text": "zheng.lexuan.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0009",
+  "split": "dev",
+  "audio_id": "clip_zh_0009",
+  "language": "zh",
+  "transcript": "我叫李芊颖，最近真的很想给自己找点新爱好。最近工作虽然还算稳定，但是每天都对着电脑，眼睛都有点酸。我现在在做行政管理，每天都要安排会议和整理文件。有时候会觉得很细碎，什么事情都要管。所以我最近开始学做甜点。一开始只是觉得好玩，结果越来越认真。上个星期我做了一个奶油蛋糕，家人还说不错。不过我自己觉得有点太甜。对了，下个月那个会议是在星期二对吗？我怕我记错时间。如果有改变，可以通知我。我的电话是九六四八，五五零五。哎，对了，我刚刚说错了。不是五五零五。是五五零六。所以整个号码是九六四八，五五零六。不好意思，最近真的有点累。我现在住在木兰路大牌六一八。环境还算安静，只是早上有点塞车。你最近听起来真的很忙，但还能学做甜点，真的不容易。我做菜都常常失败，所以听你说都觉得很佩服。对了，我还没跟你说，我是张嘉宁。我现在在做客服管理，每天都要处理很多问题。有时候客户的问题其实很简单，但他们会很紧张。我就要慢慢解释。对了，刚刚你说你的号码是九六四八，五五零六对吧？我想写下来，怕我记错。如果我找不到你，我也可以发邮件。我的邮箱是 zhang.jianing.demo@gmail.com。有空我们也可以一起做甜点，我可以负责洗碗。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "李芊颖"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九六四八，五五零五"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九六四八，五五零六"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "text": "木兰路大牌六一八"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "NAME",
+      "text": "张嘉宁"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "text": "zhang.jianing.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0010",
+  "split": "dev",
+  "audio_id": "clip_zh_0010",
+  "language": "zh",
+  "transcript": "最近真的觉得生活节奏很快。每天上班下班，好像一转眼一天就过了。我这几个月一直在跟一个大项目。团队人不多，所以很多事情都要自己去跟进。有时候晚上回家都已经九点多了。对了，我还没正式说，我是许轩铭。我现在在做应用产品开发。其实工作还挺有挑战性的，只是压力也比较大。最近我开始尝试早上起来跑步。不过常常第二天就想放弃。对了，那个会议时间是星期四下午对吗？我想提前安排好时间。如果有改变，可以通知我。我的电话是九三四五，六六七七。有时候我在开会可能没听到，但是我会回。对了，我最近还在考虑是不是要换个地方住。现在住的地方虽然离公司近，但是附近太吵。我住在湖滨路大牌三二一。有时候想换个安静一点的环境。你真的很忙啊，听你这么说都觉得累。应用开发一定很需要专心。我最近倒是比较平稳一点。我现在在做财务管理。每天都要对数字，有时候会觉得头有点胀。不过至少时间比较固定。对了，刚刚你说你的号码是九三四五，六六七七对吧？我想记下来。如果我找不到你，我可能会先发邮件。我的邮箱是 xu.xuanming.demo@gmail.com。有空我们也可以出来喝咖啡，不要只聊工作。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "许轩铭"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九三四五，六六七七"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "text": "湖滨路大牌三二一"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "text": "xu.xuanming.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0011",
+  "split": "dev",
+  "audio_id": "clip_zh_0011",
+  "language": "zh",
+  "transcript": "最近我突然觉得一整天好像不够用。早上刚起床，一下子就到下班了。这几个星期公司在准备年度会议，所以特别忙。每天都要开很多次会。有时候会一直说话说到嘴巴都干了。不过周末我还去了一趟书店。好久没慢慢挑书了。那天真的觉得特别放松。对了，我还没正式跟你说。我叫周家豪。我现在在做系统维护。听起来很稳定，但是有时候半夜也会被叫起来。有一次凌晨三点还要远程处理问题。那天真的很累。对了，下周那个会议时间是上午九点对吗？我怕我记错。如果有变化，可以通知我。我的电话是九六六八，一一二三。有时候我在处理故障可能不能马上接听。但是我会回电话。其实我最近还在想要不要报一个技术课程。想提升一下自己。你真的很忙啊，听你说到凌晨还在工作。这样的工作时间真的很伤身体。我最近倒是比较规律一点。我现在在做线上销售。每天主要回复信息和跟进客户。有时候也会陪客户聊很久。对了，我也还没自我介绍。我是黄冠昇。对了，刚刚你说你的号码是九六六八，一一二三对吧？我想写下来。如果会议时间有调整，我会先跟你联系。我的邮箱是 huang.guansheng.demo@gmail.com。有空我们也可以一起去喝咖啡聊聊。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "周家豪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九六六八，一一二三"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "text": "黄冠昇"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "text": "huang.guansheng.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0012",
+  "split": "dev",
+  "audio_id": "clip_zh_0012",
+  "language": "zh",
+  "transcript": "最近我觉得自己的生活节奏慢下来很多。前几个月一直在忙项目，现在终于可以喘口气了。有时候忙的时候，什么都没想，只想快点完成。现在突然空闲下来，反而有点不习惯。上个星期我去了一次海边。站在海边吹风，真的很舒服。那一刻觉得很安静。对了，我之前好像都还没跟你说过我是谁。我叫林鸣诠。我现在在做项目策划。主要负责前期规划和团队协调。有时候需要跟很多人开会。但我还挺喜欢这种工作方式。对了，下周那个见面你还会来吧？我怕我找不到你。如果到时候有问题，可以打给我。我的电话是九三三三，二二一一。有时候我可能没能马上接听，但我会回复。对了，我最近还搬家了。我现在住在红山路大牌七八五。环境还算安静，只是距离公司有点远。听你这么说，感觉你最近真的放松了不少。去海边站着吹风，我也很想试试。我这几个月倒是一直在忙。工作和家庭时间要平衡，有时候真的很难。对了，我也自我介绍一下。我叫蔡欣宁。我现在在做企业咨询。每天都要跟客户谈合作细节。有时候谈到很晚。对了，刚刚你说你的号码是九三三三，二二一一对吗？我想记下来。如果我有时间上的变化，我会提前跟你联系。我的邮箱是 cai.xinning.demo@gmail.com。有空我们也可以一起去海边坐坐。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林鸣诠"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九三三三，二二一一"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "text": "红山路大牌七八五"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "蔡欣宁"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "text": "cai.xinning.demo@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0013",
+  "split": "eval",
+  "audio_id": "clip_zh_0013",
+  "language": "zh",
+  "transcript": "最近我开始感觉到工作和生活真的要找平衡。前段时间我一直加班，连周末都在处理事情。那时候每天回家都很累。现在我决定每周至少留一天给自己。上个周末我去爬山，虽然很累，但觉得特别充实。对了，我好像还没跟你说过。我是谢宇皓。我这几年一直在做市场分析。每天都要看数据，还要写报告。有时候一个资料要看好几遍。对了，如果下个月的会议时间有调整，你可以发邮件给我。我的邮箱是 xie.yuhao.demo@gmail.com。我平常会定期查看邮件。如果是比较急的事情，可以直接打我。我的电话是九八三三，六六二五。有时候我可能在出差，回复会慢一点。对了，我现在住在绿华路大牌五九二。最近这里开了几家新餐厅，还挺方便的。爬山听起来很不错，我也一直想去运动一下。最近工作压力大的时候，人真的需要出去走走。对了，我也还没正式说。我叫张智恩。我现在在做产品管理。每天要跟开发团队和市场团队沟通。有时候一个小问题都会讨论很久。对了，刚刚你说你的邮箱是 xie.yuhao.demo@gmail.com 对吧？我想再确认一下。还有你的号码是九八三三，六六二五吗？如果有会议时间变化，我会先跟你说。我的邮箱是 zhang.zhien.demo@ymail.com。其实无论工作再忙，身体健康还是最重要。有空我们也可以一起去爬山。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "谢宇皓"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "xie.yuhao.demo@gmail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "text": "九八三三，六六二五"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "text": "绿华路大牌五九二"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "NAME",
+      "text": "张智恩"
+    },
+    {
+      "entity_id": "e6",
+      "pii_type": "EMAIL",
+      "text": "zhang.zhien.demo@ymail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0014",
+  "split": "eval",
+  "audio_id": "clip_zh_0014",
+  "language": "zh",
+  "transcript": "最近我觉得自己开始慢慢学会放慢节奏。前一阵子一直在忙工作，连陪家人的时间都少了。有一天我妈妈突然跟我说，不要只知道工作。那句话我想了很久。所以最近只要有空，我就会提前下班。上个周末我还自己做了一顿饭给家人吃。虽然味道不是特别好，但至少是用心做的。对了，我好像还没正式跟你说我是谁。我是李志豪。我现在在做数据管理。每天都要对着很多系统和报表。有时候一个数字错了，后面全部都要重新来。不过也因为这样，我变得比较细心。对了，下周那个见面还确定吗？我怕我时间安排冲突。如果有变化，你可以联系我。我的电话是九二二七，三三五六。有时候我可能在处理数据，回复会慢一点。如果不急，也可以发邮件。我的邮箱是 li.zhihao.demo@hotmail.com。我每天晚上都会查看。听你这么说，感觉你真的开始重视生活了。其实很多时候，人都是忙到忘了生活本身。我这几年也有过这种感觉。对了，我也自我介绍一下。我叫郑伟明。我现在在做网络运行。有时候晚上也会被通知去检查问题。所以我很理解你的感觉。对了，刚刚你说你的号码是九二二七，三三五六对吧？我想记下来。如果我有时间上的改变，我会先跟你说。我的邮箱是 zheng.weiming.demo@cmail.com。其实找到生活和工作的平衡，真的需要时间。有空我们可以一起吃顿简单的饭，慢慢聊。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "李志豪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九二二七，三三五六"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "text": "li.zhihao.demo@hotmail.com"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "郑伟明"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "text": "zheng.weiming.demo@cmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0015",
+  "split": "eval",
+  "audio_id": "clip_zh_0015",
+  "language": "zh",
+  "transcript": "最近我其实有点想换工作，但也还在犹豫。有时候觉得现在的工作还挺稳定的，但是又觉得好像可以再挑战一下自己。嗯……你会不会也有这种感觉？前几个月我一直加班，连晚饭都吃得很随便。现在虽然没那么忙，但是心里还是会想很多事。啊，对了，我还没跟你说过。我叫吴立凯。我现在在做运营管理。主要负责每天的数据变化和团队安排。有时候一个小问题，都可能影响很多人。所以压力还挺大的。对了，那个见面还确定吧？我怕我临时有事。如果你找不到我，可以直接打我。我的电话是九一一六，四四二七。哎，不是四四二七……是四四二八。对，所以是九一一六，四四二八。最近记性不太好。我现在住在绿园路大牌六六三。环境还不错，只是晚上有点吵。你这种感觉我太理解了。稳定和挑战之间真的很难选择。我前几年也犹豫了很久。最后还是决定尝试一下新的方向。啊，对了，我也跟你说一下。我是蔡嘉宁。我现在在做数据测试。每天要检查系统是否正常运行。有时候也会突然加班。对了，刚刚你说你的号码是九一一六，四四二八对吧？我想写下来，免得忘记。如果会议时间有改变，我会先跟你联系。我的邮箱是 cai.jianing.demo@xyz.com。其实无论怎么选，只要是自己真正想要的就好。有空我们可以一起吃饭，慢慢聊。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "吴立凯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九一一六，四四二八"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "text": "绿园路大牌六六三"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "text": "蔡嘉宁"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "EMAIL",
+      "text": "cai.jianing.demo@xyz.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0016",
+  "split": "dev",
+  "audio_id": "clip_zh_0016",
+  "language": "zh",
+  "transcript": "大家好，我叫林子旭。我今天联系你是想确认明天的会议时间。我的电话是九一二三，四五六七，如果有任何变化，请尽快通知我。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林子旭"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九一二三，四五六七"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0017",
+  "split": "dev",
+  "audio_id": "clip_zh_0017",
+  "language": "zh",
+  "transcript": "你好，我是陈伟明。我昨天发送了一封邮件，想确认你是否已经收到。我的邮箱是 chen.weiming.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈伟明"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "chen.weiming.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0018",
+  "split": "dev",
+  "audio_id": "clip_zh_0018",
+  "language": "zh",
+  "transcript": "大家好，我叫黄雨婷。我今天打电话是因为我想了解一下申请的进度。我的电话是八七七七，八八九九，谢谢你的帮助。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "黄雨婷"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八七七七，八八九九"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0019",
+  "split": "dev",
+  "audio_id": "clip_zh_0019",
+  "language": "zh",
+  "transcript": "你好，我是李俊凯。我最近搬到了新地址，是大牌一二三，River View Road。请帮我更新系统中的资料。感谢你黄明。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "李俊凯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌一二三，River View Road"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "text": "黄明"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0020",
+  "split": "dev",
+  "audio_id": "clip_zh_0020",
+  "language": "zh",
+  "transcript": "大家好，我叫张心怡。我想确认今天的预约时间是否已经确定。我的电话是八三四五六七八九。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "张心怡"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八三四五六七八九"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0021",
+  "split": "dev",
+  "audio_id": "clip_zh_0021",
+  "language": "zh",
+  "transcript": "你好，我是王浩然。我希望确认我的个人资料是否正确。我的ID是FAKE-ID-七七八八。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "王浩然"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "text": "FAKE-ID-七七八八"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0022",
+  "split": "dev",
+  "audio_id": "clip_zh_0022",
+  "language": "zh",
+  "transcript": "大家好，我叫刘宇欣。我想知道我订购的商品什么时候会送达。我的电话是九九八八七七六六。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "刘宇欣"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九九八八七七六六"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0023",
+  "split": "dev",
+  "audio_id": "clip_zh_0023",
+  "language": "zh",
+  "transcript": "你好，我是赵美玲。我今天联系你是想更新我的联系方式。我的邮箱是meiling.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "赵美玲"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "meiling.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0024",
+  "split": "dev",
+  "audio_id": "clip_zh_0024",
+  "language": "zh",
+  "transcript": "大家好，我叫陈宇涵。我想确认你是否收到我的申请资料。我的电话是六五四三二一零九。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈宇涵"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "六五四三二一零九"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0025",
+  "split": "dev",
+  "audio_id": "clip_zh_0025",
+  "language": "zh",
+  "transcript": "你好，我是林家豪。我想确认下次会议的时间和地点。我的电话是八二二二三三四四。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林家豪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八二二二三三四四"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0026",
+  "split": "dev",
+  "audio_id": "clip_zh_0026",
+  "language": "zh",
+  "transcript": "你好，我叫许天芯。我今天联系你是想确认我的预约时间。我的电话是九三四五六六七七，请在方便时联系我。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "许天芯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九三四五六六七七"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0027",
+  "split": "dev",
+  "audio_id": "clip_zh_0027",
+  "language": "zh",
+  "transcript": "大家好，我是郭萱萱。我昨天提交了一份申请，想知道是否已经处理。我的邮箱是guo.xuanxuan.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "郭萱萱"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "guo.xuanxuan.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0028",
+  "split": "dev",
+  "audio_id": "clip_zh_0028",
+  "language": "zh",
+  "transcript": "你好，我叫谢宇皓。我想确认我的个人资料是否正确。我的ID是一八三二九九九八八。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "谢宇皓"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "text": "一八三二九九九八八"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0029",
+  "split": "dev",
+  "audio_id": "clip_zh_0029",
+  "language": "zh",
+  "transcript": "大家好，我是林鸣诠。我今天联系你是想确认我的联系方式。我的电话是八九零一二三四四。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林鸣诠"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八九零一二三四四"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0030",
+  "split": "dev",
+  "audio_id": "clip_zh_0030",
+  "language": "zh",
+  "transcript": "你好，我叫林雯婷。我最近更新了我的地址，是大牌三四五，Green Hill Road。请帮我确认。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林雯婷"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌三四五，Green Hill Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0031",
+  "split": "dev",
+  "audio_id": "clip_zh_0031",
+  "language": "zh",
+  "transcript": "大家好，我是曾心恩。我想确认你是否收到我的邮件。我的邮箱是xinen.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "曾心恩"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "xinen.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0032",
+  "split": "dev",
+  "audio_id": "clip_zh_0032",
+  "language": "zh",
+  "transcript": "你好，我叫余玉莲。我想确认我的电话号码是否正确。我的电话是九八八八一一二二。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "余玉莲"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九八八八一一二二"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0033",
+  "split": "dev",
+  "audio_id": "clip_zh_0033",
+  "language": "zh",
+  "transcript": "大家好，我是陈慧伶。我今天联系你是想了解我的申请进度。我的电话是八七七七五五六六。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈慧伶"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八七七七五五六六"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0034",
+  "split": "dev",
+  "audio_id": "clip_zh_0034",
+  "language": "zh",
+  "transcript": "你好，我叫张智恩。我想确认我的地址是否已经更新。我住在大牌七八九，Sunrise Road。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "张智恩"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌七八九，Sunrise Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0035",
+  "split": "dev",
+  "audio_id": "clip_zh_0035",
+  "language": "zh",
+  "transcript": "大家好，我是许轩铭。我想确认我的联系资料是否正确。我的电话是六五四三二一零九。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "许轩铭"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "六五四三二一零九"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0036",
+  "split": "dev",
+  "audio_id": "clip_zh_0036",
+  "language": "zh",
+  "transcript": "你好，我叫吴伊宸。我今天联系你是想确认我的预约时间。我的电话是九三三三二二一一。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "吴伊宸"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九三三三二二一一"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0037",
+  "split": "dev",
+  "audio_id": "clip_zh_0037",
+  "language": "zh",
+  "transcript": "大家好，我是李芊颖。我想确认我的联系资料是否正确。我的邮箱是li.qianying.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "李芊颖"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "li.qianying.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0038",
+  "split": "dev",
+  "audio_id": "clip_zh_0038",
+  "language": "zh",
+  "transcript": "你好，我叫林微媃。我想确认我的地址是否已经更新。我住在大牌一二三，Hill View Road。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林微媃"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌一二三，Hill View Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0039",
+  "split": "dev",
+  "audio_id": "clip_zh_0039",
+  "language": "zh",
+  "transcript": "大家好，我是粱米雪。我今天联系你是想确认我的电话号码。我的电话是九四四四八八九九。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "粱米雪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九四四四八八九九"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0040",
+  "split": "dev",
+  "audio_id": "clip_zh_0040",
+  "language": "zh",
+  "transcript": "你好，我叫郭员甫。我想确认我的申请资料是否完整。我的电话是九五五五三三二二。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "郭员甫"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九五五五三三二二"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0041",
+  "split": "dev",
+  "audio_id": "clip_zh_0041",
+  "language": "zh",
+  "transcript": "大家好，我是刘轩睿。我想确认我的邮箱是否正确。我的邮箱是liu.xuanrui.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "刘轩睿"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "liu.xuanrui.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0042",
+  "split": "dev",
+  "audio_id": "clip_zh_0042",
+  "language": "zh",
+  "transcript": "你好，我叫黄冠昇。我想确认我的个人资料是否正确。我的ID是五五六六。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "黄冠昇"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "text": "五五六六"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_zh_0043",
+  "split": "dev",
+  "audio_id": "clip_zh_0043",
+  "language": "zh",
+  "transcript": "大家好，我是郑乐萱。我想确认我的电话号码。我的电话是八一一一四四五五。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "郑乐萱"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八一一一四四五五"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0044",
+  "split": "eval",
+  "audio_id": "clip_zh_0044",
+  "language": "zh",
+  "transcript": "你好，我叫吴立凯。我想确认我的地址。我住在大牌六七八，Garden View Road。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "吴立凯"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌六七八，Garden View Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0045",
+  "split": "eval",
+  "audio_id": "clip_zh_0045",
+  "language": "zh",
+  "transcript": "大家好，我是陈彦艾。我想确认我的联系方式。我的电话是九二二二七七八八。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈彦艾"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九二二二七七八八"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0046",
+  "split": "eval",
+  "audio_id": "clip_zh_0046",
+  "language": "zh",
+  "transcript": "你好，我叫周家豪。我今天联系你是想确认我的预约时间。我的电话是九六六六一一二二，请在方便时联系我。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "周家豪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九六六六一一二二"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0047",
+  "split": "eval",
+  "audio_id": "clip_zh_0047",
+  "language": "zh",
+  "transcript": "大家好，我是林宇欣。我昨天发送了一封邮件，想确认你是否已经收到。我的邮箱是 linyuxin.demo@mail.com。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "林宇欣"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "text": "linyuxin.demo@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0048",
+  "split": "eval",
+  "audio_id": "clip_zh_0048",
+  "language": "zh",
+  "transcript": "你好，我叫吴佳琪。我想确认我的地址是否正确。我住在大牌五六七，Hilltop Road。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "吴佳琪"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "text": "大牌五六七，Hilltop Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0049",
+  "split": "eval",
+  "audio_id": "clip_zh_0049",
+  "language": "zh",
+  "transcript": "大家好，我是陈志远。我想确认我的联系资料。我的电话是八九零一二三四五六。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "陈志远"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "八九零一二三四五六"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_zh_0050",
+  "split": "eval",
+  "audio_id": "clip_zh_0050",
+  "language": "zh",
+  "transcript": "你好，我叫黄心怡。我想确认我的申请进度。我的电话是九五五五六六七七。",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "text": "黄心怡"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "text": "九五五五六六七七"
+    }
+  ]
+}
+]

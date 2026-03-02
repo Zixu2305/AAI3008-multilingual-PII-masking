@@ -1,0 +1,1633 @@
+[
+  {
+    "record_id": "gold_dev_en_0001",
+    "split": "dev",
+    "audio_id": "clip_en_0001",
+    "language": "en",
+    "transcript": "Hello, my name is Daniel Tan, and I am calling to confirm the meeting scheduled for next Wednesday afternoon. My phone number is 9123 4567, and you can reach me anytime after 2 PM. If I am unavailable, please leave a message and I will return your call as soon as possible. Thank you. Actually, since we are confirming next Wednesday, I thought I should quickly go over a few details so everything runs smoothly on that day. The past few weeks have been quite busy for me, and I’ve been trying to reorganize my calendar because there were a couple of instances where meetings overlapped and caused unnecessary stress. I’ve started blocking out focused time in the mornings so I can complete my tasks without interruptions, and it has made a noticeable difference in my productivity. Outside of work, I’ve also been trying to maintain a healthier routine, like jogging in the evenings and reducing screen time before bed, because I realized that when I’m well-rested, I communicate much more clearly during meetings. Regarding the upcoming discussion, I just want to make sure the location is still at the main office and that the agenda remains the same as previously discussed. If there are any documents I should review beforehand, please send them over so I can prepare properly. Also, I need to correct something I mentioned earlier about my contact number. The number I gave previously, 9123 4567, was actually my old line and I apologize for the confusion. The correct number now is 9132 4567. Let me repeat that clearly to avoid any mistake: nine one three two, four five six seven. The third digit is three, not two. The older number has already been deactivated, so please make sure your records reflect the updated one. In addition, if email is more convenient, you can reach me at daniel.tan.demo@example.com. I usually check my inbox in the late afternoon around four or five, so I should be able to respond within the same day. If there are any last-minute changes to the schedule or venue, just send me a quick note and I’ll adjust accordingly. I’ve reserved the entire afternoon to avoid any scheduling conflicts this time. I believe that covers everything on my end, and I’m looking forward to a productive meeting next Wednesday.",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "start_char": 18,
+        "end_char": 29,
+        "text": "Daniel Tan"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "PHONE",
+        "start_char": 124,
+        "end_char": 133,
+        "text": "9123 4567"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "PHONE",
+        "start_char": 1085,
+        "end_char": 1094,
+        "text": "9123 4567"
+      },
+      {
+        "entity_id": "e4",
+        "pii_type": "PHONE",
+        "start_char": 1166,
+        "end_char": 1175,
+        "text": "9132 4567"
+      },
+      {
+        "entity_id": "e5",
+        "pii_type": "PHONE",
+        "start_char": 1248,
+        "end_char": 1285,
+        "text": "9132 4567"
+      },
+      {
+        "entity_id": "e6",
+        "pii_type": "EMAIL",
+        "start_char": 1548,
+        "end_char": 1578,
+        "text": "daniel.tan.demo@example.com"
+      }
+    ]
+  },
+  {
+    "record_id": "gold_dev_en_0002",
+    "split": "dev",
+    "audio_id": "clip_en_0002",
+    "language": "en",
+    "transcript": "Hi, this is Melissa Wong speaking, and I recently submitted an application through your online system. My email address is melissa.wong.demo@example.com, and I wanted to check if you have received all the required documents. Please let me know if anything else is needed from my side. Thank you for reaching out, Melissa. I’m checking the system now and I can see your submission from last Friday evening. Everything appears to have been uploaded successfully, including the supporting documents and the reference letter. At the moment, your application status shows as “under review,” which means our team has begun processing it but has not finalized the evaluation yet. Usually this stage takes about three to five working days depending on the volume of submissions we receive, especially during peak periods when there are many applications coming in at the same time. If there are any missing files or clarification needed, we will contact you directly. Just to confirm, the email address we have on file is melissa.wong.demo@example.com. Could you confirm that is correct before we proceed? We want to make sure all correspondence reaches you properly and without delay. Everything looks correct on our end, so there should not be any delivery issues from our side. I understand your concern about the portal confirmation being quite generic. We’ve actually received similar feedback from other applicants who felt the status page didn’t provide enough transparency about what happens next. Internally, once a submission is marked as received, it goes through an initial verification step where we check document completeness and formatting. After that, it is forwarded to the evaluation team for detailed review. That process can take a little time because each application is assessed carefully against the stated criteria. During this review period, you might not see visible updates in the portal, but please rest assured that your file is actively being processed. If we require any clarification, for example an updated document version or additional supporting information, we will notify you via email with clear instructions on what to submit and the deadline for submission. In the meantime, there is nothing further you need to prepare unless you receive a specific request from us. I also recommend checking your spam or junk folder occasionally, just in case automated notifications are filtered incorrectly, although this is rare. Once the review is complete, you will receive a formal confirmation email outlining the outcome and the next steps. That message will include timelines, any required follow-up actions, and contact details for further assistance. If you do not hear from us within five working days, you are absolutely welcome to follow up again using the same email address. Simply reference your full name and the submission date so we can locate your file quickly in the system. We truly appreciate your patience throughout this process, and we understand that waiting for updates can feel uncertain. Please be assured that your application has been safely received and is currently progressing through the standard review workflow. Thank you again for reaching out and for taking the initiative to confirm the details.",
+    "entities": [
+      {
+        "entity_id": "e1",
+        "pii_type": "NAME",
+        "text": "Melissa Wong"
+      },
+      {
+        "entity_id": "e2",
+        "pii_type": "EMAIL",
+        "text": "melissa.wong.demo@example.com"
+      },
+      {
+        "entity_id": "e3",
+        "pii_type": "EMAIL",
+        "text": "melissa.wong.demo@example.com"
+      }
+    ]
+  },
+ {
+  "record_id": "gold_dev_en_0003",
+  "split": "dev",
+  "audio_id": "clip_en_0003",
+  "language": "en",
+  "transcript": "Good morning, I am Kevin Lim, and I am following up on the delivery that was supposed to arrive yesterday evening. My contact number is eight three four five six seven eight nine, and I will be available throughout the day. Please call me once the package has been delivered successfully. Good morning Kevin, thank you for following up regarding the delivery. I’ve reviewed the tracking system carefully and I can see that your parcel was dispatched from the sorting facility yesterday afternoon, but there was a routing adjustment late in the evening that caused a slight delay in the final dispatch stage. The shipment did reach your regional hub, however it missed the last outbound vehicle assigned to your zone, which is why it did not arrive as originally scheduled. I completely understand how frustrating that can be, especially if you were planning your day around receiving the package. At the moment, the updated delivery window is today between 2 PM and 6 PM. I’ve placed an internal note requesting priority handling so that it is loaded onto the first available route this afternoon. I can also confirm that the contact number listed in our system is eight three four five six seven eight nine. Before I finalize the delivery instructions, could you confirm that this is still your active number? Drivers sometimes make a courtesy call approximately ten to fifteen minutes before arrival, especially if access to the building requires coordination. If eight three four five six seven eight nine is correct, I’ll ensure that remains the primary contact. If there have been any recent changes to your availability or preferred delivery timing, please let me know now so I can update the driver notes accordingly. In addition, I want to explain how the delivery workflow operates so you have full transparency. Once the parcel is scanned onto the vehicle, the driver receives a digital manifest containing contact numbers and any special instructions. If the driver encounters difficulty locating the address or accessing the premises, the system automatically prompts them to attempt a phone call before marking the parcel as undeliverable. That helps reduce unnecessary re-delivery attempts. Your parcel does not require a signature, but we do recommend someone be present if possible. If no one is available, the driver may leave it in a secure location if permitted by building guidelines, otherwise it will be scheduled for the next working day. I’ve also added a comment requesting the driver to ring the bell clearly and wait briefly before proceeding. Sometimes delays occur simply because drivers are on tight schedules and move quickly between stops. We are continuously working on improving route optimization to reduce such situations, especially during peak shipping periods. If you would like, I can also enroll this shipment for SMS tracking updates, though the primary notifications are typically sent through the system automatically. Once the parcel is delivered, the status will immediately update to “completed,” and you should receive a confirmation message shortly after. If for any reason the parcel does not arrive within today’s window, please contact us again and reference your order so we can escalate the matter directly to the operations team. We genuinely appreciate your patience and understanding while we work to ensure your package reaches you safely.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 19,
+      "end_char": 28,
+      "text": "Kevin Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 136,
+      "end_char": 178,
+      "text": "8345 6789"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 1088,
+      "end_char": 1130,
+      "text": "8345 6789"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 1296,
+      "end_char": 1338,
+      "text": "8345 6789"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0004",
+  "split": "dev",
+  "audio_id": "clip_en_0004",
+  "language": "en",
+  "transcript": "Hello, my name is Sarah Lee, and I would like to update my contact information in your system. I recently moved to Block 789, Green Valley Road, and I want to make sure future letters are sent to the correct address. Please confirm once the update has been completed. Hello Sarah, thank you for reaching out to update your mailing details. I’ve pulled up your account on my end and I can see that there is a previous address currently registered in the system. Before I proceed with any changes, I just want to ensure that the new address is correctly recorded so there are no delivery disruptions moving forward. You mentioned that you recently relocated, and the new mailing address is Block 789, Green Valley Road. I’ll update that in the system once we complete this confirmation process. It’s quite common for small formatting inconsistencies to cause delays in mail processing, especially when automated sorting systems rely on exact block and street combinations. That’s why we prefer to confirm carefully before finalizing any modification. Once the update is entered, it typically takes up to one working day for the change to synchronize across all internal databases. During that short transition window, any letters that have already been prepared for dispatch may still reflect the old address if they were processed before the update was registered. If you still have access to your previous mailbox, it may be helpful to monitor it for a brief period just in case something was sent shortly before the change request. I also want to explain how our mailing workflow operates so you have better visibility. When correspondence is generated, it is queued in batches and routed to the print facility, where the address details are automatically populated based on the latest system record at the time of processing. That means once your new address is fully saved, all subsequent documents will reflect Block 789, Green Valley Road without requiring any further action from you. If there are any ongoing cases, subscriptions, or service updates linked to your account, those communications will also follow the revised mailing details once the synchronization is complete. We understand that relocating can be a busy and sometimes overwhelming process, and administrative updates are often done in stages. That’s completely normal. Our goal is simply to ensure that you continue receiving all correspondence without interruption. After I finalize the update today, you should receive a confirmation notice indicating that your mailing details have been successfully amended. I recommend reviewing that confirmation carefully once you receive it, just to ensure that everything appears exactly as intended. If there are any additional contact changes in the future, such as phone or email updates, you can notify us using the same process and we’ll be happy to assist. Thank you for informing us promptly about your move, and I’ll proceed with updating your record.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 28,
+      "text": "Sarah Lee"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 119,
+      "end_char": 152,
+      "text": "Block 789, Green Valley Road"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "start_char": 693,
+      "end_char": 726,
+      "text": "Block 789, Green Valley Road"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "start_char": 1757,
+      "end_char": 1790,
+      "text": "Block 789, Green Valley Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0005",
+  "split": "dev",
+  "audio_id": "clip_en_0005",
+  "language": "en",
+  "transcript": "Hi there, this is Jonathan Ng, and I am calling regarding the appointment that was scheduled earlier this week. My phone number is 8777 2291, and I prefer to be contacted in the evening after work. Let me know if there are any changes to the schedule. Hi Jonathan, thank you for calling regarding your appointment earlier this week. I’ve reviewed the system carefully and I can confirm that your booking is still secured for the originally scheduled time, and there have been no changes or adjustments made so far. We understand that coordinating appointments around work commitments can sometimes be challenging, especially when your availability is mainly in the evenings after a full workday. From our records, your preferred contact number is 8777 2291, and it is tagged in our system as “evening preferred.” If that number remains correct, we will continue using it for any reminders or schedule updates. Our standard procedure is to send a reminder one day before the appointment, and in some cases we may send a follow-up confirmation message on the morning of the appointment as well, depending on the type of session booked. Over the past few months, we’ve noticed that proactive confirmations significantly reduce missed appointments, so we really appreciate that you’re checking in ahead of time. It also gives us an opportunity to review any special notes associated with your booking. For example, if there are particular preferences, accessibility requirements, or preparation steps, it’s always better to clarify them in advance rather than on the day itself. If your work schedule becomes unpredictable or you anticipate running slightly late, just let us know as early as possible and we can make minor adjustments where feasible. Our system does allow limited flexibility within the same week, subject to availability. We also offer waitlist options if you ever need an earlier slot, though those tend to fill quickly during peak periods. In addition, if you would rather receive a reminder via text message instead of a call, we can configure that preference in your profile. Some clients find text reminders less intrusive during working hours. At this stage, everything remains confirmed and no further action is required from you. Should anything change unexpectedly on our side, we will contact you at 8777 2291 during your preferred evening window. Otherwise, we look forward to seeing you at the scheduled time and ensuring everything runs smoothly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 29,
+      "text": "Jonathan Ng"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 131,
+      "end_char": 140,
+      "text": "8777 2291"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 255,
+      "end_char": 263,
+      "text": "Jonathan"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 747,
+      "end_char": 756,
+      "text": "8777 2291"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "PHONE",
+      "start_char": 2325,
+      "end_char": 2334,
+      "text": "8777 2291"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0006",
+  "split": "dev",
+  "audio_id": "clip_en_0006",
+  "language": "en",
+  "transcript": "Good afternoon, I am Rachel Tan, and I wanted to follow up on the email that I sent earlier today. My email address is rachel.tan.test@mail.com, and I hope you had a chance to review it. Please reply when convenient so we can proceed with the next step. Good afternoon Rachel, thank you for following up regarding the email you sent earlier today. I’ve taken some time to review our internal system and I can confirm that your message has been successfully received and logged for processing. I understand that when you send an important email, especially one that may involve documentation, approvals, or coordination between departments, it’s completely reasonable to want confirmation that it hasn’t been overlooked. From what I can see, your email from rachel.tan.test@mail.com has already been categorized and assigned to the relevant team for evaluation. Our internal workflow involves several stages once a message is received. First, it is timestamped and indexed so that it enters the official case queue. Then, depending on the subject matter, it is directed to the appropriate department. If the matter involves administrative review, it may go through a verification stage before a response is drafted. If it involves policy interpretation or technical assessment, it may require consultation with additional team members. Because of this structured process, response times can vary slightly depending on complexity and current workload levels. On average, we aim to provide a reply within one to two working days, though during peak submission periods it may extend marginally beyond that. I also want to assure you that each inquiry is reviewed individually rather than processed through automated templates alone. Accuracy and clarity are important to us, especially when the outcome may affect subsequent steps or decisions on your side. In some cases, the reviewing officer may need to cross-reference previous records or confirm certain data points before issuing a response. That additional verification ensures that the information you receive is reliable and complete. If further clarification or supporting documentation is needed, the team will respond directly with clear instructions outlining what is needed and the preferred format for submission. In the meantime, there is no immediate action required from you. I do recommend monitoring your inbox over the next couple of days, and occasionally checking your spam or junk folder just in case automated replies are filtered incorrectly by your email provider. While that is uncommon, it does occasionally happen depending on individual mailbox settings. If you have not received any response after two working days, you are absolutely welcome to follow up again, referencing your original message so we can quickly retrieve the case record. We appreciate your patience and understand that waiting for updates can sometimes feel uncertain, particularly if your inquiry relates to time-sensitive matters. Please rest assured that your message is safely in our system and progressing through the standard review workflow. Thank you again for reaching out proactively and for allowing us the time needed to ensure your request is handled properly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 21,
+      "end_char": 31,
+      "text": "Rachel Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 119,
+      "end_char": 143,
+      "text": "rachel.tan.test@mail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 269,
+      "end_char": 275,
+      "text": "Rachel"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 757,
+      "end_char": 781,
+      "text": "rachel.tan.test@mail.com"
+    }
+  ]
+},
+{
+"record_id": "gold_dev_en_0007",
+"split": "dev",
+"audio_id": "clip_en_0007",
+"language": "en",
+"transcript": "Hello, my name is Michael Ong, and I am contacting you to verify my identification details. My ID number is DE5566, and I was asked to provide it for verification purposes. Please confirm once everything has been checked successfully.",
+"entities": [
+{
+"entity_id": "e1",
+"pii_type": "NAME",
+"start_char": 18,
+"end_char": 29,
+"text": "Michael Ong"
+},
+{
+"entity_id": "e2",
+"pii_type": "ID",
+"start_char": 109,
+"end_char": 115,
+"text": "DE5566"
+}
+]
+},
+{
+  "record_id": "gold_dev_en_0008",
+  "split": "dev",
+  "audio_id": "clip_en_0008",
+  "language": "en",
+  "transcript": "Hi, this is Emily Chua, and I would like to confirm the reservation that I made under my name earlier. My phone number is 9888 3344, and I will arrive around 7 PM tonight. Please let me know if there are any issues with the booking. Hi Emily, thank you for contacting us to confirm your reservation for this evening. I’ve reviewed the booking details in our system and I can see that your reservation has been successfully secured under your name. The scheduled arrival time is noted for around 7 PM, and everything appears to be in order. We always recommend confirming ahead of time, especially during peak hours, because it allows us to prepare the seating arrangements more efficiently and minimize waiting time upon arrival. We have seen your number in our reservation details and if that is still the best number to reach you at, we will use it in case there are any unforeseen updates or if we need to clarify any last-minute details regarding your booking. Typically, reminder notifications are sent earlier in the day, but since you’ve already confirmed directly, there is no additional action required from your side. In terms of arrival, if you anticipate running slightly earlier or later than 7 PM, please let us know as soon as possible. During busy periods, we hold reserved tables for a limited grace period before reallocating them, but advance notice always helps us make appropriate adjustments. If there are any special requests such as seating preferences, accessibility considerations, or celebration arrangements, you may inform us ahead of time so that we can prepare accordingly. Our goal is to ensure a smooth and comfortable experience from the moment you arrive. Once you reach the venue, simply provide your name at the reception desk and our staff will guide you to your table. If for any reason you encounter difficulty locating the entrance or require assistance upon arrival, you may call 9123 4567 so that we can coordinate support promptly. Other than that, everything is set for this evening. We look forward to welcoming you at 7 PM and ensuring that your reservation proceeds without any issues.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 14,
+      "end_char": 25,
+      "text": "Emily Chua"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 121,
+      "end_char": 130,
+      "text": "9888 3344"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 214,
+      "end_char": 219,
+      "text": "Emily"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 1913,
+      "end_char": 1922,
+      "text": "9123 4567"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0009",
+  "split": "dev",
+  "audio_id": "clip_en_0009",
+  "language": "en",
+  "transcript": "Good morning, I am Jason Lim, and I am calling to request additional information about the upcoming event. My email is jason.lim.fake@example.com, and I would appreciate it if you could send the details before Friday. Thank you for your assistance. Good morning Jason, thank you for reaching out to request additional information about the upcoming event. I’ve reviewed your inquiry and can confirm that the event details are currently being finalized by the organizing committee. We understand that attendees often need clarity on scheduling, venue arrangements, and participation guidelines in advance, especially if travel or scheduling adjustments are required. At this stage, the core agenda has been drafted, but certain logistical components such as speaker confirmations and session timings are still undergoing minor refinements. Once all elements are confirmed, a comprehensive information package will be distributed. According to our records, your preferred contact email is jason.lim.fake@example.com, and we will ensure that the finalized event details are sent directly to that address once available. The upcoming communication will include the full program outline, estimated start and end times, venue access instructions, and any materials that participants are advised to review beforehand. We are also preparing a brief overview of the objectives of the event so that attendees have a clearer understanding of the intended outcomes. In addition, there may be optional networking segments or breakout sessions included in the schedule, and those details will be outlined in the final confirmation message. If there are specific areas of the event that you are particularly interested in, you are welcome to indicate them so that we can highlight relevant segments in our follow-up correspondence. We appreciate your proactive approach in requesting information early, as it allows you to plan accordingly and ensures that you are well prepared. Should there be any changes to the tentative schedule before the final confirmation is issued, an updated notice will be communicated promptly. In the meantime, there is no further action required from you. We recommend monitoring your inbox over the next few days for the detailed event briefing. If you have not received the information before Friday, you are welcome to follow up again and we will provide a status update. Thank you for your interest in the event, and we look forward to sharing the finalized details with you soon.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 28,
+      "text": "Jason Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 116,
+      "end_char": 143,
+      "text": "jason.lim.fake@example.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 260,
+      "end_char": 265,
+      "text": "Jason"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 1044,
+      "end_char": 1071,
+      "text": "jason.lim.fake@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0010",
+  "split": "dev",
+  "audio_id": "clip_en_0010",
+  "language": "en",
+  "transcript": "Hello, my name is Andrew Koh, and I recently updated my mailing address to Block 456, Sunrise Avenue. I just want to confirm that your system reflects this change correctly. Please contact me at 9011 2233 if you need further confirmation. Hello Andrew, thank you for contacting us to confirm that your mailing address has been updated correctly in our records. I’ve carefully reviewed your account profile and can confirm that the address currently reflected in the active correspondence field is Block 456, Sunrise Avenue, and it has been successfully designated as your primary mailing location. When an address update request is submitted, our system does more than simply overwrite the previous entry. It first logs the modification with a timestamp for audit purposes, then initiates a background validation routine to ensure that the new address conforms to standardized formatting conventions and does not conflict with any existing records associated with your profile. This validation process helps prevent inconsistencies, such as partial updates across linked service modules or duplicate active addresses. Once the formatting and structural checks are completed, the system proceeds to synchronize the updated information across all integrated communication modules, including billing, notifications, service updates, and official correspondence channels. This synchronization is critical because some accounts may be connected to multiple services, and uniformity ensures that all outgoing communications reference the same active address without exception. Based on the system audit trail, your update has completed this synchronization process successfully, and there are no residual references to the former address in any of the active mailing fields. It is worth noting that physical mail items that were already generated or queued for dispatch before the update confirmation may still follow the routing path associated with the prior address, as mailing cycles are sometimes processed in batches ahead of actual delivery dates. However, from the moment the update was finalized, all newly generated correspondence has been configured to reflect the updated location. Maintaining accurate mailing details is particularly important in cases where documents may contain time-sensitive information, financial statements, or formal notifications that require acknowledgment. Our system is designed with safeguards to ensure that only one address remains active for correspondence at any given time, minimizing the risk of misdirected mail or administrative confusion. Additionally, periodic internal audits are conducted to verify data integrity across account records, further reducing the likelihood of discrepancies. At present, your profile does not show any pending verification flags, cross-module inconsistencies, or synchronization errors, which confirms that the update has been fully processed and integrated. There is no further action required from your side. We do recommend monitoring your incoming mail over the next short period to ensure a smooth transition, particularly if the change was recent. Should you observe any correspondence continuing to be delivered to a different location after a reasonable timeframe, please contact us again so that we can investigate promptly and confirm that all external mailing channels are aligned. We appreciate your diligence in verifying your records, as proactive confirmation helps maintain clarity and prevents future communication disruptions. Please rest assured that your updated mailing information is now accurately reflected throughout our system and will be used for all standard correspondence moving forward.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 29,
+      "text": "Andrew Koh"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 75,
+      "end_char": 103,
+      "text": "Block 456, Sunrise Avenue"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 170,
+      "end_char": 179,
+      "text": "9011 2233"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "NAME",
+      "start_char": 205,
+      "end_char": 211,
+      "text": "Andrew"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "start_char": 435,
+      "end_char": 463,
+      "text": "Block 456, Sunrise Avenue"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0011",
+  "split": "dev",
+  "audio_id": "clip_en_0011",
+  "language": "en",
+  "transcript": "Hello, my name is Benjamin Tan, and I am calling to confirm whether my documents have been received successfully. My phone number is 9234 5567, and I will be available throughout the afternoon. Please let me know if there is anything else I need to provide. Thank you very much. Hello Benjamin, thank you for reaching out to confirm whether your documents have been received successfully. I’ve carefully reviewed your record in our internal system, and I can confirm that your submission has been logged and timestamped accordingly. The documents you provided are currently in the verification stage, which is the first part of our standard processing workflow. During this phase, our team conducts a completeness check to ensure that all required forms, signatures, and supporting materials are present and properly formatted. This step may seem procedural, but it plays an important role in preventing unnecessary back-and-forth communication later in the review process. In some cases, small discrepancies such as unsigned sections, unclear scans, or outdated templates can delay progression to the assessment stage. Based on the information currently available, there are no immediate issues flagged on your submission, which is a positive sign. Once verification is completed, your file will move into the evaluation queue where it will be assessed according to the applicable criteria. The contact number listed in your profile is 9234 5567, and it is marked as your preferred afternoon contact. If that remains accurate, we will continue to use it should we need to clarify any time-sensitive matters. Typically, most updates are communicated via email for documentation purposes, but in situations where urgent clarification is required, a phone call may be made to ensure efficiency. I would also like to explain that the timeline for review can vary slightly depending on overall submission volume and the complexity of individual cases. Some files proceed quickly if all information aligns perfectly with the requirements, while others may require internal consultation before a final determination is made. Please be assured that each submission is handled individually rather than processed through an automated decision system. Accuracy and fairness are priorities in our review procedure. At this moment, there is no additional action required from you. We recommend simply monitoring your communication channels over the next few working days. If any supplementary information is required, you will receive a clear and specific request outlining what is needed and the timeframe for submission. We understand that waiting for confirmation can sometimes feel uncertain, particularly if the outcome influences subsequent plans on your side. However, rest assured that your documents are actively progressing through the established workflow and have not been overlooked. We appreciate your proactive approach in confirming receipt, as it demonstrates attentiveness and helps ensure smooth communication. Should you have further questions in the meantime, you are welcome to follow up again referencing your submission so we can locate your file promptly. Thank you for your patience, and we will notify you as soon as the next stage of review is completed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 31,
+      "text": "Benjamin Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 134,
+      "end_char": 143,
+      "text": "9234 5567"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 260,
+      "end_char": 268,
+      "text": "Benjamin"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 1184,
+      "end_char": 1193,
+      "text": "9234 5567"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0012",
+  "split": "dev",
+  "audio_id": "clip_en_0012",
+  "language": "en",
+  "transcript": "Hi, this is Alicia Wong speaking, and I would like to follow up on the message I sent earlier this week. My email address is alicia.wong.demo@example.com, and I hope you had time to review it. Please reply when convenient so we can proceed with the next steps. Hi Alicia, thank you for taking the time to follow up on the message you sent earlier this week. I understand that when you’re waiting for a response, especially if your plans depend on it, it can create some uncertainty. I’ve reviewed our internal correspondence system and can confirm that your email has been successfully received and logged. The address currently associated with your profile is alicia.wong.demo@example.com, and that is the channel through which all official communication will continue to be sent. Once your message entered our system, it was automatically timestamped and routed through our internal classification process. During this stage, inquiries are categorized based on their subject matter and directed to the relevant department or reviewing officer. In cases where the request involves coordination across multiple teams or verification of certain records, the review timeline may extend slightly beyond the standard response window. However, this additional time is typically spent ensuring accuracy and completeness, rather than indicating any issue with your submission. At the moment, your inquiry status reflects that it is currently under review and has not been flagged for missing information or incomplete documentation. That is a positive sign, as it suggests that the initial content of your message was sufficiently clear for evaluation. Our review team aims to provide responses that address all aspects of the inquiry rather than issuing partial replies that may lead to further clarification cycles. Depending on the complexity of the topic you raised, the team may need to cross-reference internal policies, confirm procedural guidelines, or verify historical records before finalizing their response. We generally advise allowing one to two working days for a standard review, though peak periods or high submission volumes can occasionally extend this timeframe slightly. In the meantime, there is no further action required from your side. We recommend monitoring your inbox periodically, including your spam or junk folder, as automated notifications may sometimes be filtered incorrectly by external mail providers. If additional documentation, clarification, or confirmation is required, you will receive a clear request outlining the next steps. We understand that waiting for updates can sometimes feel inconvenient, particularly if your schedule depends on timely communication, and we genuinely appreciate your patience. Should you not receive any response within the expected timeframe, you are welcome to follow up again referencing your previous message so that we can quickly retrieve your file and provide an updated status. Please rest assured that your inquiry is currently progressing through the standard workflow and has not encountered any issues at this stage. We value clear and proactive communication, and we will ensure that you receive a complete and accurate reply once the review process is finalized.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 14,
+      "end_char": 27,
+      "text": "Alicia Wong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 125,
+      "end_char": 154,
+      "text": "alicia.wong.demo@example.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 245,
+      "end_char": 251,
+      "text": "Alicia"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 605,
+      "end_char": 634,
+      "text": "alicia.wong.demo@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0013",
+  "split": "dev",
+  "audio_id": "clip_en_0013",
+  "language": "en",
+  "transcript": "Good afternoon, my name is Christopher Lim, and I am calling regarding the appointment scheduled for Friday morning. My contact number is eight seven six five four three two one, and I will be available after 9 AM. Please confirm the timing when possible.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 42,
+      "text": "Christopher Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 138,
+      "end_char": 177,
+      "text": "8765 4321"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0014",
+  "split": "dev",
+  "audio_id": "clip_en_0014",
+  "language": "en",
+  "transcript": "Hello, I am Stephanie Lee, and I recently updated my mailing address to Block 234, Maple Grove Road. I want to ensure that all future correspondence is sent to the correct location. Please confirm once the update has been completed successfully.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 26,
+      "text": "Stephanie Lee"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 71,
+      "end_char": 99,
+      "text": "Block 234, Maple Grove Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0015",
+  "split": "eval",
+  "audio_id": "clip_en_0015",
+  "language": "en",
+  "transcript": "Hi there, this is Nicholas Ng, and I am calling to check the delivery status of my recent order. My phone number is 9456 7788, and I will be at home this evening. Please contact me if the delivery time changes. Hi Nicholas, thank you for checking in regarding the delivery status of your recent order. I’ve accessed the tracking system and can see that your package has already left the regional distribution hub earlier this morning and is currently assigned to a delivery route for this evening. Based on the latest update, the estimated arrival window remains within the scheduled timeframe. Occasionally, real-time tracking may not immediately reflect minor route adjustments because drivers’ routes are optimized dynamically depending on traffic and overall delivery density in a particular area. That said, the shipment is active and progressing as expected. I also see that the primary contact number associated with this order is 9456 7788. If that remains accurate, the driver may attempt to call should there be difficulty accessing the property or locating the correct entrance. In most residential deliveries, no prior call is made unless specific instructions have been requested, but the contact number is available for operational use if necessary. For your awareness, once the package is scanned onto the delivery vehicle, it enters the final-mile stage, which typically involves multiple stops across the assigned zone. Factors such as traffic congestion, weather conditions, and building access policies can slightly affect the exact arrival time within the estimated window. If no one is present at the address during delivery, and if the parcel does not require a signature, the driver may leave it in a secure location where permitted. Otherwise, it will be marked for re-delivery on the next working day. If you anticipate being unavailable during the scheduled window, you may consider leaving specific delivery instructions through the tracking portal, if that feature is enabled for your shipment. Our goal is to ensure safe and timely arrival while minimizing unnecessary delays or repeated delivery attempts. Once the package is successfully delivered, the system will update automatically and a confirmation notification will be generated. If you do not see a status change by the end of the day, feel free to reach out again and we can escalate the matter directly with the route supervisor. We appreciate your patience and understanding, and we will continue monitoring the shipment until it reaches you successfully.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 30,
+      "text": "Nicholas Ng"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 125,
+      "end_char": 134,
+      "text": "9456 7788"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 210,
+      "end_char": 219,
+      "text": "Nicholas"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 900,
+      "end_char": 909,
+      "text": "9456 7788"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0016",
+  "split": "dev",
+  "audio_id": "clip_en_0016",
+  "language": "en",
+  "transcript": "Good morning, my name is Olivia Chua, and I am calling to verify my account details. My email address is olivia.chua.fake@mail.com, and I would appreciate it if you could confirm that everything is correct. Thank you for your assistance.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 39,
+      "text": "Olivia Chua"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 109,
+      "end_char": 135,
+      "text": "olivia.chua.fake@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0017",
+  "split": "dev",
+  "audio_id": "clip_en_0017",
+  "language": "en",
+  "transcript": "Hello, I am Marcus Koh, and I would like to confirm the reservation I made yesterday afternoon. My contact number is 9012 4455, and I will arrive at the scheduled time. Please let me know if there are any changes.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 22,
+      "text": "Marcus Koh"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 112,
+      "end_char": 121,
+      "text": "9012 4455"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0018",
+  "split": "dev",
+  "audio_id": "clip_en_0018",
+  "language": "en",
+  "transcript": "Hi, this is Natalie Ong speaking, and I am calling regarding the request I submitted earlier. My ID number is D3344, and I was told to provide it for verification. Please confirm once the process is complete.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 23,
+      "text": "Natalie Ong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 108,
+      "end_char": 113,
+      "text": "D3344"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0019",
+  "split": "dev",
+  "audio_id": "clip_en_0019",
+  "language": "en",
+  "transcript": "Good afternoon, my name is Aaron Lim, and I would like to confirm my contact information in your records. My phone number is 8344 5566, and my email is aaron.lim.demo@example.com. Please update your system accordingly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 36,
+      "text": "Aaron Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 124,
+      "end_char": 133,
+      "text": "8344 5566"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "start_char": 149,
+      "end_char": 176,
+      "text": "aaron.lim.demo@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0020",
+  "split": "dev",
+  "audio_id": "clip_en_0020",
+  "language": "en",
+  "transcript": "Hello, I am Grace Tan, and I recently moved to Block 678, Sunset View Road. I would like to ensure that my address has been updated correctly. Please contact me at 9122 3344 if you need further confirmation.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 21,
+      "text": "Grace Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 47,
+      "end_char": 75,
+      "text": "Block 678, Sunset View Road"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 166,
+      "end_char": 175,
+      "text": "9122 3344"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0021",
+  "split": "eval",
+  "audio_id": "clip_en_0021",
+  "language": "en",
+  "transcript": "Hello, my name is Darren Wong, and I am calling to confirm that my registration has been processed successfully. My phone number is 9333 2211, and I will be available throughout the day. Please let me know if there are any additional steps I need to complete. Hello Darren, thank you for reaching out to confirm whether your registration has been processed successfully. I’ve taken the time to review your submission in our internal system, and I can confirm that your registration form has been received and officially recorded. The system indicates that your submission has passed the initial validation stage, which means all required fields were completed and the mandatory information was provided in the correct format. After this preliminary validation, the file proceeds to backend verification, where the information submitted is cross-referenced against existing records to ensure consistency and compliance with eligibility requirements. This stage is largely administrative and involves internal checks rather than additional input from the registrant. At present, there are no pending alerts or discrepancies attached to your case, which is a positive indicator that the process is moving forward smoothly. The contact number currently associated with your registration profile is 9333 2211, and it is recorded as your primary daytime contact. If this remains accurate, we will retain it in the system should there be any need for time-sensitive communication. While most updates are typically issued in written form for documentation purposes, there may be rare instances where a direct phone call is more efficient for clarification. Following the verification stage, your registration status will transition into the activation phase. During activation, the system finalizes your eligibility and prepares any necessary follow-up documentation or instructions. This transition can take a few working days depending on overall submission volume and system processing capacity. We aim to handle all registrations in a timely yet careful manner to ensure fairness and accuracy. Once activation is complete, you will receive a confirmation notification outlining any next steps, including access details or further instructions if applicable. In the meantime, there is no additional action required from you. We recommend simply keeping your contact channels accessible over the coming days so that communication can proceed without delay. If for any reason you do not receive an update within the expected timeframe, you are welcome to follow up again and reference your registration details so we can quickly retrieve your file and provide a status update. We understand that registration confirmations are often linked to scheduling decisions or planning arrangements on your end, so we strive to maintain transparency throughout the process. Thank you for proactively confirming your status, and please rest assured that your registration is currently progressing through the standard workflow and will be finalized shortly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 29,
+      "text": "Darren Wong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 149,
+      "end_char": 158,
+      "text": "9333 2211"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 324,
+      "end_char": 330,
+      "text": "Darren"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 1047,
+      "end_char": 1056,
+      "text": "9333 2211"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0022",
+  "split": "eval",
+  "audio_id": "clip_en_0022",
+  "language": "en",
+  "transcript": "Hi, this is Chloe Tan speaking, and I would like to check on the progress of my recent request. My email address is chloe.tan.demo@example.com, and I hope to receive an update soon. Please contact me if further information is needed. Hi Chloe, thank you for reaching out to check on the progress of your recent request. I completely understand that when you’ve submitted something important, especially if it affects planning decisions or timelines on your end, it’s natural to want clarity on its current status. I’ve reviewed our internal tracking system and can confirm that your request has been properly logged and is actively being processed. The case is currently assigned to the relevant department for evaluation, and there are no alerts or processing errors attached to your file at this time. The email address we have on record for you is chloe.tan.demo@example.com, and all official correspondence, including any requests for clarification or confirmation of outcome, will be sent there. Once a request enters our workflow, it goes through several structured stages. Initially, it is categorized based on subject matter and priority level. After categorization, it is routed to a reviewing officer or team with subject-specific responsibility. In some cases, especially if the request intersects with policy interpretation or requires verification of supporting documentation, the file may be circulated internally for consultation before a final response is drafted. This ensures that any information provided back to you is accurate, complete, and aligned with established procedures. At present, your request remains in what we classify as the active review phase. During this stage, the reviewing officer is evaluating the content and cross-referencing relevant internal guidelines where necessary. It is worth noting that a request may not show visible status updates externally during this phase, but that does not indicate inactivity. Many internal review steps occur behind the scenes, and visible updates are typically generated only when a decision point or follow-up action has been reached. The standard review window ranges from one to three working days, though peak submission periods may occasionally extend this timeframe slightly. Based on the current processing volume, your request appears to be moving within the normal expected timeline. There is no indication at this time that additional documentation or clarification will be required from you, but if that changes, you will receive a clear notification outlining what is needed and how to provide it. In the meantime, there is no further action required on your side. We recommend periodically checking your inbox for updates, and if possible, reviewing your spam or junk folder as automated notifications can sometimes be filtered by external email providers. We understand that waiting without detailed interim updates can sometimes feel uncertain, especially when you are trying to plan ahead, and we appreciate your patience during this review process. If you do not receive a response within the standard processing window, you are absolutely welcome to follow up again referencing your original request so that we can quickly retrieve your case and provide a more precise update. Our goal is to ensure both accuracy and efficiency, and your proactive communication helps us maintain clarity throughout the process. Please rest assured that your request is progressing appropriately and is being handled carefully according to our established workflow.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 21,
+      "text": "Chloe Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 116,
+      "end_char": 143,
+      "text": "chloe.tan.demo@example.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 236,
+      "end_char": 242,
+      "text": "Chloe"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 741,
+      "end_char": 768,
+      "text": "chloe.tan.demo@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0023",
+  "split": "dev",
+  "audio_id": "clip_en_0023",
+  "language": "en",
+  "transcript": "Good morning, my name is Ethan Lim, and I am following up on the appointment that was scheduled earlier this week. My phone number is 8111 4455, and I will be available after lunch. Please confirm the appointment time.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 36,
+      "text": "Ethan Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 124,
+      "end_char": 133,
+      "text": "8111 4455"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0024",
+  "split": "dev",
+  "audio_id": "clip_en_0024",
+  "language": "en",
+  "transcript": "Hello, I am Vanessa Lee, and I recently updated my contact details in your system. My new address is Block 456, Mountain View Road, and I want to ensure that everything has been recorded correctly. Please confirm when possible.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 24,
+      "text": "Vanessa Lee"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 100,
+      "end_char": 130,
+      "text": "Block 456, Mountain View Road"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0025",
+  "split": "dev",
+  "audio_id": "clip_en_0025",
+  "language": "en",
+  "transcript": "Hi there, this is Brandon Ng, and I am calling to confirm my reservation for tomorrow evening. My contact number is 9222 7788, and I will arrive at the scheduled time. Please let me know if there are any changes.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 28,
+      "text": "Brandon Ng"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 115,
+      "end_char": 124,
+      "text": "9222 7788"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0026",
+  "split": "dev",
+  "audio_id": "clip_en_0026",
+  "language": "en",
+  "transcript": "Good afternoon, my name is Sophia Chua, and I am calling to verify my personal information. My email address is sophia.chua.fake@mail.com, and I would appreciate it if you could confirm that it is correct.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 39,
+      "text": "Sophia Chua"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 109,
+      "end_char": 135,
+      "text": "sophia.chua.fake@mail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0027",
+  "split": "dev",
+  "audio_id": "clip_en_0027",
+  "language": "en",
+  "transcript": "Hello, I am Ryan Koh, and I would like to confirm that my documents were received successfully. My ID number is S112232D, and please let me know if any further verification is required.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 20,
+      "text": "Ryan Koh"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 110,
+      "end_char": 118,
+      "text": "S112232D"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0028",
+  "split": "eval",
+  "audio_id": "clip_en_0028",
+  "language": "en",
+  "transcript": "Hi, this is Amanda Ong speaking, and I would like to confirm my phone number in your records. It is 9444 8899, and I will be available this evening if you need to contact me. Hi Amanda, thank you for reaching out to confirm your phone number in our records. I’ve accessed your profile and I can see that the number currently listed is 9444 8899. If that remains accurate, there is no further action required on your part and we will continue to use it as your primary contact. We encourage customers to review their contact details periodically, especially if they rely on phone notifications for updates, reminders, or service alerts. Having the correct number on file ensures that important information reaches you without delay. In some situations, automated systems may generate confirmation messages or time-sensitive alerts, and those are typically directed to the registered phone number in your profile. It’s helpful to confirm this proactively rather than discovering later that outdated contact details caused a missed notification. At the moment, your profile appears complete and there are no pending changes requiring additional verification. If you ever update your number in the future, we recommend informing us as soon as possible so that the change can be reflected across all linked systems. Sometimes contact details are stored in multiple modules depending on the type of service associated with the account, and updating it promptly helps maintain consistency throughout. While most standard communication is issued through written correspondence, phone contact may occasionally be used for urgent matters, such as last-minute scheduling adjustments or account-related clarifications. Maintaining an accurate number helps us provide smoother and more efficient support when needed. If you have any preferences regarding the time of day you prefer to be contacted, you may also indicate that in your profile so that our team can respect your availability. Other than that, everything in your account currently appears up to date, and no additional steps are needed from your side. We appreciate you taking the initiative to verify your information, as it helps prevent potential communication gaps in the future.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 22,
+      "text": "Amanda Ong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 105,
+      "end_char": 114,
+      "text": "9444 8899"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 180,
+      "end_char": 186,
+      "text": "Amanda"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 332,
+      "end_char": 341,
+      "text": "9444 8899"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0029",
+  "split": "dev",
+  "audio_id": "clip_en_0029",
+  "language": "en",
+  "transcript": "Good morning, my name is Justin Tan, and I am calling to follow up on my application. My email address is justin.tan.demo@example.com, and I would appreciate your response when convenient. Good morning Justin, thank you for following up on your application. I understand that once an application has been submitted, it’s natural to want reassurance that it is progressing properly, especially if the outcome may influence your next plans or commitments. I’ve reviewed our records and can confirm that your application has been successfully received and is currently in the evaluation phase. The email address associated with your submission is justin.tan.demo@example.com, and that will remain the primary channel through which all formal updates and decisions are communicated. Once an application enters our system, it moves through several structured stages. Initially, it undergoes an administrative screening process to ensure all required fields are completed and that the necessary documentation has been attached. After passing that screening stage, it proceeds to a more detailed assessment, where the reviewing team evaluates the content against the relevant criteria and guidelines. Depending on the complexity of the application and the number of submissions received during the same period, the assessment timeline can vary slightly. At present, your application does not show any missing-document flags or procedural issues, which indicates that it has progressed beyond the preliminary screening without complication. The reviewing team is currently conducting a substantive evaluation, which may involve internal discussion or cross-referencing of supporting information to ensure consistency and fairness. We strive to conduct each review carefully and objectively so that decisions are made based on accurate interpretation rather than speed alone. Typically, applicants can expect a response within several working days, though during high-volume periods the timeline may extend modestly. While waiting for the final outcome, there is no further action required from you unless you receive a specific request for clarification or additional documentation. We recommend monitoring your inbox regularly over the coming days, including your spam or junk folder, as automated notifications can occasionally be redirected by external filters. If you do not receive any update after the expected timeframe, you are welcome to follow up referencing your original submission date so that we can quickly retrieve your file and provide a clearer status update. We appreciate your patience during this review process and recognize that timely communication is important for planning purposes. Please rest assured that your application is currently progressing through the standard evaluation workflow and will be concluded once the assessment phase is completed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 37,
+      "text": "Justin Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 116,
+      "end_char": 144,
+      "text": "justin.tan.demo@example.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "NAME",
+      "start_char": 215,
+      "end_char": 221,
+      "text": "Justin"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 650,
+      "end_char": 678,
+      "text": "justin.tan.demo@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0030",
+  "split": "dev",
+  "audio_id": "clip_en_0030",
+  "language": "en",
+  "transcript": "Hello, I am Michelle Lim, and I recently moved to Block 789, Ocean View Road. Please update my address in your system and contact me at 1900 555 3322 if additional confirmation is needed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 25,
+      "text": "Michelle Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 50,
+      "end_char": 78,
+      "text": "Block 789, Ocean View Road"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 132,
+      "end_char": 146,
+      "text": "1900 555 3322"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0031",
+  "split": "dev",
+  "audio_id": "clip_en_0031",
+  "language": "en",
+  "transcript": "Hello, my name is Victor Tan, and I am calling to confirm whether my registration form was received successfully. My phone number is 126 9666 1122, and I will be available this afternoon. Please contact me if you need any additional information from my side.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 28,
+      "text": "Victor Tan"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 126,
+      "end_char": 139,
+      "text": "126 9666 1122"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0032",
+  "split": "dev",
+  "audio_id": "clip_en_0032",
+  "language": "en",
+  "transcript": "Hi, this is Hannah Lim speaking, and I would like to follow up on the application I submitted last week. My email address is hannah.lim.test@example.com, and I hope to receive an update soon. Please let me know if further documents are required.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 22,
+      "text": "Hannah Lim"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 127,
+      "end_char": 154,
+      "text": "hannah.lim.test@example.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0033",
+  "split": "dev",
+  "audio_id": "clip_en_0033",
+  "language": "en",
+  "transcript": "Good morning, my name is Kelvin Ong, and I am calling to confirm my appointment scheduled for tomorrow morning. My contact number is eight nine one two three four five six, and I will arrive on time. Please confirm the details with me.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 37,
+      "text": "Kelvin Ong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 140,
+      "end_char": 174,
+      "text": "8912 3456"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0034",
+  "split": "dev",
+  "audio_id": "clip_en_0034",
+  "language": "en",
+  "transcript": "Hello, I am Jasmine Wong, and I recently updated my mailing address to Block 901, Riverbank Avenue. I want to ensure that your system reflects the correct information. Please contact me at 9777 4455 if confirmation is needed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 24,
+      "text": "Jasmine Wong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 69,
+      "end_char": 98,
+      "text": "Block 901, Riverbank Avenue"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 170,
+      "end_char": 179,
+      "text": "9777 4455"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0034",
+  "split": "dev",
+  "audio_id": "clip_en_0034",
+  "language": "en",
+  "transcript": "Hello, I am Jasmine Wong, and I recently updated my mailing address to Block 901, Riverbank Avenue. I want to ensure that your system reflects the correct information. Please contact me at 9777 4455 if confirmation is needed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 24,
+      "text": "Jasmine Wong"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 69,
+      "end_char": 98,
+      "text": "Block 901, Riverbank Avenue"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 170,
+      "end_char": 179,
+      "text": "9777 4455"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0036",
+  "split": "dev",
+  "audio_id": "clip_en_0036",
+  "language": "en",
+  "transcript": "Good afternoon, my name is Alicia Koh, and I am contacting you to verify my personal information. My ID number is R223233, and I was asked to provide it for verification. Please confirm once everything has been processed.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 27,
+      "end_char": 38,
+      "text": "Alicia Koh"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 113,
+      "end_char": 120,
+      "text": "R223233"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0037",
+  "split": "dev",
+  "audio_id": "clip_en_0037",
+  "language": "en",
+  "transcript": "Hello, I am Brandon Lee, and I would like to confirm my contact information in your system. My email address is brandon.lee.demo@mail.com, and my phone number is 9333 8899. Please update your records accordingly.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 24,
+      "text": "Brandon Lee"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 109,
+      "end_char": 136,
+      "text": "brandon.lee.demo@mail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 158,
+      "end_char": 167,
+      "text": "9333 8899"
+    }
+  ]
+}, 
+{
+  "record_id": "gold_dev_en_0038",
+  "split": "dev",
+  "audio_id": "clip_en_0038",
+  "language": "en",
+  "transcript": "Hi, this is Steven. I just finished filling in the online form and wanted to double-check everything before moving on. My ID is 15. If anything is missing or unclear, you can reach me at 8055 5801 or stevenlim@gmail.com. I’m currently staying at Commonwealth. Thanks so much for your help, and have a great day.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 18,
+      "text": "Steven"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 125,
+      "end_char": 127,
+      "text": "15"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 180,
+      "end_char": 189,
+      "text": "8055 5801"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 193,
+      "end_char": 213,
+      "text": "stevenlim@gmail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ADDRESS",
+      "start_char": 241,
+      "end_char": 253,
+      "text": "Commonwealth"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0039",
+  "split": "dev",
+  "audio_id": "clip_en_0039",
+  "language": "en",
+  "transcript": "Hello, my name is Sam. I submitted my application earlier this morning and just wanted to follow up to make sure it went through properly. I listed my address as redhill, and my contact number is 8370 4452. My email is sam.smith@gmail.com, and the tracking ID should be 14. Please let me know if you need anything else from me.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 21,
+      "text": "Sam"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 163,
+      "end_char": 170,
+      "text": "redhill"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 198,
+      "end_char": 207,
+      "text": "8370 4452"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 221,
+      "end_char": 240,
+      "text": "sam.smith@gmail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ID",
+      "start_char": 273,
+      "end_char": 275,
+      "text": "14"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0040",
+  "split": "dev",
+  "audio_id": "clip_en_0040",
+  "language": "en",
+  "transcript": "Hi there, this is Taylor speaking. I was reviewing my submission and realized I should confirm my contact details, just in case. My phone number is 9100 8808, my email is Taylor@gmail.com, and I used ID 13. Everything else should already be filled in, but feel free to reach out if there’s a problem.",
+  "entities": [
+   {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 24,
+      "text": "Taylor"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "PHONE",
+      "start_char": 142,
+      "end_char": 151,
+      "text": "9100 8808"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "EMAIL",
+      "start_char": 165,
+      "end_char": 181,
+      "text": "Taylor@gmail.com"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ID",
+      "start_char": 196,
+      "end_char": 198,
+      "text": "13"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0041",
+  "split": "dev",
+  "audio_id": "clip_en_0041",
+  "language": "en",
+  "transcript": "Hello, Justin here. I hope you’re doing well today. I recently updated my address to Toa Payoh, so I just wanted to make sure that change was captured correctly. If you need to reach me, my phone number is 8121 4572, and my email is justinbieber@gmail.com. My application ID is 12. Thanks again.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 7,
+      "end_char": 13,
+      "text": "Justin"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 86,
+      "end_char": 96,
+      "text": "Toa Payoh"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 196,
+      "end_char": 205,
+      "text": "8121 4572"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 219,
+      "end_char": 240,
+      "text": "justinbieber@gmail.com"
+    },
+    {
+      "entity_id": "e5",
+      "pii_type": "ID",
+      "start_char": 261,
+      "end_char": 263,
+      "text": "12"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0042",
+  "split": "dev",
+  "audio_id": "clip_en_0042",
+  "language": "en",
+  "transcript": "Good afternoon, this message is from Navas. I’m checking on the status of my request and just wanted to make sure all my details are correct. I submitted everything under ID 11. You can contact me at 9320 8452, or send any updates to navas@gmail.com. I appreciate your time",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 37,
+      "end_char": 42,
+      "text": "Navas"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 174,
+      "end_char": 176,
+      "text": "11"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 200,
+      "end_char": 209,
+      "text": "9320 8452"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 234,
+      "end_char": 249,
+      "text": "navas@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_dev_en_0043",
+  "split": "dev",
+  "audio_id": "clip_en_0043",
+  "language": "en",
+  "transcript": "Hello, my name is Carlos. I registered online last night and wanted to confirm that everything went through smoothly. My email is Carlos@gmail.com, my phone is 9570 2565, and my current address is Yishun. Please let me know if there’s anything else you need from my side.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 24,
+      "text": "Carlos"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 125,
+      "end_char": 142,
+      "text": "Carlos@gmail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 156,
+      "end_char": 165,
+      "text": "9570 2565"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ADDRESS",
+      "start_char": 190,
+      "end_char": 196,
+      "text": "Yishun"
+    }
+  ]
+},
+
+
+
+
+{
+  "record_id": "gold_eval_en_0044",
+  "split": "eval",
+  "audio_id": "clip_en_0044",
+  "language": "en",
+  "transcript": "Hi, this is Marcello. I’m calling because I wasn’t sure if my documents were fully received, so I just wanted to check in. My reference ID is 9. If needed, you can reach me at 8190 8829 or marcello@gmail.com. Thank you for helping to look into this.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 20,
+      "text": "Marcello"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 135,
+      "end_char": 136,
+      "text": "9"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 166,
+      "end_char": 175,
+      "text": "8190 8829"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 179,
+      "end_char": 199,
+      "text": "marcello@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0045",
+  "split": "eval",
+  "audio_id": "clip_en_0045",
+  "language": "en",
+  "transcript": "Hey, Pepe here. I recently moved, so I updated my address to woodlands, and I just wanted to confirm that it’s reflected in the system. My contact number is 9781 8690 , and my email remains pepe@gmail.com . Please let me know if there are any issues.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 5,
+      "end_char": 9,
+      "text": "Pepe"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 60,
+      "end_char": 69,
+      "text": "woodlands"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 158,
+      "end_char": 167,
+      "text": "9781 8690"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 193,
+      "end_char": 208,
+      "text": "pepe@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0046",
+  "split": "eval",
+  "audio_id": "clip_en_0046",
+  "language": "en",
+  "transcript": "Hello, this recording is from Ramos. I just wanted to confirm that my booking was successful and that everything looks okay on your end. The system ID I used is 7. And My phone number is 8624 7286, my email is sergioramos@gmail.com. Thanks for checking.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 30,
+      "end_char": 35,
+      "text": "Ramos"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ID",
+      "start_char": 160,
+      "end_char": 161,
+      "text": "7"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 187,
+      "end_char": 196,
+      "text": "8624 7286"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "EMAIL",
+      "start_char": 210,
+      "end_char": 231,
+      "text": "sergioramos@gmail.com"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0047",
+  "split": "eval",
+  "audio_id": "clip_en_0047",
+  "language": "en",
+  "transcript": "Hi, this is Casemiro. I just updated my profile and changed my email to casemiro@gmail.com, so I wanted to make sure that saved correctly. My current address is Yew Tee, and my phone number is still 8709 7584. Appreciate your help.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 12,
+      "end_char": 20,
+      "text": "Casemiro"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 70,
+      "end_char": 89,
+      "text": "casemiro@gmail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ADDRESS",
+      "start_char": 150,
+      "end_char": 157,
+      "text": "Yew Tee"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "PHONE",
+      "start_char": 190,
+      "end_char": 199,
+      "text": "8709 7584"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0048",
+  "split": "eval",
+  "audio_id": "clip_en_0048",
+  "language": "en",
+  "transcript": "Hello, my name is Kroos. I signed up using kroos@gmail.com and received ID 5. I just wanted to confirm that my submission is complete. Please let me know if you need any additional information from me.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 23,
+      "text": "Kroos"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 43,
+      "end_char": 59,
+      "text": "kroos@gmail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "ID",
+      "start_char": 76,
+      "end_char": 77,
+      "text": "5"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0049",
+  "split": "eval",
+  "audio_id": "clip_en_0049",
+  "language": "en",
+  "transcript": "Hi there, this is Modric. I wanted to confirm that my address, Bukit Gombak, was recorded correctly in the system. My phone number is 9504 7098, and my reference ID is 4. Thanks for taking the time to help.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 18,
+      "end_char": 24,
+      "text": "Modric"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "ADDRESS",
+      "start_char": 63,
+      "end_char": 76,
+      "text": "Bukit Gombak"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 116,
+      "end_char": 125,
+      "text": "9504 7098"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ID",
+      "start_char": 148,
+      "end_char": 149,
+      "text": "4"
+    }
+  ]
+},
+{
+  "record_id": "gold_eval_en_0050",
+  "split": "eval",
+  "audio_id": "clip_en_0050",
+  "language": "en",
+  "transcript": "Good evening, Benzema here. I registered earlier today and just wanted to make sure my contact details are accurate. My email is benzama@gmail.com, my phone is 9426 1264, and my ID is 3. Looking forward to hearing back.",
+  "entities": [
+    {
+      "entity_id": "e1",
+      "pii_type": "NAME",
+      "start_char": 14,
+      "end_char": 22,
+      "text": "Benzema"
+    },
+    {
+      "entity_id": "e2",
+      "pii_type": "EMAIL",
+      "start_char": 117,
+      "end_char": 135,
+      "text": "benzama@gmail.com"
+    },
+    {
+      "entity_id": "e3",
+      "pii_type": "PHONE",
+      "start_char": 149,
+      "end_char": 158,
+      "text": "9426 1264"
+    },
+    {
+      "entity_id": "e4",
+      "pii_type": "ID",
+      "start_char": 174,
+      "end_char": 175,
+      "text": "3"
+    }
+  ]
+}
+]
