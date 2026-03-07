@@ -4,18 +4,18 @@ run:
   output_dir: "data/runs/pii/${run.run_id}"
 
 pii:
-  # Hybrid detection = rules + NER
+  # Hybrid detection = rules + NER + optional LLM
   enable_rules: true
   enable_ner: true
+  enable_llm: false
 
   rules:
-    # Keep simple first; expand later
     phone: true
     email: true
-    # Add more later if needed:
-    # id_number: true
-    # postal_code: true
-    # credit_card: false
+    zh_phone: true
+    en_spoken_phone: true
+    id_number: true
+    address: true
 
   ner:
     # A multilingual NER model is a good baseline.
@@ -28,9 +28,14 @@ pii:
     label_map:
       PER: "NAME"
       PERSON: "NAME"
-      LOC: "LOCATION"
-      GPE: "LOCATION"
+      LOC: "ADDRESS"
+      GPE: "ADDRESS"
       ORG: "ORG"
+
+  llm:
+    provider: "anthropic"
+    model: "claude-sonnet-4-20250514"
+    max_tokens: 2048
 
 postprocess:
   # Merge close spans, remove tiny spans, etc.

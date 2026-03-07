@@ -113,6 +113,7 @@ def predict_ner_spans(
                 "type": label,
                 "text": text[start:end],
                 "score": float(score) if isinstance(score, (int, float)) else None,
+                "source": "ner",
             }
         )
 

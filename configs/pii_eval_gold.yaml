@@ -1,0 +1,44 @@
+run:
+  run_id: "pii_eval_gold_baseline_v1"
+
+inputs:
+  gold_path: "data/prepared/gold_set/dev.jsonl"
+  # pred_path: null  # if null, runs PII pipeline on gold transcripts
+
+pii:
+  enable_rules: true
+  enable_ner: true
+  enable_llm: false
+
+  rules:
+    phone: true
+    email: true
+    zh_phone: true
+    id_number: true
+    address: true
+    en_spoken_phone: true
+    partial_phone: true
+
+  ner:
+    model_name: "Davlan/xlm-roberta-base-ner-hrl"
+    device: "cpu"
+    max_length: 256
+    label_map:
+      PER: "NAME"
+      PERSON: "NAME"
+      LOC: "ADDRESS"
+      GPE: "ADDRESS"
+      ORG: "ORG"
+
+  llm:
+    provider: "anthropic"
+    model: "claude-sonnet-4-20250514"
+    max_tokens: 2048
+
+postprocess:
+  merge_gap_chars: 1
+  min_span_chars: 1
+
+protocol:
+  beta: 2.0
+  overlap_threshold: 0.5
