@@ -66,7 +66,7 @@ EN_ADDRESS_RE = re.compile(
     rf"|"
     rf"\d{{1,4}}\s+[\w\s]*?{_ROAD_TYPE}(?:\s+\d{{1,4}})?"
     rf"|"
-    rf"[\w]+(?:\s+[\w]+){{0,3}}\s+{_ROAD_TYPE}\s+\d{{1,4}}",
+    rf"[\w]+(?:\s+[\w]+){{0,1}}\s+{_ROAD_TYPE}\s+\d{{1,4}}",
     re.IGNORECASE,
 )
 
@@ -75,6 +75,15 @@ SG_NRIC_RE = re.compile(r"(?<![A-Za-z])[STFGM]\d{7}[A-Za-z](?![A-Za-z])", re.IGN
 
 # Singapore postal code: "S" or "Singapore" prefix + 6 digits (e.g. S609690)
 SG_POSTAL_RE = re.compile(r"(?:Singapore\s*|S)\d{6}(?!\d)", re.IGNORECASE)
+
+# Singapore postal code after address: road-type + optional street number + separator + 6 digits
+SG_POSTAL_AFTER_ADDR_RE = re.compile(
+    rf"{_ROAD_TYPE}"
+    r"(?:\s+\d{1,4})?"     # optional street number
+    r"[,\s]+"               # separator (comma, space)
+    r"(\d{6})(?!\d)",
+    re.IGNORECASE,
+)
 
 
 def _rule_spans_for_text(text: str, rules_cfg: dict[str, Any]) -> list[dict[str, Any]]:
@@ -123,6 +132,7 @@ def _rule_spans_for_text(text: str, rules_cfg: dict[str, Any]) -> list[dict[str,
     # Singapore postal code
     if bool(rules_cfg.get("postal_code", True)):
         _add(SG_POSTAL_RE, "ADDRESS")
+        _add(SG_POSTAL_AFTER_ADDR_RE, "ADDRESS", group=1)
 
     spans.sort(key=lambda s: (s["start"], s["end"]))
     return spans

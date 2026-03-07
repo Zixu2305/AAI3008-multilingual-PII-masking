@@ -171,7 +171,8 @@ Base model label mapping: PER→NAME, LOC/GPE→ADDRESS, ORG→ORG
 | `ZH_ADDRESS_RE` | Chinese addresses | 大牌123, 南京路 |
 | `EN_ADDRESS_RE` | English addresses (Block, number+street, street+number) | Block 123 Orchard Road, Jurong East Street 12, 10 Orchard Road |
 | `SG_NRIC_RE` | Singapore NRIC/FIN numbers | S1234567A, G7654321B |
-| `SG_POSTAL_RE` | Singapore postal codes | S609690, Singapore 123456 |
+| `SG_POSTAL_RE` | Singapore postal codes (prefixed) | S609690, Singapore 123456 |
+| `SG_POSTAL_AFTER_ADDR_RE` | Bare 6-digit postal codes after address | Orchard Road, 238879 |
 
 ---
 
@@ -537,15 +538,38 @@ SG_NRIC_RE = re.compile(r"(?<![A-Za-z])[STFGM]\d{7}[A-Za-z](?![A-Za-z])", re.IGN
 
 **File:** `src/pii/run.py`
 
-**Problem:** Singapore postal codes (e.g., `S609690`, `Singapore 609690`) were not detected by any pattern. `SG_NRIC_RE` requires 7 digits + check letter, so 6-digit postal codes don't match.
+**Problem:** Singapore postal codes (e.g., `S609690`, `Singapore 609690`, or bare `609690` after an address) were not detected by any pattern.
 
-**Fix:** Added `SG_POSTAL_RE` regex pattern:
+**Fix:** Added two regex patterns:
+
+**1. `SG_POSTAL_RE`** — Matches postal codes with `S` or `Singapore` prefix:
 
 ```python
 SG_POSTAL_RE = re.compile(r"(?:Singapore\s*|S)\d{6}(?!\d)", re.IGNORECASE)
 ```
 
-**Examples detected:** `S609690`, `Singapore 123456`, `Singapore609690`
+**2. `SG_POSTAL_AFTER_ADDR_RE`** — Matches bare 6-digit postal codes appearing right after an address (road type + optional street number + separator):
+
+```python
+SG_POSTAL_AFTER_ADDR_RE = re.compile(
+    rf"{_ROAD_TYPE}"
+    r"(?:\s+\d{1,4})?"     # optional street number
+    r"[,\s]+"               # separator (comma, space)
+    r"(\d{6})(?!\d)",
+    re.IGNORECASE,
+)
+```
+
+Captures group 1 (the 6-digit postal code only).
+
+**Examples detected:**
+
+| Pattern | Input | Detected |
+|---------|-------|----------|
+| `SG_POSTAL_RE` | `S609690` | `S609690` |
+| `SG_POSTAL_RE` | `Singapore 123456` | `Singapore 123456` |
+| `SG_POSTAL_AFTER_ADDR_RE` | `Jurong East Street 12, 609690` | `609690` |
+| `SG_POSTAL_AFTER_ADDR_RE` | `Orchard Road, 238879` | `238879` |
 
 **Tagged as:** `ADDRESS` type.
 

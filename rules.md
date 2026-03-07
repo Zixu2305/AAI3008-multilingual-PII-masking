@@ -170,8 +170,8 @@ re.compile(
     # Alt 2: number + street name + road-type
     rf"\d{{1,4}}\s+[\w\s]*?{_ROAD_TYPE}(?:\s+\d{{1,4}})?"
     rf"|"
-    # Alt 3: street name + road-type + number
-    rf"[\w]+(?:\s+[\w]+){{0,3}}\s+{_ROAD_TYPE}\s+\d{{1,4}}",
+    # Alt 3: street name (1-2 words) + road-type + number
+    rf"[\w]+(?:\s+[\w]+){{0,1}}\s+{_ROAD_TYPE}\s+\d{{1,4}}",
     re.IGNORECASE
 )
 ```
@@ -188,7 +188,7 @@ re.compile(
 
 ---
 
-### `SG_POSTAL_RE` — Singapore postal codes
+### `SG_POSTAL_RE` — Singapore postal codes (prefixed)
 
 ```python
 re.compile(r"(?:Singapore\s*|S)\d{6}(?!\d)", re.IGNORECASE)
@@ -201,6 +201,37 @@ re.compile(r"(?:Singapore\s*|S)\d{6}(?!\d)", re.IGNORECASE)
 | `(?!\d)` | Not followed by another digit |
 
 **Examples:** `S609690`, `Singapore 123456`, `Singapore609690`
+
+**Config:** `pii.rules.postal_code` (default: `true`)
+
+---
+
+### `SG_POSTAL_AFTER_ADDR_RE` — Bare 6-digit postal codes after address
+
+```python
+_ROAD_TYPE = r"(?:Road|Street|Avenue|Drive|Lane|Way|Crescent|Place|Boulevard|View\s+Road|Grove\s+Road)"
+
+re.compile(
+    rf"{_ROAD_TYPE}"
+    r"(?:\s+\d{1,4})?"     # optional street number
+    r"[,\s]+"               # separator (comma, space)
+    r"(\d{6})(?!\d)",
+    re.IGNORECASE,
+)
+```
+
+| Component | Meaning |
+|-----------|---------|
+| `_ROAD_TYPE` | Road type keyword (Road, Street, Avenue, etc.) |
+| `(?:\s+\d{1,4})?` | Optional street number after road type |
+| `[,\s]+` | Comma and/or space separator |
+| `(\d{6})` | **Capture group 1** — exactly 6 digits (the postal code) |
+| `(?!\d)` | Not followed by another digit |
+
+**Examples:**
+- `Jurong East Street 12, 609690` → captures `609690`
+- `Orchard Road, 238879` → captures `238879`
+- `Block 123 Tampines Street 45 520123` → captures `520123`
 
 **Config:** `pii.rules.postal_code` (default: `true`)
 
@@ -238,5 +269,5 @@ re.compile(r"(?<![A-Za-z])[STFGM]\d{7}[A-Za-z](?![A-Za-z])", re.IGNORECASE)
 | `pii.rules.partial_phone` | `true` | `EN_PARTIAL_PHONE_RE`, `ZH_PARTIAL_PHONE_RE` |
 | `pii.rules.email` | `true` | `EMAIL_RE` |
 | `pii.rules.address` | `true` | `ZH_ADDRESS_RE`, `EN_ADDRESS_RE` |
-| `pii.rules.postal_code` | `true` | `SG_POSTAL_RE` |
+| `pii.rules.postal_code` | `true` | `SG_POSTAL_RE`, `SG_POSTAL_AFTER_ADDR_RE` |
 | `pii.rules.nric` | `true` | `SG_NRIC_RE` |
