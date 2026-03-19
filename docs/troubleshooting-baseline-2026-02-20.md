@@ -106,7 +106,7 @@ Result:
 
 - Implemented reusable ASR evaluation runner:
   - `src/asr/eval.py`
-  - `scripts/11_eval_asr.py`
+  - `python -m src.cli asr-eval --config configs/asr_eval.yaml`
   - `configs/asr_eval.yaml`
 - Added protocol documentation:
   - `docs/asr-eval-protocol-v1.md`
@@ -166,7 +166,7 @@ Full-set ASR eval run:
 - Added config:
   - `configs/asr_eval_full_set.yaml`
 - Executed:
-  - `python3 scripts/11_eval_asr.py --config configs/asr_eval_full_set.yaml` (in Docker app container)
+  - `python -m src.cli asr-eval --config configs/asr_eval_full_set.yaml` (in Docker app container)
 - New output:
   - `data/runs/asr_eval/asr_eval_full_set_v1/`
     - `summary.json`

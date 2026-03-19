@@ -15,6 +15,10 @@ asr:
   compute_type: "float16"
 
   language: "auto"
+  mixed_language:
+    enabled: false
+    languages: ["en", "zh"]
+    fallback_language: "en"
   word_timestamps: true
   vad_filter: true
   beam_size: 5

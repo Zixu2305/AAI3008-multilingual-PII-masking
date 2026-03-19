@@ -14,7 +14,7 @@ Top-level folders/files:
 - `docker/`: container definitions (`Dockerfile`, `docker-compose.yml`).
 - `docs/`: protocol docs, troubleshooting logs, and process notes.
 - `notebooks/`: analysis/report notebooks (read artifacts; do not own pipeline execution).
-- `scripts/`: executable wrappers for each stage and prep task.
+- `scripts/`: dataset preparation scripts.
 - `src/`: core pipeline implementation modules.
 - `.env` / `.env.example`: environment configuration for Docker/runtime.
 - `requirements.txt`: Python dependencies.
@@ -108,56 +108,31 @@ data/raw/
 
 ## Run Pipeline Stages
 
-### Existing scripts (thin wrappers)
-
-```bash
-python scripts/10_run_asr.py --config configs/asr.yaml
-python scripts/11_eval_asr.py --config configs/asr_eval.yaml
-python scripts/20_run_pii.py --config configs/pii.yaml
-python scripts/21_eval_pii.py --config configs/pii_eval_wikiann.yaml
-python scripts/30_mask_audio.py --config configs/pii.yaml
-python scripts/40_eval.py --config configs/eval.yaml
-```
-
-### Script quick guide (when to use)
-
-- `scripts/00_smoke_asr.py`
-  - Purpose: minimal quick ASR sanity check using `configs/asr.yaml`.
-  - Status: optional/legacy helper.
-  - Note: mostly redundant now that `scripts/10_run_asr.py` is stable.
-- `scripts/01_prep_cs_dialogue.py`
-  - Purpose: prepare duration-budgeted CS-Dialogue subsets and manifests.
-  - Status: core.
-- `scripts/02_prep_wikiann.py`
-  - Purpose: export full WikiAnn EN/ZH train/validation/test JSONL artifacts.
-  - Status: core.
-- `scripts/10_run_asr.py`
-  - Purpose: run ASR inference and produce segment artifacts.
-  - Status: core.
-- `scripts/11_eval_asr.py`
-  - Purpose: run fixed-protocol ASR evaluation (WER/CER + runtime breakdowns).
-  - Status: core for ASR benchmarking.
-- `scripts/20_run_pii.py`
-  - Purpose: run PII span detection on ASR outputs.
-  - Status: core.
-- `scripts/21_eval_pii.py`
-  - Purpose: run WikiAnn EN/ZH NER baseline evaluation (entity-level P/R/F1/Fbeta).
-  - Status: core for NER benchmarking.
-- `scripts/30_mask_audio.py`
-  - Purpose: run masking stage from PII outputs.
-  - Status: core pipeline stage (current masking logic is placeholder behavior).
-- `scripts/40_eval.py`
-  - Purpose: general pipeline eval summary aggregation.
-  - Status: core for end-to-end pipeline runs.
-
-### Unified CLI (additive)
+Canonical execution path is the unified CLI in `src/cli.py`:
 
 ```bash
 python -m src.cli asr --config configs/asr.yaml
+python -m src.cli asr-eval --config configs/asr_eval.yaml
 python -m src.cli pii --config configs/pii.yaml
 python -m src.cli pii-eval --config configs/pii_eval_wikiann.yaml
+python -m src.cli pii-eval-gold --config configs/pii_eval_gold.yaml
 python -m src.cli mask --config configs/pii.yaml
 python -m src.cli eval --config configs/eval.yaml
+```
+
+## Dataset Prep Scripts
+
+Dataset prep remains script-based:
+
+- `scripts/01_prep_cs_dialogue.py`: prepare duration-budgeted CS-Dialogue subsets + manifests.
+- `scripts/02_prep_wikiann.py`: export WikiAnn EN/ZH splits into JSONL.
+- `scripts/03_prep_gold_set.py`: convert gold JSON to prepared JSONL (`dev` / `eval`).
+- `scripts/04_prep_gold_bio.py`: convert gold spans to BIO token labels for NER fine-tuning.
+
+## Streamlit App
+
+```bash
+streamlit run app/streamlit_app.py
 ```
 
 ## Run Artifact Contract

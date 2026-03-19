@@ -42,6 +42,18 @@ postprocess:
   merge_gap_chars: 1
   min_span_chars: 2
 
+mask:
+  # Used by `python -m src.cli mask`.
+  mode: "silence"        # "silence" | "beep"
+  # No lead pad: start mask exactly at aligned span start.
+  lead_sec: 0.00
+  tail_sec: 0.15
+  min_interval_sec: 0.20
+  merge_gap_sec: 0.05
+  beep_freq_hz: 1000
+  beep_gain_db: -6.0
+  beep_amplitude: 0.20
+
 export:
   spans_jsonl: "spans.jsonl"      # per utterance/segment
   audit_json: "audit.json"        # run metadata

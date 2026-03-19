@@ -52,16 +52,31 @@ def resolve_hf_device(device_cfg: Any) -> int:
 
 def load_ner_pipeline(model_name: str, device_cfg: Any) -> Any:
     try:
-        from transformers import pipeline
+        from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
     except ModuleNotFoundError as exc:
         raise ModuleNotFoundError(
             "transformers is required for NER runs. Install requirements or run inside the Docker app container."
         ) from exc
 
     device = resolve_hf_device(device_cfg)
+    model = AutoModelForTokenClassification.from_pretrained(model_name)
+
+    # Some tokenizer files require optional runtime deps (e.g. tiktoken/sentencepiece).
+    # Keep fast tokenizer path, but provide a clear dependency hint when that is the root cause.
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    except Exception as exc:
+        err_s = str(exc).lower()
+        if "tiktoken" in err_s or "sentencepiece" in err_s:
+            raise RuntimeError(
+                "Failed to load NER tokenizer. Install optional dependencies and retry: "
+                "`pip install tiktoken sentencepiece`."
+            ) from exc
+        raise
     return pipeline(
         task="token-classification",
-        model=model_name,
+        model=model,
+        tokenizer=tokenizer,
         aggregation_strategy="simple",
         device=device,
     )

@@ -55,6 +55,7 @@ mlruns/
 # Data artifacts (large / generated / sensitive)
 data/raw/
 data/runs/
+data/uploads/
 data/gold/
 data/interim/
 data/processed/

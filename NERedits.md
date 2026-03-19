@@ -190,10 +190,10 @@ Base model label mapping: PER→NAME, LOC/GPE→ADDRESS, ORG→ORG
 | `src/pii/llm_detect.py` | Optional LLM-based PII detection (Anthropic API) |
 | `src/asr/run.py` | ASR inference (Faster-Whisper) |
 | `src/asr/eval.py` | ASR evaluation (WER/CER) |
-| `src/mask/run.py` | Audio masking (placeholder) |
+| `src/mask/run.py` | Time-aligned audio masking with mute/beep + audit output |
 | `src/eval/run.py` | End-to-end aggregation |
 
-### Scripts
+### Execution Entry Points
 
 | File | Purpose |
 |------|---------|
@@ -201,11 +201,7 @@ Base model label mapping: PER→NAME, LOC/GPE→ADDRESS, ORG→ORG
 | `scripts/02_prep_wikiann.py` | Download + prepare WikiAnn NER data |
 | `scripts/03_prep_gold_set.py` | JSON → JSONL with char offsets + dev/eval split |
 | `scripts/04_prep_gold_bio.py` | JSONL → BIO subword tags + 5-fold CV splits |
-| `scripts/10_run_asr.py` | ASR wrapper |
-| `scripts/20_run_pii.py` | PII detection wrapper |
-| `scripts/22_eval_pii_gold.py` | Gold eval wrapper (alternative to CLI) |
-| `scripts/30_mask_audio.py` | Masking wrapper |
-| `scripts/40_eval.py` | End-to-end eval wrapper |
+| `src/cli.py` | Canonical runner for ASR/PII/mask/eval and eval subcommands |
 
 ### Data
 
@@ -634,4 +630,4 @@ Captures group 1 (the 6-digit postal code only).
 | Strict BIO | `eval.py` | NER only | 0.761 | (N.A as eval.py has no F2) |
 
 **Run Demo server**
-streamlit run app.py --server.headless true
+streamlit run app/streamlit_app.py --server.headless true

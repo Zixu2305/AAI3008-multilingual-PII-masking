@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 
+from src.asr.eval import run_asr_eval
 from src.asr.run import run_asr
 from src.eval.run import run_eval
 from src.mask.run import run_mask
@@ -17,6 +18,9 @@ def main() -> None:
 
     p_asr = sub.add_parser("asr", help="Run ASR stage")
     p_asr.add_argument("--config", default="configs/asr.yaml")
+
+    p_asr_eval = sub.add_parser("asr-eval", help="Run ASR evaluation stage")
+    p_asr_eval.add_argument("--config", default="configs/asr_eval.yaml")
 
     p_pii = sub.add_parser("pii", help="Run PII detection stage")
     p_pii.add_argument("--config", default="configs/pii.yaml")
@@ -38,6 +42,8 @@ def main() -> None:
 
     if args.cmd == "asr":
         out = run_asr(cfg)
+    elif args.cmd == "asr-eval":
+        out = run_asr_eval(cfg)
     elif args.cmd == "pii":
         out = run_pii(cfg)
     elif args.cmd == "pii-eval":

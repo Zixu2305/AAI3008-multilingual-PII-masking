@@ -4,6 +4,8 @@ faster-whisper
 # Core ML + NLP
 torch
 transformers
+tiktoken
+sentencepiece
 
 # Datasets + eval
 datasets
@@ -20,3 +22,5 @@ pyyaml
 pydantic
 orjson
 rich
+
+streamlit
