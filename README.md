@@ -120,6 +120,12 @@ python -m src.cli mask --config configs/pii.yaml
 python -m src.cli eval --config configs/eval.yaml
 ```
 
+Current default ASR config points to the local CTranslate2 export at `data/models/whisper-large-v3/ct2`. If that folder is unavailable on another machine, either switch `asr.model_name` back to a standard `faster-whisper` model name such as `large-v3`, or point it at the Hugging Face CT2 repo `ImShooShoo/whisper-large-v3`.
+
+Current default PII config points to the local v1 fine-tuned NER checkpoint at `data/models/ner_finetuned_gold_v1/final/best`. If that folder is unavailable on another machine, either switch `pii.ner.model_name` back to `Davlan/xlm-roberta-base-ner-hrl`, or point it at the Hugging Face repo `ImShooShoo/ner_finetuned_gold_roberta`.
+
+The `ID` category is handled as a hybrid privacy label, not NRIC-only. Runtime rules cover exact NRIC/FIN patterns plus cue-word-gated identifiers such as `reference ID 9`, `application ID 12`, and `员工编号 STAFF-ID-5521`.
+
 ## Dataset Prep Scripts
 
 Dataset prep remains script-based:
@@ -131,9 +137,85 @@ Dataset prep remains script-based:
 
 ## Streamlit App
 
+### Local quickstart
+
+Tested with Python 3.10.
+
+1. Create and activate a virtual environment.
+2. Install Python dependencies.
+3. Ensure FFmpeg is available on your machine.
+4. Launch Streamlit and open the app on `localhost`.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+```
+
+FFmpeg is recommended for uploaded `mp3` / `m4a` inputs and for the masking stage audio backends.
+
+- macOS: `brew install ffmpeg`
+- Ubuntu/Debian: `sudo apt-get install ffmpeg`
+
+Open the app at:
+
+```text
+http://localhost:8501
+```
+
+The repo now includes [`.streamlit/config.toml`](./.streamlit/config.toml), which prefers `localhost` for the browser URL because the microphone recorder generally needs `localhost` or `https`.
+
+### What the reader should prepare
+
+- Python environment with `requirements.txt` installed
+- Optional local model folders if you do not want first-run downloads:
+  - `data/models/whisper-large-v3/ct2`
+  - `data/models/ner_finetuned_gold_v1/final/best`
+- Internet access for first run if local models are missing
+- Optional `HF_TOKEN` only if you later make the Hugging Face model repos private
+- Browser microphone permission if using the recorder
+
+### Run command
+
 ```bash
 streamlit run app/streamlit_app.py
 ```
+
+The Streamlit app now resolves models in this order:
+
+- ASR: local `data/models/whisper-large-v3/ct2` -> Hugging Face `ImShooShoo/whisper-large-v3` -> baseline `large-v3`
+- NER: local `data/models/ner_finetuned_gold_v1/final/best` -> Hugging Face `ImShooShoo/ner_finetuned_gold_roberta` -> baseline `Davlan/xlm-roberta-base-ner-hrl`
+
+Downloaded model files are cached under `data/cache/hf/`. Set `HF_TOKEN` only if you later switch to private Hugging Face repos.
+
+### Notes before a demo
+
+- If you know the clip is only English or only Chinese, set the ASR language in the sidebar instead of leaving it on `auto`. This avoids mixed-language re-decode and is faster.
+- On CPU, the fine-tuned `whisper-large-v3` path can be slow on longer bilingual clips. Multi-minute audio can take 10+ minutes.
+- For live demos, a GPU machine is strongly preferred.
+- If you run the app on another machine, use an SSH tunnel and still open the app on `http://localhost:8501` from your browser:
+
+```bash
+ssh -L 8501:localhost:8501 user@your-machine
+```
+
+### Microphone recorder
+
+- Use Chrome or Edge first.
+- Open the app on `localhost` or `https`. Plain LAN URLs such as `http://192.168.x.x:8501` can prevent the recorder from starting.
+- If the browser does not show a permission prompt, check site-level microphone permissions and reload the page.
+
+### Common first-run issues
+
+- `ValueError: tiktoken is required...`
+  - Fix: `pip install -r requirements.txt`
+- Missing model folders
+  - The app will try local models first, then download:
+    - ASR: `ImShooShoo/whisper-large-v3`
+    - NER: `ImShooShoo/ner_finetuned_gold_roberta`
+- Masking stage copies original audio instead of masking
+  - Usually an audio backend / FFmpeg issue; check FFmpeg installation
 
 ## Run Artifact Contract
 

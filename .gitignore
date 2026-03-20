@@ -54,11 +54,13 @@ mlruns/
 
 # Data artifacts (large / generated / sensitive)
 data/raw/
+data/cache/
 data/runs/
 data/uploads/
 data/gold/
 data/interim/
 data/processed/
+data/models/whisper-large-v3/
 
 # Keep placeholder files when needed
 !data/.gitkeep

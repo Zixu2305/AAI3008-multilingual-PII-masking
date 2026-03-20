@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import shutil
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -48,6 +49,10 @@ def _to_float(value: Any) -> float | None:
         return float(str(value))
     except Exception:
         return None
+
+
+def _contains_cjk(text: str) -> bool:
+    return bool(re.search(r"[\u4e00-\u9fff]", text or ""))
 
 
 def _normalize_words(raw_words: Any) -> list[dict[str, Any]]:
@@ -111,6 +116,9 @@ def _build_word_char_map(text: str, words: list[dict[str, Any]]) -> list[dict[st
         stripped = token.strip()
         if stripped and stripped != token:
             candidates.append(stripped)
+        edge_trimmed = re.sub(r"^[^\w\u4e00-\u9fff]+|[^\w\u4e00-\u9fff]+$", "", stripped)
+        if edge_trimmed and edge_trimmed not in candidates:
+            candidates.append(edge_trimmed)
 
         start_char = None
         matched = None
@@ -138,11 +146,64 @@ def _build_word_char_map(text: str, words: list[dict[str, Any]]) -> list[dict[st
                 "end_char": float(end_char),
                 "start_sec": float(start_sec),
                 "end_sec": float(end_sec),
+                "text": matched,
             }
         )
         cursor = end_char
 
     return mapping
+
+
+def _find_covering_word(
+    start_char: int,
+    end_char: int,
+    word_char_map: list[dict[str, float]],
+) -> dict[str, float] | None:
+    for w in word_char_map:
+        ws = int(w["start_char"])
+        we = int(w["end_char"])
+        if start_char >= ws and end_char <= we:
+            return w
+    return None
+
+
+def _char_to_word_time(char_pos: int, word_char_map: list[dict[str, float]]) -> float | None:
+    if not word_char_map:
+        return None
+
+    ordered = sorted(word_char_map, key=lambda w: (float(w["start_char"]), float(w["end_char"])))
+    prev: dict[str, float] | None = None
+
+    for w in ordered:
+        ws = float(w["start_char"])
+        we = float(w["end_char"])
+        ts = float(w["start_sec"])
+        te = float(w["end_sec"])
+
+        if ws <= char_pos <= we:
+            if we <= ws:
+                return ts
+            ratio = (float(char_pos) - ws) / (we - ws)
+            return ts + ratio * (te - ts)
+
+        if we < char_pos:
+            prev = w
+            continue
+
+        if prev is None:
+            return None
+
+        prev_end_char = float(prev["end_char"])
+        prev_end_sec = float(prev["end_sec"])
+        char_gap = ws - prev_end_char
+        time_gap = ts - prev_end_sec
+        if char_gap <= 0.0 or time_gap < 0.0:
+            return None
+        ratio = (float(char_pos) - prev_end_char) / char_gap
+        ratio = max(0.0, min(1.0, ratio))
+        return prev_end_sec + ratio * time_gap
+
+    return None
 
 
 def _span_to_word_interval(
@@ -153,31 +214,11 @@ def _span_to_word_interval(
     if not word_char_map:
         return None
 
-    overlaps = []
-    for w in word_char_map:
-        ws = int(w["start_char"])
-        we = int(w["end_char"])
-        if end_char <= ws or start_char >= we:
-            continue
-        overlaps.append(w)
-
-    if overlaps:
-        return (
-            min(float(w["start_sec"]) for w in overlaps),
-            max(float(w["end_sec"]) for w in overlaps),
-        )
-
-    center = 0.5 * (start_char + end_char)
-
-    def _dist(item: dict[str, float]) -> float:
-        ws = float(item["start_char"])
-        we = float(item["end_char"])
-        if ws <= center <= we:
-            return 0.0
-        return min(abs(center - ws), abs(center - we))
-
-    nearest = min(word_char_map, key=_dist)
-    return float(nearest["start_sec"]), float(nearest["end_sec"])
+    start_sec = _char_to_word_time(start_char, word_char_map)
+    end_sec = _char_to_word_time(end_char, word_char_map)
+    if start_sec is None or end_sec is None or end_sec <= start_sec:
+        return None
+    return start_sec, end_sec
 
 
 def _span_to_interval(
@@ -199,6 +240,8 @@ def _span_to_interval(
     end_char = span.get("end")
     if not isinstance(start_char, int) or not isinstance(end_char, int):
         return None
+    pii_type = str(span.get("type", "") or "").upper()
+    span_text = str(span.get("text", "") or "")
 
     text_len = len(text)
     if text_len > 0:
@@ -211,6 +254,7 @@ def _span_to_interval(
     alignment_mode = "char_ratio"
     start_sec = None
     end_sec = None
+    covering_word = _find_covering_word(start_char, end_char, word_char_map)
 
     word_interval = _span_to_word_interval(start_char, end_char, word_char_map)
     if word_interval is not None:
@@ -227,7 +271,17 @@ def _span_to_interval(
             start_sec = seg_start + ratio_start * duration
             end_sec = seg_start + ratio_end * duration
 
-    start_sec = max(seg_start, float(start_sec) - lead_sec)
+    extra_lead_sec = 0.0
+    # Short Chinese names often sit inside a fused token such as "我叫张伟强。".
+    # A small extra lead reduces late starts without globally reintroducing early masks.
+    if pii_type == "NAME" and _contains_cjk(span_text) and len(span_text) <= 3:
+        extra_lead_sec = 0.08
+        if covering_word is not None:
+            word_prefix = text[int(covering_word["start_char"]) : start_char]
+            if any(cue in word_prefix for cue in ("我叫", "我是", "名叫", "叫做", "叫")):
+                start_sec = float(covering_word["start_sec"])
+
+    start_sec = max(seg_start, float(start_sec) - lead_sec - extra_lead_sec)
     end_sec = min(seg_end, float(end_sec) + tail_sec)
 
     if end_sec <= start_sec:

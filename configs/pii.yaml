@@ -15,12 +15,14 @@ pii:
     zh_phone: true
     en_spoken_phone: true
     id_number: true
+    generic_id: true
     address: true
+    nric: true
+    postal_code: true
 
   ner:
-    # A multilingual NER model is a good baseline.
-    # You can swap this later without touching code.
-    model_name: "Davlan/xlm-roberta-base-ner-hrl"
+    # Local v1 fine-tuned weights. Swap to a Hub model ID later if needed.
+    model_name: "data/models/ner_finetuned_gold_v1/final/best"
     device: "cuda"
     max_length: 256
 

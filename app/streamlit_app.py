@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import time
@@ -24,7 +25,15 @@ from src.utils.io import PROJECT_ROOT, read_jsonl
 
 
 BASELINE_NER_MODEL = "Davlan/xlm-roberta-base-ner-hrl"
+LOCAL_FINETUNED_NER_MODEL = "data/models/ner_finetuned_gold_v1/final/best"
+REMOTE_FINETUNED_NER_MODEL = "ImShooShoo/ner_finetuned_gold_roberta"
 BASELINE_ASR_MODEL = "large-v3"
+LOCAL_FINETUNED_ASR_MODEL = "data/models/whisper-large-v3/ct2"
+REMOTE_FINETUNED_ASR_MODEL = "ImShooShoo/whisper-large-v3"
+HF_CACHE_ROOT = Path("data") / "cache" / "hf"
+HF_ASR_CACHE_DIR = str(HF_CACHE_ROOT / "asr")
+HF_NER_CACHE_DIR = str(HF_CACHE_ROOT / "ner")
+HF_TOKEN_ENV = "HF_TOKEN"
 BASELINE_NER_DEVICE = "cpu"
 DEFAULT_RULES = {
     "phone": True,
@@ -33,6 +42,7 @@ DEFAULT_RULES = {
     "en_spoken_phone": True,
     "partial_phone": True,
     "id_number": True,
+    "generic_id": True,
     "address": True,
     "nric": True,
     "postal_code": True,
@@ -80,9 +90,128 @@ def _guess_audio_suffix(input_audio: Any) -> str:
     return ".wav"
 
 
-def _write_input_audio(input_audio: Any, run_tag: str, fallback_name: str) -> tuple[Path, str]:
+def _snapshot_audio_input(input_audio: Any, fallback_name: str) -> dict[str, Any]:
     raw_name = str(getattr(input_audio, "name", "") or "").strip() or fallback_name
     suffix = _guess_audio_suffix(input_audio)
+    content_type = str(getattr(input_audio, "type", "") or "").strip() or None
+
+    if isinstance(input_audio, dict) and "payload" in input_audio:
+        payload = bytes(input_audio.get("payload") or b"")
+        raw_name = str(input_audio.get("name") or raw_name).strip() or raw_name
+        suffix = str(input_audio.get("suffix") or suffix).strip() or suffix
+        content_type = str(input_audio.get("content_type") or content_type or "").strip() or None
+    elif hasattr(input_audio, "getbuffer"):
+        payload = bytes(input_audio.getbuffer())
+    elif hasattr(input_audio, "getvalue"):
+        payload = bytes(input_audio.getvalue())
+    elif hasattr(input_audio, "read"):
+        if hasattr(input_audio, "seek"):
+            try:
+                input_audio.seek(0)
+            except Exception:
+                pass
+        payload = input_audio.read()
+    else:
+        raise TypeError("Unsupported audio input object; expected UploadedFile-like input.")
+
+    if not payload:
+        raise ValueError("Audio input is empty.")
+
+    return {
+        "payload": payload,
+        "name": raw_name,
+        "suffix": suffix,
+        "content_type": content_type,
+    }
+
+
+def _seed_hf_token_from_secrets() -> None:
+    for key in ("HF_TOKEN", "HUGGINGFACE_HUB_TOKEN", "huggingface_token"):
+        try:
+            raw = st.secrets.get(key)
+        except Exception:
+            raw = None
+        token = str(raw or "").strip()
+        if token:
+            os.environ.setdefault(HF_TOKEN_ENV, token)
+            return
+
+
+def _get_request_host_and_proto() -> tuple[str | None, str | None]:
+    try:
+        headers = dict(st.context.headers)
+    except Exception:
+        return None, None
+
+    host = str(headers.get("X-Forwarded-Host") or headers.get("Host") or "").strip().lower() or None
+    proto = str(headers.get("X-Forwarded-Proto") or headers.get("X-Scheme") or "").strip().lower() or None
+    return host, proto
+
+
+def _mic_context_message() -> tuple[str, str]:
+    host, proto = _get_request_host_and_proto()
+    if proto == "https":
+        return "success", f"Microphone context looks valid: `{host or 'https'}`"
+    if host:
+        hostname = host.split(":", 1)[0]
+        if hostname in {"localhost", "127.0.0.1", "::1"}:
+            return "success", f"Microphone context looks valid: `{host}`"
+        return (
+            "warning",
+            "Microphone recording usually only works on `https` or `localhost`. "
+            f"Current host looks like `{host}`. If recording does not start, open the app via "
+            "`http://localhost:8501` or use an SSH tunnel.",
+        )
+    return (
+        "info",
+        "Microphone recording requires a browser-secure context: `https` or `localhost`.",
+    )
+
+
+def _local_asr_exists() -> bool:
+    return (PROJECT_ROOT / LOCAL_FINETUNED_ASR_MODEL / "model.bin").exists()
+
+
+def _local_ner_exists() -> bool:
+    return (PROJECT_ROOT / LOCAL_FINETUNED_NER_MODEL / "model.safetensors").exists()
+
+
+def _resolve_asr_model_name() -> tuple[str, str]:
+    if _local_asr_exists():
+        return LOCAL_FINETUNED_ASR_MODEL, "local fine-tuned"
+    if REMOTE_FINETUNED_ASR_MODEL:
+        return REMOTE_FINETUNED_ASR_MODEL, "huggingface fine-tuned"
+    return BASELINE_ASR_MODEL, "baseline"
+
+
+def _resolve_ner_model_name() -> tuple[str, str]:
+    if _local_ner_exists():
+        return LOCAL_FINETUNED_NER_MODEL, "local fine-tuned"
+    if REMOTE_FINETUNED_NER_MODEL:
+        return REMOTE_FINETUNED_NER_MODEL, "huggingface fine-tuned"
+    return BASELINE_NER_MODEL, "baseline"
+
+
+def _ner_model_caption(model_name: str) -> str:
+    if model_name == LOCAL_FINETUNED_NER_MODEL:
+        return "finetuned_gold_v1 (local)"
+    if model_name == REMOTE_FINETUNED_NER_MODEL:
+        return "finetuned_gold_v1 (huggingface)"
+    return model_name
+
+
+def _asr_model_caption(model_name: str) -> str:
+    if model_name == LOCAL_FINETUNED_ASR_MODEL:
+        return "whisper-large-v3 finetuned (local ct2)"
+    if model_name == REMOTE_FINETUNED_ASR_MODEL:
+        return "whisper-large-v3 finetuned (huggingface ct2)"
+    return model_name
+
+
+def _write_input_audio(input_audio: Any, run_tag: str, fallback_name: str) -> tuple[Path, str]:
+    snapshot = _snapshot_audio_input(input_audio, fallback_name)
+    raw_name = str(snapshot.get("name") or fallback_name).strip() or fallback_name
+    suffix = str(snapshot.get("suffix") or _guess_audio_suffix(input_audio)).strip() or ".wav"
     safe_name = _safe_slug(Path(raw_name).stem)
     rel_dir = Path("data") / "uploads" / "streamlit" / run_tag
     abs_dir = PROJECT_ROOT / rel_dir
@@ -90,12 +219,7 @@ def _write_input_audio(input_audio: Any, run_tag: str, fallback_name: str) -> tu
 
     audio_rel = rel_dir / f"{safe_name}{suffix}"
     audio_abs = PROJECT_ROOT / audio_rel
-    if hasattr(input_audio, "getbuffer"):
-        payload = bytes(input_audio.getbuffer())
-    elif hasattr(input_audio, "read"):
-        payload = input_audio.read()
-    else:
-        raise TypeError("Unsupported audio input object; expected UploadedFile-like input.")
+    payload = bytes(snapshot.get("payload") or b"")
     audio_abs.write_bytes(payload)
     return audio_abs, str(audio_rel)
 
@@ -174,6 +298,7 @@ def _build_asr_cfg(
     mixed_language_enabled: bool,
 ) -> dict[str, Any]:
     compute_type = "float16" if device.startswith("cuda") else "float32"
+    fallback_model = BASELINE_ASR_MODEL if model_name != BASELINE_ASR_MODEL else None
     return {
         "run": {
             "run_id": run_id,
@@ -190,9 +315,15 @@ def _build_asr_cfg(
         "asr": {
             "engine": "faster_whisper",
             "model_name": model_name,
+            "fallback_model_name": fallback_model,
             "device": device,
             "compute_type": compute_type,
+            "download_root": HF_ASR_CACHE_DIR,
+            "local_files_only": False,
+            "hf_token_env": HF_TOKEN_ENV,
             "language": language,
+            "max_segment_sec": 12.0,
+            "segment_overlap_sec": 0.8,
             "word_timestamps": True,
             "vad_filter": True,
             "beam_size": 5,
@@ -207,6 +338,8 @@ def _build_asr_cfg(
 
 
 def _build_pii_cfg(run_id: str, asr_run_id: str, device: str) -> dict[str, Any]:
+    ner_model_name, _ = _resolve_ner_model_name()
+    fallback_model = BASELINE_NER_MODEL if ner_model_name != BASELINE_NER_MODEL else None
     return {
         "run": {
             "run_id": run_id,
@@ -218,8 +351,12 @@ def _build_pii_cfg(run_id: str, asr_run_id: str, device: str) -> dict[str, Any]:
             "enable_llm": False,
             "rules": dict(DEFAULT_RULES),
             "ner": {
-                "model_name": BASELINE_NER_MODEL,
+                "model_name": ner_model_name,
+                "fallback_model_name": fallback_model,
                 "device": device,
+                "cache_dir": HF_NER_CACHE_DIR,
+                "local_files_only": False,
+                "hf_token_env": HF_TOKEN_ENV,
                 "max_length": 256,
                 "score_threshold": 0.0,
                 "label_map": dict(DEFAULT_LABEL_MAP),
@@ -341,6 +478,7 @@ def _render_run_ids(asr_id: str, pii_id: str, masked_id: str, eval_id: str) -> N
 
 def main() -> None:
     st.set_page_config(page_title="PII Audio Pipeline", layout="wide")
+    _seed_hf_token_from_secrets()
 
     st.markdown(
         """
@@ -359,11 +497,11 @@ def main() -> None:
           .pill {display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: .2rem .6rem; margin-right: .35rem; font-size: .78rem;}
         </style>
         <div class="hero">
-          <h1>Baseline End-to-End Audio PII Pipeline</h1>
-          <p>Upload or record audio and run <b>ASR -> PII -> Mask -> Eval</b> with baseline models. Fine-tuned checkpoints can be plugged in later.</p>
+          <h1>End-to-End Audio PII Pipeline</h1>
+          <p>Upload or record audio and run <b>ASR -> PII -> Mask -> Eval</b> with rules plus NER. The app prefers local fine-tuned checkpoints, otherwise it downloads the Hugging Face repos and falls back to baseline only if needed.</p>
           <div style="margin-top:.55rem;">
-            <span class="pill">ASR: faster-whisper</span>
-            <span class="pill">NER: Davlan/xlm-roberta-base-ner-hrl</span>
+            <span class="pill">ASR: local -> Hugging Face -> baseline</span>
+            <span class="pill">NER: local -> Hugging Face -> baseline</span>
             <span class="pill">Rules + NER (LLM off)</span>
           </div>
         </div>
@@ -372,12 +510,13 @@ def main() -> None:
     )
 
     with st.sidebar:
-        st.markdown("### Baseline Defaults")
+        st.markdown("### Pipeline Defaults")
 
         # Keep UI simple: fixed baseline models with limited ASR language controls.
         asr_device = "cuda" if _has_cuda() else "cpu"
         ner_device = BASELINE_NER_DEVICE
-        asr_model = BASELINE_ASR_MODEL
+        asr_model, asr_source = _resolve_asr_model_name()
+        ner_model, ner_source = _resolve_ner_model_name()
         asr_language = st.selectbox("ASR language", options=["auto", "en", "zh"], index=0)
         mixed_language_enabled = st.checkbox(
             "Mixed-language re-decode (en/zh)",
@@ -389,9 +528,13 @@ def main() -> None:
 
         st.write(f"ASR device: `{asr_device}`")
         st.write(f"NER device: `{ner_device}`")
-        st.write(f"ASR model: `{asr_model}`")
+        st.write(f"ASR model: `{_asr_model_caption(asr_model)}`")
+        st.write(f"NER model: `{_ner_model_caption(ner_model)}`")
+        st.write(f"ASR source preference: `{asr_source}`")
+        st.write(f"NER source preference: `{ner_source}`")
         st.write(f"ASR language: `{asr_language}`")
         st.write(f"Mixed-language re-decode: `{mixed_language_enabled}`")
+        st.write(f"HF cache root: `{HF_CACHE_ROOT}`")
         package_artifacts = st.checkbox("Package artifacts as zip", value=True)
 
         st.markdown("### Note")
@@ -408,27 +551,57 @@ def main() -> None:
     )
     uploaded_file = None
     recorded_audio = None
-    selected_audio = None
+    selected_audio: Any | None = None
     selected_audio_name = "input_audio.wav"
+    selected_audio_snapshot: dict[str, Any] | None = None
 
     if input_mode == "Upload file":
         uploaded_file = st.file_uploader(
             "Upload one audio file",
             type=["wav", "mp3", "m4a", "flac", "ogg", "mp4", "webm"],
             accept_multiple_files=False,
+            key="upload_audio_file",
         )
         selected_audio = uploaded_file
         if uploaded_file is not None:
             selected_audio_name = str(getattr(uploaded_file, "name", "uploaded_audio.wav"))
+            try:
+                selected_audio_snapshot = _snapshot_audio_input(uploaded_file, selected_audio_name)
+            except Exception as exc:
+                st.error(f"Unable to read uploaded audio: {exc}")
+                return
     else:
-        recorded_audio = st.audio_input("Record audio from microphone")
-        selected_audio = recorded_audio
+        mic_status, mic_message = _mic_context_message()
+        if mic_status == "success":
+            st.success(mic_message)
+        elif mic_status == "warning":
+            st.warning(mic_message)
+        else:
+            st.info(mic_message)
+        st.caption("If the browser does not show a permission prompt, try Chrome/Edge and open the app on `localhost`.")
+        recorded_audio = st.audio_input("Record audio from microphone", key="mic_audio_input")
         selected_audio_name = "recorded_audio.wav"
         if recorded_audio is not None:
-            st.caption("Recorded audio preview")
-            st.audio(recorded_audio)
+            try:
+                st.session_state["recorded_audio_snapshot"] = _snapshot_audio_input(recorded_audio, selected_audio_name)
+            except Exception as exc:
+                st.error(f"Unable to read recorded audio: {exc}")
+                return
 
-    run_clicked = st.button("Run End-to-End Baseline", type="primary", use_container_width=True)
+        cached_recording = st.session_state.get("recorded_audio_snapshot")
+        if cached_recording:
+            selected_audio_snapshot = dict(cached_recording)
+            selected_audio = selected_audio_snapshot
+            selected_audio_name = str(selected_audio_snapshot.get("name") or selected_audio_name)
+            st.caption("Recorded audio preview")
+            st.audio(
+                selected_audio_snapshot["payload"],
+                format=str(selected_audio_snapshot.get("content_type") or "audio/wav"),
+            )
+            if recorded_audio is None:
+                st.caption("Using the latest recorded audio stored in this session.")
+
+    run_clicked = st.button("Run End-to-End Pipeline", type="primary", use_container_width=True)
 
     if not run_clicked:
         return
@@ -451,7 +624,8 @@ def main() -> None:
     bundle_zip_path: Path | None = None
 
     try:
-        audio_abs, audio_rel = _write_input_audio(selected_audio, tag, selected_audio_name)
+        audio_input_obj = selected_audio_snapshot if selected_audio_snapshot is not None else selected_audio
+        audio_abs, audio_rel = _write_input_audio(audio_input_obj, tag, selected_audio_name)
         manifest_rel = _write_manifest(audio_rel, tag)
 
         asr_cfg = _build_asr_cfg(
@@ -512,8 +686,22 @@ def main() -> None:
     asr_segments = read_jsonl(Path(asr_out) / "segments.jsonl")
     pii_rows = read_jsonl(Path(pii_out) / "spans.jsonl")
     mask_audit = read_jsonl(Path(masked_out) / "audit.jsonl")
+    asr_meta = _load_summary(Path(asr_out) / "run_meta.json")
     eval_summary = _load_summary(Path(eval_out) / "summary.json")
     pii_meta = _load_summary(Path(pii_out) / "run_meta.json")
+
+    st.markdown("### Model Resolution")
+    st.code(
+        "\n".join(
+            [
+                f"ASR requested: {asr_meta.get('model_name_requested', asr_cfg['asr'].get('model_name'))}",
+                f"ASR used:      {asr_meta.get('model_name', asr_cfg['asr'].get('model_name'))}",
+                f"NER requested: {pii_meta.get('ner_model_name_requested', pii_cfg['pii']['ner'].get('model_name'))}",
+                f"NER used:      {pii_meta.get('ner_model_name', pii_cfg['pii']['ner'].get('model_name'))}",
+            ]
+        ),
+        language="text",
+    )
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("ASR segments", len(asr_segments))

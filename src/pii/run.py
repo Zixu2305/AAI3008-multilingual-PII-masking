@@ -8,7 +8,7 @@ from typing import Any
 
 from src.pii.ner import load_ner_pipeline, predict_ner_spans
 from src.utils.artifacts import artifact_dir
-from src.utils.io import read_jsonl, write_json, write_jsonl
+from src.utils.io import PROJECT_ROOT, read_jsonl, write_json, write_jsonl
 
 
 PHONE_RE = re.compile(r"(?<!\d)(?:\+?\d[\d\-\s]{6,}\d)(?!\d)")
@@ -30,6 +30,13 @@ EN_SPOKEN_PHONE_RE = re.compile(
     re.IGNORECASE,
 )
 
+_ID_CHARS = r"A-Za-z0-9零一二三四五六七八九〇○"
+_ID_TOKEN = rf"[{_ID_CHARS}]+"
+_ID_DIGITISH = r"[0-9零一二三四五六七八九〇○]"
+_ID_DIGITISH_TOKEN = rf"(?=[{_ID_CHARS}]*{_ID_DIGITISH})[{_ID_CHARS}]+"
+_ID_VALUE_SEP = r"(?:[\s,，、:：/_-]+)"
+_ID_VALUE = rf"(?:{_ID_TOKEN}{_ID_VALUE_SEP}){{0,2}}{_ID_DIGITISH_TOKEN}(?:{_ID_VALUE_SEP}{_ID_DIGITISH_TOKEN})*"
+
 # Cue-word-gated partial phone: catches 4+ digit phones preceded by phone-related words
 EN_PARTIAL_PHONE_RE = re.compile(
     r"(?:phone|number|call|dial|contact|hp|handphone)"
@@ -41,6 +48,26 @@ ZH_PARTIAL_PHONE_RE = re.compile(
     r"(?:电话|手机|联系|号码|拨打)"
     r"[是为：:]*\s*"
     rf"({_ZH_DIGIT}{{3,}})",
+)
+
+# Cue-word-gated IDs: broader than NRIC, but only when explicit ID context is present.
+EN_CONTEXT_ID_RE = re.compile(
+    rf"(?:"
+    rf"(?:(?:reference|ref|application|app|booking|tracking|ticket|case|staff|employee|system|record)\s+id(?:\s+number)?)"
+    rf"|"
+    rf"(?:id(?:\s+number)?)"
+    rf"|"
+    rf"(?:(?:employee|staff|application|reference|tracking|booking|case|ticket|record)\s+number)"
+    rf")"
+    rf"\s*(?:is|was|=|:|should\s+be)?\s*"
+    rf"((?!(?:is|was|should|be)\b){_ID_VALUE})",
+    re.IGNORECASE,
+)
+ZH_CONTEXT_ID_RE = re.compile(
+    rf"(?:身份证(?:号码)?|证件(?:号|号码)?|员工编号|工号|申请编号|参考编号|订单编号|预约编号|系统编号|ID)"
+    rf"\s*(?:是|为|:|：)?\s*"
+    rf"({_ID_VALUE})",
+    re.IGNORECASE,
 )
 
 # Address patterns
@@ -85,17 +112,44 @@ SG_POSTAL_AFTER_ADDR_RE = re.compile(
     re.IGNORECASE,
 )
 
+ID_RULE_LEADING_FILLER_RE = re.compile(r"^(?:is|was|be|should\s+be)\s+", re.IGNORECASE)
+
+
+def _normalize_id_rule_match(start: int, end: int, matched_text: str) -> tuple[int, int, str] | None:
+    trimmed = matched_text.lstrip(" \t,，、:：/_-")
+    start += len(matched_text) - len(trimmed)
+    matched_text = trimmed
+
+    filler = ID_RULE_LEADING_FILLER_RE.match(matched_text)
+    if filler:
+        start += filler.end()
+        matched_text = matched_text[filler.end():]
+
+    matched_text = matched_text.rstrip(" \t,，、:：/_-")
+    if not matched_text or not re.search(_ID_DIGITISH, matched_text):
+        return None
+    end = start + len(matched_text)
+    return start, end, matched_text
+
 
 def _rule_spans_for_text(text: str, rules_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     spans: list[dict] = []
 
     def _add(pattern, pii_type: str, group: int = 0) -> None:
         for m in pattern.finditer(text):
+            start = m.start(group)
+            end = m.end(group)
+            matched_text = m.group(group)
+            if pii_type == "ID":
+                normalized = _normalize_id_rule_match(start, end, matched_text)
+                if normalized is None:
+                    continue
+                start, end, matched_text = normalized
             spans.append({
-                "start": m.start(group),
-                "end": m.end(group),
+                "start": start,
+                "end": end,
                 "type": pii_type,
-                "text": m.group(group),
+                "text": matched_text,
                 "source": "rule",
             })
 
@@ -124,6 +178,11 @@ def _rule_spans_for_text(text: str, rules_cfg: dict[str, Any]) -> list[dict[str,
     if bool(rules_cfg.get("address", True)):
         _add(ZH_ADDRESS_RE, "ADDRESS")
         _add(EN_ADDRESS_RE, "ADDRESS")
+
+    # Generic IDs in explicit identifier context ("reference ID", "员工编号", etc.)
+    if bool(rules_cfg.get("generic_id", rules_cfg.get("id_number", False))):
+        _add(EN_CONTEXT_ID_RE, "ID", group=1)
+        _add(ZH_CONTEXT_ID_RE, "ID", group=1)
 
     # Singapore NRIC/FIN
     if bool(rules_cfg.get("nric", True)):
@@ -229,6 +288,16 @@ def _detect_pii_for_text(
     return spans
 
 
+def _resolve_cache_dir(value: Any) -> str | None:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    path = Path(raw)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return str(path)
+
+
 def run_pii(cfg: dict) -> Path:
     run_id = cfg.get("run", {}).get("run_id", "pii_run")
     out_dir = artifact_dir("pii", run_id)
@@ -251,7 +320,16 @@ def run_pii(cfg: dict) -> Path:
         model_name = str(ner_cfg.get("model_name", "")).strip()
         if not model_name:
             raise ValueError("pii.ner.model_name is required when pii.enable_ner=true")
-        ner_pipe = load_ner_pipeline(model_name=model_name, device_cfg=ner_cfg.get("device", "cpu"))
+        ner_pipe = load_ner_pipeline(
+            model_name=model_name,
+            device_cfg=ner_cfg.get("device", "cpu"),
+            cache_dir=_resolve_cache_dir(ner_cfg.get("cache_dir")),
+            local_files_only=bool(ner_cfg.get("local_files_only", False)),
+            revision=str(ner_cfg.get("revision", "")).strip() or None,
+            hf_token_env=str(ner_cfg.get("hf_token_env", "")).strip() or None,
+            fallback_model_name=str(ner_cfg.get("fallback_model_name", "")).strip() or None,
+        )
+    resolved_ner_model_name = getattr(ner_pipe, "_resolved_model_name", None) if ner_pipe is not None else None
 
     total_spans_counter: Counter[str] = Counter()
 
@@ -296,7 +374,8 @@ def run_pii(cfg: dict) -> Path:
                 "ner": enable_ner,
                 "llm": enable_llm,
             },
-            "ner_model_name": ner_cfg.get("model_name") if enable_ner else None,
+            "ner_model_name": resolved_ner_model_name if enable_ner else None,
+            "ner_model_name_requested": ner_cfg.get("model_name") if enable_ner else None,
         },
     )
 

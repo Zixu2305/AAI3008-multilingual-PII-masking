@@ -1,5 +1,5 @@
 run:
-  run_id: "asr_baseline_cs_test"
+  run_id: "asr_finetuned_large_v3_cs_test"
   output_dir: "data/runs/asr/${run.run_id}"
 
 data:
@@ -10,11 +10,14 @@ data:
 
 asr:
   engine: "faster_whisper"
-  model_name: "small"
+  # Local CTranslate2 export of the fine-tuned Whisper large-v3 checkpoint.
+  model_name: "data/models/whisper-large-v3/ct2"
   device: "cuda"
   compute_type: "float16"
 
   language: "auto"
+  max_segment_sec: 12.0
+  segment_overlap_sec: 0.8
   mixed_language:
     enabled: false
     languages: ["en", "zh"]

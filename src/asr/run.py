@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -154,6 +155,132 @@ def _transcribe_audio(
     return segments, info
 
 
+def _clip_windows(start: float, end: float, max_segment_sec: float) -> list[tuple[float, float]]:
+    if not (end > start):
+        return []
+    if max_segment_sec <= 0.0 or (end - start) <= max_segment_sec:
+        return [(start, end)]
+
+    windows: list[tuple[float, float]] = []
+    cur = float(start)
+    max_segment_sec = float(max_segment_sec)
+    while cur < end:
+        nxt = min(end, cur + max_segment_sec)
+        if nxt <= cur:
+            break
+        windows.append((cur, nxt))
+        cur = nxt
+    return windows
+
+
+def _transcribe_window_with_context(
+    *,
+    model: Any,
+    audio_path: Path,
+    language: str | None,
+    beam_size: int,
+    vad_filter: bool,
+    word_timestamps: bool,
+    condition_on_previous_text: bool,
+    core_start: float,
+    core_end: float,
+    overlap_sec: float,
+) -> list[dict[str, Any]]:
+    clip_start = max(0.0, float(core_start) - max(0.0, float(overlap_sec)))
+    clip_end = max(float(core_end), float(core_end) + max(0.0, float(overlap_sec)))
+    segments, _ = _transcribe_audio(
+        model=model,
+        audio_path=audio_path,
+        language=language,
+        beam_size=beam_size,
+        vad_filter=vad_filter,
+        word_timestamps=word_timestamps,
+        condition_on_previous_text=condition_on_previous_text,
+        clip_timestamps=[clip_start, clip_end],
+    )
+
+    selected: list[dict[str, Any]] = []
+    for seg in segments:
+        seg_start = float(seg.get("start", 0.0) or 0.0)
+        seg_end = float(seg.get("end", 0.0) or 0.0)
+        if seg_end <= seg_start:
+            continue
+        midpoint = 0.5 * (seg_start + seg_end)
+        if float(core_start) <= midpoint < float(core_end):
+            selected.append(seg)
+    return selected
+
+
+def _refine_long_segments(
+    *,
+    model: Any,
+    audio_path: Path,
+    segments: list[dict[str, Any]],
+    language: str | None,
+    beam_size: int,
+    vad_filter: bool,
+    word_timestamps: bool,
+    condition_on_previous_text: bool,
+    max_segment_sec: float,
+    segment_overlap_sec: float,
+) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    stats = {
+        "long_segments_refined": 0,
+        "refine_clip_calls": 0,
+        "refine_clip_failures": 0,
+        "refined_segments_from_windows": 0,
+    }
+    if max_segment_sec <= 0.0:
+        return list(segments), stats
+
+    refined: list[dict[str, Any]] = []
+    for seg in segments:
+        seg_start = float(seg.get("start", 0.0) or 0.0)
+        seg_end = float(seg.get("end", 0.0) or 0.0)
+        seg_duration = seg_end - seg_start
+        if seg_duration <= max_segment_sec:
+            refined.append(seg)
+            continue
+
+        windows = _clip_windows(seg_start, seg_end, max_segment_sec=max_segment_sec)
+        if len(windows) <= 1:
+            refined.append(seg)
+            continue
+
+        stats["long_segments_refined"] += 1
+        window_segments: list[dict[str, Any]] = []
+        for win_start, win_end in windows:
+            stats["refine_clip_calls"] += 1
+            try:
+                sub_segments = _transcribe_window_with_context(
+                    model=model,
+                    audio_path=audio_path,
+                    language=language,
+                    beam_size=beam_size,
+                    vad_filter=vad_filter,
+                    word_timestamps=word_timestamps,
+                    condition_on_previous_text=condition_on_previous_text,
+                    core_start=win_start,
+                    core_end=win_end,
+                    overlap_sec=segment_overlap_sec,
+                )
+            except Exception:
+                sub_segments = []
+                stats["refine_clip_failures"] += 1
+
+            if sub_segments:
+                window_segments.extend(sub_segments)
+
+        if window_segments:
+            stats["refined_segments_from_windows"] += len(window_segments)
+            refined.extend(window_segments)
+        else:
+            refined.append(seg)
+
+    refined.sort(key=lambda s: (float(s.get("start", 0.0) or 0.0), float(s.get("end", 0.0) or 0.0)))
+    return refined, stats
+
+
 def _load_resume_state(path: Path) -> tuple[set[str], int, int]:
     if not path.exists():
         return set(), -1, 0
@@ -232,6 +359,69 @@ def _load_inputs(cfg: dict) -> list[AudioInput]:
     raise ValueError(f"Unsupported data.source_type='{source_type}'. Use 'manifest' or 'local_dir'.")
 
 
+def _resolve_hf_token(token_env: str | None = None) -> str | None:
+    env_names = [token_env, "HF_TOKEN", "HUGGINGFACE_HUB_TOKEN"]
+    for env_name in env_names:
+        if not env_name:
+            continue
+        token = str(os.environ.get(env_name, "")).strip()
+        if token:
+            return token
+    return None
+
+
+def _resolve_path_str(value: Any) -> str | None:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    path = Path(raw)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return str(path)
+
+
+def _load_whisper_model(
+    WhisperModel: Any,
+    *,
+    model_name: str,
+    fallback_model_name: str | None,
+    device: str,
+    compute_type: str,
+    download_root: str | None,
+    local_files_only: bool,
+    revision: str | None,
+    hf_token_env: str | None,
+) -> tuple[Any, str]:
+    candidates: list[str] = []
+    for value in (model_name, fallback_model_name):
+        candidate = str(value or "").strip()
+        if candidate and candidate not in candidates:
+            candidates.append(candidate)
+
+    load_kwargs: dict[str, Any] = {
+        "device": device,
+        "compute_type": compute_type,
+        "local_files_only": bool(local_files_only),
+    }
+    if download_root:
+        load_kwargs["download_root"] = download_root
+    if revision:
+        load_kwargs["revision"] = revision
+    token = _resolve_hf_token(hf_token_env)
+    if token:
+        load_kwargs["use_auth_token"] = token
+
+    errors: list[str] = []
+    for candidate in candidates:
+        try:
+            return WhisperModel(candidate, **load_kwargs), candidate
+        except Exception as exc:
+            errors.append(f"{candidate}: {exc}")
+
+    joined = "\n".join(errors)
+    raise RuntimeError(f"Failed to load ASR model. Tried:\n{joined}")
+
+
 def run_asr(cfg: dict) -> Path:
     try:
         from faster_whisper import WhisperModel
@@ -274,13 +464,20 @@ def run_asr(cfg: dict) -> Path:
     asr_cfg = cfg.get("asr", {})
     requested_language = _normalize_language_code(asr_cfg.get("language", "auto"))
     decode_language = None if requested_language == "auto" else requested_language
-    model_name = asr_cfg.get("model_name", "small")
+    requested_model_name = str(asr_cfg.get("model_name", "small")).strip() or "small"
+    fallback_model_name = str(asr_cfg.get("fallback_model_name", "")).strip() or None
     device = asr_cfg.get("device", "cpu")
     compute_type = asr_cfg.get("compute_type", "float32")
     beam_size = int(asr_cfg.get("beam_size", 5))
     vad_filter = bool(asr_cfg.get("vad_filter", True))
     word_timestamps = bool(asr_cfg.get("word_timestamps", True))
     condition_on_previous_text = bool(asr_cfg.get("condition_on_previous_text", False))
+    max_segment_sec = max(0.0, float(asr_cfg.get("max_segment_sec", 12.0) or 0.0))
+    segment_overlap_sec = max(0.0, float(asr_cfg.get("segment_overlap_sec", 0.8) or 0.0))
+    download_root = _resolve_path_str(asr_cfg.get("download_root") or asr_cfg.get("cache_dir"))
+    local_files_only = bool(asr_cfg.get("local_files_only", False))
+    revision = str(asr_cfg.get("revision", "")).strip() or None
+    hf_token_env = str(asr_cfg.get("hf_token_env", "")).strip() or None
 
     mixed_cfg = asr_cfg.get("mixed_language", {}) or {}
     mixed_enabled_requested = bool(mixed_cfg.get("enabled", False))
@@ -305,7 +502,17 @@ def run_asr(cfg: dict) -> Path:
             f"[ASR] mixed_language.enabled ignored because asr.language is forced to '{requested_language}'."
         )
 
-    model = WhisperModel(model_name, device=device, compute_type=compute_type)
+    model, resolved_model_name = _load_whisper_model(
+        WhisperModel,
+        model_name=requested_model_name,
+        fallback_model_name=fallback_model_name,
+        device=device,
+        compute_type=compute_type,
+        download_root=download_root,
+        local_files_only=local_files_only,
+        revision=revision,
+        hf_token_env=hf_token_env,
+    )
     started = perf_counter()
 
     segments_buffer: list[dict[str, Any]] = []
@@ -318,6 +525,10 @@ def run_asr(cfg: dict) -> Path:
     mixed_redecode_calls = 0
     mixed_redecode_failures = 0
     mixed_segments_from_redecode = 0
+    long_segments_refined = 0
+    refine_clip_calls = 0
+    refine_clip_failures = 0
+    refined_segments_from_windows = 0
 
     prev_summary = _load_previous_summary(summary_path) if resume else {}
     prev_elapsed = float(prev_summary.get("elapsed_sec", 0.0) or 0.0)
@@ -397,9 +608,26 @@ def run_asr(cfg: dict) -> Path:
                 continue
 
             decoded_segments = list(base_segments)
+            refined_base_segments, refine_stats = _refine_long_segments(
+                model=model,
+                audio_path=item.audio_path,
+                segments=base_segments,
+                language=decode_language,
+                beam_size=beam_size,
+                vad_filter=vad_filter,
+                word_timestamps=word_timestamps,
+                condition_on_previous_text=condition_on_previous_text,
+                max_segment_sec=max_segment_sec,
+                segment_overlap_sec=segment_overlap_sec,
+            )
+            long_segments_refined += int(refine_stats["long_segments_refined"])
+            refine_clip_calls += int(refine_stats["refine_clip_calls"])
+            refine_clip_failures += int(refine_stats["refine_clip_failures"])
+            refined_segments_from_windows += int(refine_stats["refined_segments_from_windows"])
+
             if mixed_enabled_effective and base_segments:
                 decoded_segments = []
-                for base_seg in base_segments:
+                for base_seg in refined_base_segments:
                     base_start = float(base_seg.get("start", 0.0) or 0.0)
                     base_end = float(base_seg.get("end", 0.0) or 0.0)
                     if base_end <= base_start:
@@ -413,7 +641,7 @@ def run_asr(cfg: dict) -> Path:
 
                     mixed_redecode_calls += 1
                     try:
-                        rec_segments, _ = _transcribe_audio(
+                        rec_segments = _transcribe_window_with_context(
                             model=model,
                             audio_path=item.audio_path,
                             language=target_language,
@@ -421,7 +649,9 @@ def run_asr(cfg: dict) -> Path:
                             vad_filter=vad_filter,
                             word_timestamps=word_timestamps,
                             condition_on_previous_text=condition_on_previous_text,
-                            clip_timestamps=[base_start, base_end],
+                            core_start=base_start,
+                            core_end=base_end,
+                            overlap_sec=segment_overlap_sec,
                         )
                     except Exception as exc:
                         rec_segments = []
@@ -447,6 +677,7 @@ def run_asr(cfg: dict) -> Path:
                     key=lambda s: (float(s.get("start", 0.0) or 0.0), float(s.get("end", 0.0) or 0.0))
                 )
             else:
+                decoded_segments = list(refined_base_segments)
                 effective_language = decode_language or _normalize_language_code(getattr(info, "language", None))
                 if effective_language == "auto":
                     effective_language = "unknown"
@@ -542,7 +773,8 @@ def run_asr(cfg: dict) -> Path:
         summary_path,
         {
             "run_id": run_id,
-            "model_name": model_name,
+            "model_name": resolved_model_name,
+            "model_name_requested": requested_model_name,
             "device": device,
             "compute_type": compute_type,
             "language": requested_language,
@@ -550,6 +782,8 @@ def run_asr(cfg: dict) -> Path:
             "mixed_language_requested": mixed_enabled_requested,
             "mixed_languages": mixed_languages,
             "mixed_fallback_language": mixed_fallback_language,
+            "max_segment_sec": max_segment_sec,
+            "segment_overlap_sec": segment_overlap_sec,
             "inputs_total": len(inputs_all),
             "files_processed": total_files_processed,
             "files_failed": total_files_failed,
@@ -571,6 +805,10 @@ def run_asr(cfg: dict) -> Path:
             "mixed_redecode_calls": mixed_redecode_calls,
             "mixed_redecode_failures": mixed_redecode_failures,
             "mixed_segments_from_redecode": mixed_segments_from_redecode,
+            "long_segments_refined": long_segments_refined,
+            "refine_clip_calls": refine_clip_calls,
+            "refine_clip_failures": refine_clip_failures,
+            "refined_segments_from_windows": refined_segments_from_windows,
         },
     )
     write_json(
@@ -583,16 +821,23 @@ def run_asr(cfg: dict) -> Path:
             "inputs_total": len(inputs_all),
             "files_processed": total_files_processed,
             "files_failed": total_files_failed,
-            "model_name": model_name,
+            "model_name": resolved_model_name,
+            "model_name_requested": requested_model_name,
             "engine": "faster_whisper",
             "language": requested_language,
             "mixed_language_enabled": mixed_enabled_effective,
             "mixed_language_requested": mixed_enabled_requested,
             "mixed_languages": mixed_languages,
             "mixed_fallback_language": mixed_fallback_language,
+            "max_segment_sec": max_segment_sec,
+            "segment_overlap_sec": segment_overlap_sec,
             "mixed_redecode_calls": mixed_redecode_calls,
             "mixed_redecode_failures": mixed_redecode_failures,
             "mixed_segments_from_redecode": mixed_segments_from_redecode,
+            "long_segments_refined": long_segments_refined,
+            "refine_clip_calls": refine_clip_calls,
+            "refine_clip_failures": refine_clip_failures,
+            "refined_segments_from_windows": refined_segments_from_windows,
             "status": "interrupted" if interrupted else "completed",
             "resume_enabled": resume,
             "resumed_items": skipped_existing,

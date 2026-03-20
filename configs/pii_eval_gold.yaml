@@ -1,8 +1,8 @@
 run:
-  run_id: "pii_eval_gold_baseline_v1"
+  run_id: "pii_eval_gold_finetuned_v1"
 
 inputs:
-  gold_path: "data/prepared/gold_set/dev.jsonl"
+  gold_path: "data/prepared/gold_set/eval.jsonl"
   # pred_path: null  # if null, runs PII pipeline on gold transcripts
 
 pii:
@@ -15,12 +15,15 @@ pii:
     email: true
     zh_phone: true
     id_number: true
+    generic_id: true
     address: true
     en_spoken_phone: true
     partial_phone: true
+    nric: true
+    postal_code: true
 
   ner:
-    model_name: "Davlan/xlm-roberta-base-ner-hrl"
+    model_name: "data/models/ner_finetuned_gold_v1/final/best"
     device: "cpu"
     max_length: 256
     label_map:

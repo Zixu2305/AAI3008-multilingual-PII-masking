@@ -158,6 +158,8 @@ O, B-NAME, I-NAME, B-PHONE, I-PHONE, B-EMAIL, I-EMAIL, B-ADDRESS, I-ADDRESS, B-I
 
 Base model label mapping: PER→NAME, LOC/GPE→ADDRESS, ORG→ORG
 
+Important note: the gold-set `ID` label is broader than NRIC/FIN. It includes NRIC-like values, staff/application/reference IDs, and short contextual identifiers such as `ID 15`. In practice, `ID` is best handled by hybrid rules plus NER, not by standalone NER alone.
+
 ---
 
 ## Regex Patterns in `src/pii/run.py`
@@ -170,6 +172,8 @@ Base model label mapping: PER→NAME, LOC/GPE→ADDRESS, ORG→ORG
 | `EN_SPOKEN_PHONE_RE` | English spoken phones | "nine one three two…" |
 | `ZH_ADDRESS_RE` | Chinese addresses | 大牌123, 南京路 |
 | `EN_ADDRESS_RE` | English addresses (Block, number+street, street+number) | Block 123 Orchard Road, Jurong East Street 12, 10 Orchard Road |
+| `EN_CONTEXT_ID_RE` | English cue-word-gated IDs | reference ID 9, application ID 12 |
+| `ZH_CONTEXT_ID_RE` | Chinese cue-word-gated IDs | 员工编号 STAFF-ID-5521, 我的ID是FAKE-ID-七七八八 |
 | `SG_NRIC_RE` | Singapore NRIC/FIN numbers | S1234567A, G7654321B |
 | `SG_POSTAL_RE` | Singapore postal codes (prefixed) | S609690, Singapore 123456 |
 | `SG_POSTAL_AFTER_ADDR_RE` | Bare 6-digit postal codes after address | Orchard Road, 238879 |

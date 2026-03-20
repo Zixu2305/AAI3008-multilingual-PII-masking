@@ -239,6 +239,29 @@ re.compile(
 
 ## ID
 
+### `EN_CONTEXT_ID_RE` / `ZH_CONTEXT_ID_RE` — cue-word-gated generic identifiers
+
+These patterns intentionally require explicit identifier context, because broad IDs do not have one stable surface form like NRIC.
+
+English cue examples:
+- `ID 15`
+- `reference ID 9`
+- `application ID is 12`
+- `staff number STAFF-ID-5521`
+
+Chinese cue examples:
+- `我的ID是FAKE-ID-七七八八`
+- `员工编号是 STAFF-ID-5521`
+- `申请编号是 123-8899`
+
+**Config:** `pii.rules.generic_id` (or legacy `pii.rules.id_number`)
+
+### Why this is cue-gated
+
+Short or mixed-format identifiers are too ambiguous to match safely with a pure shape-based regex. A bare `15` could be an ID, date fragment, quantity, or address number. Requiring cue words such as `ID`, `reference ID`, `员工编号`, or `申请编号` keeps recall useful without turning normal numbers into false positives.
+
+---
+
 ### `SG_NRIC_RE` — Singapore NRIC/FIN numbers
 
 ```python
@@ -270,4 +293,5 @@ re.compile(r"(?<![A-Za-z])[STFGM]\d{7}[A-Za-z](?![A-Za-z])", re.IGNORECASE)
 | `pii.rules.email` | `true` | `EMAIL_RE` |
 | `pii.rules.address` | `true` | `ZH_ADDRESS_RE`, `EN_ADDRESS_RE` |
 | `pii.rules.postal_code` | `true` | `SG_POSTAL_RE`, `SG_POSTAL_AFTER_ADDR_RE` |
+| `pii.rules.generic_id` | `true` | `EN_CONTEXT_ID_RE`, `ZH_CONTEXT_ID_RE` |
 | `pii.rules.nric` | `true` | `SG_NRIC_RE` |

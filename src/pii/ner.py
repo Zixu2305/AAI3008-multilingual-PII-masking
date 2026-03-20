@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import re
 from typing import Any
 
@@ -50,7 +51,46 @@ def resolve_hf_device(device_cfg: Any) -> int:
     return -1
 
 
-def load_ner_pipeline(model_name: str, device_cfg: Any) -> Any:
+def _resolve_hf_token(token_env: str | None = None) -> str | None:
+    env_names = [token_env, "HF_TOKEN", "HUGGINGFACE_HUB_TOKEN"]
+    for env_name in env_names:
+        if not env_name:
+            continue
+        token = str(os.environ.get(env_name, "")).strip()
+        if token:
+            return token
+    return None
+
+
+def _model_candidates(primary: str, fallback: str | None) -> list[str]:
+    candidates: list[str] = []
+    for value in (primary, fallback):
+        name = str(value or "").strip()
+        if name and name not in candidates:
+            candidates.append(name)
+    return candidates
+
+
+def _format_tokenizer_error(exc: Exception) -> str:
+    err_s = str(exc).lower()
+    if "tiktoken" in err_s or "sentencepiece" in err_s:
+        return (
+            "Failed to load NER tokenizer. Install optional dependencies and retry: "
+            "`pip install tiktoken sentencepiece`."
+        )
+    return str(exc)
+
+
+def load_ner_pipeline(
+    model_name: str,
+    device_cfg: Any,
+    *,
+    cache_dir: str | None = None,
+    local_files_only: bool = False,
+    revision: str | None = None,
+    hf_token_env: str | None = None,
+    fallback_model_name: str | None = None,
+) -> Any:
     try:
         from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
     except ModuleNotFoundError as exc:
@@ -59,27 +99,44 @@ def load_ner_pipeline(model_name: str, device_cfg: Any) -> Any:
         ) from exc
 
     device = resolve_hf_device(device_cfg)
-    model = AutoModelForTokenClassification.from_pretrained(model_name)
+    token = _resolve_hf_token(hf_token_env)
+    load_kwargs: dict[str, Any] = {
+        "local_files_only": bool(local_files_only),
+    }
+    if cache_dir:
+        load_kwargs["cache_dir"] = cache_dir
+    if revision:
+        load_kwargs["revision"] = revision
+    if token:
+        load_kwargs["token"] = token
 
-    # Some tokenizer files require optional runtime deps (e.g. tiktoken/sentencepiece).
-    # Keep fast tokenizer path, but provide a clear dependency hint when that is the root cause.
-    try:
-        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
-    except Exception as exc:
-        err_s = str(exc).lower()
-        if "tiktoken" in err_s or "sentencepiece" in err_s:
-            raise RuntimeError(
-                "Failed to load NER tokenizer. Install optional dependencies and retry: "
-                "`pip install tiktoken sentencepiece`."
-            ) from exc
-        raise
-    return pipeline(
-        task="token-classification",
-        model=model,
-        tokenizer=tokenizer,
-        aggregation_strategy="simple",
-        device=device,
-    )
+    errors: list[str] = []
+    for candidate in _model_candidates(model_name, fallback_model_name):
+        try:
+            model = AutoModelForTokenClassification.from_pretrained(candidate, **load_kwargs)
+
+            # Some tokenizer files require optional runtime deps (e.g. tiktoken/sentencepiece).
+            # Keep fast tokenizer path, but provide a clear dependency hint when that is the root cause.
+            try:
+                tokenizer = AutoTokenizer.from_pretrained(candidate, use_fast=True, **load_kwargs)
+            except Exception as exc:
+                raise RuntimeError(_format_tokenizer_error(exc)) from exc
+
+            ner_pipe = pipeline(
+                task="token-classification",
+                model=model,
+                tokenizer=tokenizer,
+                aggregation_strategy="simple",
+                device=device,
+            )
+            setattr(ner_pipe, "_requested_model_name", model_name)
+            setattr(ner_pipe, "_resolved_model_name", candidate)
+            return ner_pipe
+        except Exception as exc:
+            errors.append(f"{candidate}: {exc}")
+
+    joined = "\n".join(errors)
+    raise RuntimeError(f"Failed to load NER model. Tried:\n{joined}")
 
 
 def predict_ner_spans(
